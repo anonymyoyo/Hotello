@@ -23,6 +23,8 @@ class User extends Authenticatable
         'addresse',
         'ville',
         'pays',
+        'favoris',
+        'hist_res',
         'password',
     ];
 

@@ -19,6 +19,8 @@ return new class extends Migration
             $table->string('addresse')->nullable();
             $table->string('ville')->nullable();
             $table->string('pays')->nullable();
+            $table->string('favoris')->nullable();
+            $table->string('hist_res')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();
