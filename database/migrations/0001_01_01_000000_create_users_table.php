@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('pays')->nullable();
             $table->string('favoris')->nullable();
             $table->string('hist_res')->nullable();
+            $table->string('user_type')->default(0);
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

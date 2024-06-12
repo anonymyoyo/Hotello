@@ -124,7 +124,7 @@ Main Content START -->
 								<p class="mb-0">New here?<a href="{{ route('register') }}"> Create an account</a></p>
 {{-- action="{{ route('home') }}" --}}
 								<!-- Form START -->
-								<form class="mt-4 text-start"  method="POST" >
+								<form class="mt-4 text-start"  method="POST" action="{{ route->name('home') }}">
                                     @csrf
 									<!-- Email -->
 									<div class="mb-3">
