@@ -12,7 +12,7 @@
 	<!-- Dark mode -->
 	<script>
 		const storedTheme = localStorage.getItem('theme')
- 
+
 		const getPreferredTheme = () => {
 			if (storedTheme) {
 				return storedTheme
@@ -66,7 +66,7 @@
 
 			}
 		})
-		
+
 	</script>
 
 	<!-- Favicon -->
@@ -84,7 +84,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendor/flatpickr/css/flatpickr.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/vendor/choices/css/choices.min.css">
-	
+
 
 	<!-- Theme CSS -->
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
@@ -292,7 +292,7 @@
 									<li> <a class="dropdown-item" href="agent-settings.html">Settings</a> </li>
 								</ul>
 							</li>
-							
+
 							<li> <a class="dropdown-item" href="admin-dashboard.html">Master Admin</a> </li>
 						</ul>
 					</li>
@@ -303,32 +303,32 @@
 							<i class="fas fa-ellipsis-h"></i>
 						</a>
 						<ul class="dropdown-menu min-w-auto" data-bs-popper="none">
-							<li> 
+							<li>
 								<a class="dropdown-item" href="https://support.webestica.com/" target="_blank">
 									<i class="text-warning fa-fw bi bi-life-preserver me-2"></i>Support
-								</a> 
+								</a>
 							</li>
-							<li> 
+							<li>
 								<a class="dropdown-item" href="docs/index.html" target="_blank">
 									<i class="text-danger fa-fw bi bi-card-text me-2"></i>Documentation
-								</a> 
+								</a>
 							</li>
 							<li> <hr class="dropdown-divider"></li>
-							<li> 
+							<li>
 								<a class="dropdown-item" href="https://booking.webestica.com/rtl/" target="_blank">
 									<i class="text-info fa-fw bi bi-toggle-off me-2"></i>RTL demo
-								</a> 
+								</a>
 							</li>
-							<li> 
+							<li>
 								<a class="dropdown-item" href="https://themes.getbootstrap.com/store/webestica/" target="_blank">
 									<i class="text-success fa-fw bi bi-cloud-download-fill me-2"></i>Buy Booking!
-								</a> 
+								</a>
 							</li>
 							<li> <hr class="dropdown-divider"></li>
-							<li> 
+							<li>
 								<a class="dropdown-item" href="docs/alerts.html" target="_blank">
 									<i class="text-orange fa-fw bi bi-puzzle-fill me-2"></i>Components
-								</a> 
+								</a>
 							</li>
 						</ul>
 					</li>
@@ -462,7 +462,7 @@
 									</svg>
 								</button>
 							</div>
-						</li> 
+						</li>
 						<!-- Dark mode options END-->
 					</ul>
 				</li>
@@ -475,10 +475,10 @@
 	<!-- Logo Nav END -->
 </header>
 <!-- Header END -->
- 
+
 <!-- **************** MAIN CONTENT START **************** -->
 <main>
-	
+
 <!-- =======================
 Main Banner START -->
 <section class="pt-3 pt-lg-5">
@@ -512,7 +512,7 @@ Main Banner START -->
 							<div class="avatar avatar-md z-index-1 position-relative me-2">
 								<img class="avatar-img rounded-circle" src="assets/images/avatar/12.jpg" alt="avatar">
 								<!-- Video button -->
-								<div class="btn btn-xs btn-round btn-white shadow-sm position-absolute top-50 start-50 translate-middle z-index-9 mb-0"> 
+								<div class="btn btn-xs btn-round btn-white shadow-sm position-absolute top-50 start-50 translate-middle z-index-9 mb-0">
 									<i class="fas fa-play"></i>
 								</div>
 							</div>
@@ -522,7 +522,7 @@ Main Banner START -->
 						</a>
 					</div>
 				</div>
-				
+
 				<!-- Image -->
 				<div class="col-lg-6 position-relative">
 
@@ -567,7 +567,7 @@ Main Banner START -->
 				</div>
 			</div>
 			<!-- Content and Image END -->
-			
+
 		<!-- Search START -->
 		<div class="row">
 			<div class="col-xl-10 position-relative mt-n3 mt-xl-n9">
@@ -618,7 +618,7 @@ Main Banner START -->
 									<label class="form-label">Guests & rooms</label>
 									<div class="dropdown guest-selector me-2">
 										<input type="text" class="form-guest-selector form-control selection-result" value="2 Guests 1 Room" data-bs-auto-close="outside" data-bs-toggle="dropdown">
-									
+
 										<!-- dropdown items -->
 										<ul class="dropdown-menu guest-selector-dropdown">
 											<!-- Adult -->
@@ -775,7 +775,7 @@ Best deal START -->
 					</div>
 				</div>
 			</div>
-		</div>	
+		</div>
 		<!-- Slider END -->
 	</div>
 </section>
@@ -1032,7 +1032,7 @@ About START -->
 
 				<!-- Client rating START -->
 				<div class="position-absolute bottom-0 start-0 z-index-1 mb-4 ms-5">
-					<div class="bg-body d-flex d-inline-block rounded-3 position-relative p-3">	
+					<div class="bg-body d-flex d-inline-block rounded-3 position-relative p-3">
 
 						<!-- Element -->
 						<img src="assets/images/element/01.svg" class="position-absolute top-0 start-0 translate-middle w-40px" alt="">
@@ -1103,7 +1103,7 @@ About START -->
 						<div class="icon-lg bg-info bg-opacity-10 text-info rounded-circle"><i class="bi bi-lightning-fill"></i></div>
 						<h5 class="mt-2">24 Hours Alert</h5>
 						<p class="mb-0">Rapturous did believe him all had supported.</p>
-					</div>		
+					</div>
 				</div>
 				<!-- Features END -->
 
@@ -1293,7 +1293,7 @@ Testimonials START -->
 						<!-- Slide item START -->
 						<div class="px-4 px-md-5">
 							<div class="row justify-content-between align-items-center">
-								
+
 								<div class="col-md-6 col-lg-5 position-relative">
 									<!-- Element -->
 									<div class="position-absolute top-0 start-0 translate-middle z-index-9 mt-7 ms-4">
@@ -1336,7 +1336,7 @@ Testimonials START -->
 						<!-- Slide item START -->
 						<div class="px-4 px-md-5">
 							<div class="row justify-content-between align-items-center">
-								
+
 								<div class="col-md-6 col-lg-5 position-relative">
 									<!-- Element -->
 									<div class="position-absolute top-0 start-0 translate-middle mt-7 ms-4 z-index-9">
@@ -1377,7 +1377,7 @@ Testimonials START -->
 						<!-- Slide item END -->
 
 					</div>
-				</div>	
+				</div>
 			</div>
 			<!-- Slider END -->
 		</div>
@@ -1668,7 +1668,7 @@ Footer START -->
 							<li class="nav-item"><a class="nav-link text-body-secondary" href="#">Support</a></li>
 						</ul>
 					</div>
-									
+
 					<!-- Link block -->
 					<div class="col-6 col-md-3">
 						<h5 class="text-white mb-2 mb-md-4">Global Site</h5>
@@ -1747,7 +1747,7 @@ Footer START -->
 					<li class="list-inline-item"> <a class="btn btn-sm shadow px-2 bg-instagram mb-0" href="#"><i class="fab fa-fw fa-instagram"></i></a> </li>
 					<li class="list-inline-item"> <a class="btn btn-sm shadow px-2 bg-twitter mb-0" href="#"><i class="fab fa-fw fa-twitter"></i></a> </li>
 					<li class="list-inline-item"> <a class="btn btn-sm shadow px-2 bg-linkedin mb-0" href="#"><i class="fab fa-fw fa-linkedin-in"></i></a> </li>
-				</ul>	
+				</ul>
 			</div>
 		</div>
 
@@ -1786,25 +1786,25 @@ Footer END -->
 		<li class="nav-item">
 			<a class="nav-link active" href="index.html"><i class="bi bi-house-door fa-fw"></i>
 				<span class="mb-0 nav-text">Home</span>
-			</a>	
+			</a>
 		</li>
 
 		<!-- Nav item My Trips -->
-		<li class="nav-item"> 
+		<li class="nav-item">
 			<a class="nav-link" href="account-bookings.html"><i class="bi bi-briefcase fa-fw"></i>
 				<span class="mb-0 nav-text">My Trips</span>
-			</a>	
+			</a>
 		</li>
 
 		<!-- Nav item Offer -->
-		<li class="nav-item"> 
+		<li class="nav-item">
 			<a class="nav-link" href="offer-detail.html"><i class="bi bi-percent fa-fw"></i>
-				<span class="mb-0 nav-text">Offer</span> 
+				<span class="mb-0 nav-text">Offer</span>
 			</a>
 		</li>
 
 		<!-- Nav item Account -->
-		<li class="nav-item"> 
+		<li class="nav-item">
 			<a class="nav-link" href="account-profile.html"><i class="bi bi-person-circle fa-fw"></i>
 				<span class="mb-0 nav-text">Account</span>
 			</a>
