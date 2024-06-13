@@ -19,7 +19,13 @@
         </div>
 
         <div class="mt-4">
-            <x-input-label for="addresse" :value="__('Telephone')" />
+            <x-input-label for="contact" :value="__('Telephone')" />
+            <x-text-input id="contact" class="block mt-1 w-full" type="text" name="contact" :value="old('contact')" required autocomplete="username" />
+            <x-input-error :messages="$errors->get('contact')" class="mt-2" />
+        </div>
+
+        <div class="mt-4">
+            <x-input-label for="addresse" :value="__('Quartier')" />
             <x-text-input id="addresse" class="block mt-1 w-full" type="text" name="addresse" :value="old('addresse')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('addresse')" class="mt-2" />
         </div>
