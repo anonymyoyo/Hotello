@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('chambres', function (Blueprint $table) {
             $table->id();
+            $table->string('disponibilite')->nullable();
+            $table->string('type')->nullable();
+            $table->string('prix')->nullable();
+            $table->string('capacite')->nullable();
             $table->timestamps();
         });
     }
