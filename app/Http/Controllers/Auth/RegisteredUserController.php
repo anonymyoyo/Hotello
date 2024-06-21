@@ -48,7 +48,7 @@ class RegisteredUserController extends Controller
             'pays' => $request->pays,
             'favoris' => $request->favoris,
             'hist_res' => $request->hist_res,
-            'role' => $request->role,
+            // 'role' => $request->role,
             'password' => Hash::make($request->password),
         ]);
 

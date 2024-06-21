@@ -1,0 +1,5 @@
+if(!Auth::check() && Auth::User()->roles != 0){
+            // return view('admin.home');
+            // abort(403);
+            redirect()->back();
+        }
