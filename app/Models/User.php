@@ -23,6 +23,7 @@ class User extends Authenticatable
         'addresse',
         'ville',
         'pays',
+        'roles_id',
         'password',
     ];
 

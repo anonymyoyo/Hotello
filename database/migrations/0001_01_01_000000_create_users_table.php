@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Roles;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,6 +12,7 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('users', function (Blueprint $table) {
             $table->id();
             $table->string('name');
@@ -21,7 +23,7 @@ return new class extends Migration
             $table->string('pays')->nullable();
             $table->string('favoris')->nullable();
             $table->string('hist_res')->nullable();
-            $table->string('roles')->default(0);
+            $table->foreignIdFor(Roles::class)->constrained()->restrictOnUpdate()->restrictOnDelete();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

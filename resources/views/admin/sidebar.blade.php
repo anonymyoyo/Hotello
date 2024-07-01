@@ -50,7 +50,7 @@
                     </a>
                     <!-- Submenu -->
                     <ul class="nav collapse flex-column" id="collapseagent" data-bs-parent="#navbar-sidebar">
-                        <li class="nav-item"> <a class="nav-link" href="admin-agent-list.html">Agent List</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('list') }}">Agent List</a></li>
                         <li class="nav-item"> <a class="nav-link" href="admin-agent-detail.html">Agent Detail</a></li>
                     </ul>
                 </li>
@@ -93,12 +93,16 @@
 
             <!-- Sidebar footer START -->
             <div class="d-flex align-items-center justify-content-between text-primary-hover mt-auto p-3">
-                <a class="h6 fw-light mb-0 text-body" href="sign-in.html" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Sign out">
+
+                <form method="POST" action="{{ route('logout') }}" id="logout">
+                @csrf
+                </form>
+
+                <a class="h6 fw-light mb-0 text-body" onclick="event.preventDefault();
+                document.getElementById('logout').submit();" >
                     <i class="fa-solid fa-arrow-right-from-bracket"></i> Log out
                 </a>
-                <a class="h6 mb-0 text-body" href="admin-settings.html" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Settings">
-                    <i class="bi bi-gear-fill"></i>
-                </a>
+
             </div>
             <!-- Sidebar footer END -->
 

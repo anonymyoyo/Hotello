@@ -141,8 +141,6 @@
                 <!-- Profile dropdown START -->
                 <li class="nav-item ms-3 dropdown">
                     <!-- Avatar -->
-
-
                     <a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
                         <img class="avatar-img rounded-2" src="assets/images/avatar/01.jpg" alt="avatar">
                     </a>
@@ -168,13 +166,7 @@
                         <li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
                         <li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
                         <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li>
-                        <li>
-                            <form method="POST" action="{{ route('logout') }}" id="logout">
-                                @csrf
-                                </form>
-                            <a class="dropdown-item bg-danger-soft-hover"onclick="event.preventDefault();
-                            document.getElementById('logout').submit();">
-                            <i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+                        <li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
                     </ul>
                 </li>
                 <!-- Profile dropdown END -->

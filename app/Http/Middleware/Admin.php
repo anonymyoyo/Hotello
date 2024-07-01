@@ -4,10 +4,9 @@ namespace App\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
 use Symfony\Component\HttpFoundation\Response;
 
-class Gerants
+class Admin
 {
     /**
      * Handle an incoming request.
@@ -16,8 +15,8 @@ class Gerants
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(!Auth::check() or Auth::user()->roles !=1){
-            abort(403);
+        if(auth()->user()->roles_id !=1){
+            return back();
         }
         return $next($request);
     }
