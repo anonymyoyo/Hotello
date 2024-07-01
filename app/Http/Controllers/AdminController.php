@@ -15,7 +15,13 @@ class AdminController extends Controller
     }
 
     public function gerant(){
-        return view('admin.gerant.list');
+        $hotels=Hotel::all();
+        return view('admin.gerant.list', compact('hotels'));
+    }
+
+    public function detail(){
+        $hotels=Hotel::all();
+        return view('admin.gerant.detail', compact('hotels'));
     }
 
     public function store(){
