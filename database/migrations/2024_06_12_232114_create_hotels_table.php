@@ -18,8 +18,6 @@ return new class extends Migration
             $table->string('localisation')->nullable();  /*addresse*/
             $table->string('etoiles')->nullable();
             $table->string('nbre_chambres')->nullable();
-            $table->string('nbre_personnel')->nullable();
-            $table->string('services')->nullable();
             $table->timestamps();
         });
     }

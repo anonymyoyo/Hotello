@@ -20,4 +20,8 @@ class AdminController extends Controller
     public function store(){
         return view('admin.gerant.create');
     }
+
+    public function add(){
+
+    }
 }

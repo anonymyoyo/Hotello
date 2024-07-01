@@ -27,32 +27,32 @@
         <h2>Nouveau Gerant</h2>
 
         <!-- Contact form -->
-        <form method="POST" action="{{ route('create.gerant') }}" class="mt-4">
+        <form method="POST" action="{{ route('create') }}" class="mt-4">
             @csrf
             <!-- Name -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Nom de L'hotel *</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="name">
             </div>
             <!-- Email -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Email *</label>
-                <input type="email" class="form-control">
+                <input type="email" class="form-control" name="email">
             </div>
             <!-- localisation -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Localisation *</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="localisation">
             </div>
             <!-- etoile -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Nombre d'etoile *</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="etoiles">
             </div>
             <!-- Nombre de Chambre -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Nombre de Chambre *</label>
-                <input type="text" class="form-control">
+                <input type="text" class="form-control" name="nbre_chambres">
             </div>
             <!-- Button -->
             <div><button class="btn btn-lg btn-primary mb-0" type="submit">Send Message</button></div>
