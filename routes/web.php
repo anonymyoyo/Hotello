@@ -23,7 +23,7 @@ Route::get('/', [HomeController::class, 'index']);
 Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('admin/dashboard', [AdminController::class, 'index'])->name('dashboard');
     Route::get('admin/gerant', [AdminController::class, 'gerant'])->name('list');
-    Route::get('gerant/store', [AdminController::class, 'store'])->name('create.gerant');
+    Route::get('gerant/store', [AdminController::class, 'store'])->name('create');
     Route::post('store/add', [AdminController::class, 'add'])->name('add.gerant');
     });
 

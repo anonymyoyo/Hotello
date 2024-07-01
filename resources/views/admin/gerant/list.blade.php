@@ -148,26 +148,30 @@
 								<li><a class="dropdown-item" href="#"><i class="bi bi-trash fa-fw me-2"></i>Remove</a></li>
 							</ul>
 						</div>
+
+                        @foreach ($hotels as $hotel )
+                            <div class="card-body text-center pb-0">
+                                <!-- Avatar Image -->
+                                <div class="avatar avatar-xl flex-shrink-0 mb-3">
+                                    <img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt="avatar">
+                                </div>
+                                <!-- Title -->
+                                <h5 class="mb-1">{{ $hotel->name }}</h5>
+                                <small><i class="bi bi-geo-alt me-1"></i>Los Angeles, USA</small>
+                                <!-- Info and rating -->
+                                <div class="d-flex justify-content-between mt-3">
+                                    <h6 class="mb-0 small"><span class="fw-light">Total listings:</span> 04</h6>
+                                    <h6 class="mb-0 small">4.5<i class="fa-solid fa-star text-warning ms-1"></i></h6>
+                                </div>
+                            </div>
+                            <!-- card footer -->
+                            <div class="card-footer d-flex gap-3 align-items-center">
+                                <a href="admin-agent-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+                                <a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        @endforeach
 						<!-- Card body -->
-						<div class="card-body text-center pb-0">
-							<!-- Avatar Image -->
-							<div class="avatar avatar-xl flex-shrink-0 mb-3">
-								<img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt="avatar">
-							</div>
-							<!-- Title -->
-							<h5 class="mb-1">Lori Stevens</h5>
-							<small><i class="bi bi-geo-alt me-1"></i>Los Angeles, USA</small>
-							<!-- Info and rating -->
-							<div class="d-flex justify-content-between mt-3">
-								<h6 class="mb-0 small"><span class="fw-light">Total listings:</span> 04</h6>
-								<h6 class="mb-0 small">4.5<i class="fa-solid fa-star text-warning ms-1"></i></h6>
-							</div>
-						</div>
-						<!-- card footer -->
-						<div class="card-footer d-flex gap-3 align-items-center">
-							<a href="admin-agent-detail.html" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
-							<a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
-						</div>
+
 					</div>
 				</div>
 

@@ -27,7 +27,7 @@
         <h2>Nouveau Gerant</h2>
 
         <!-- Contact form -->
-        <form method="POST" action="{{ route('create') }}" class="mt-4">
+        <form method="POST" action="{{ route('add.gerant') }}" class="mt-4">
             @csrf
             <!-- Name -->
             <div class="mb-4 form-control-bg-light">
