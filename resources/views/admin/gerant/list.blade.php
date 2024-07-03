@@ -171,7 +171,7 @@
                             <!-- card footer -->
                             <div class="card-footer d-flex gap-3 align-items-center">
                                 {{-- @foreach ( $hotels as $hotel ) --}}
-                                    <a href="{{ route('detail',$hotel->id) }}" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+                                    <a href="{{ route('detail', $hotel->id) }}" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
                                 {{-- @endforeach --}}
                                 <a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
                             </div>

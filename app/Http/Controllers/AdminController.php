@@ -20,8 +20,9 @@ class AdminController extends Controller
     }
 
     public function detail($id){
-        $hotels=Hotel::find($id);
-        return view('admin.gerant.detail', compact('hotels', 'id'));
+        $hotel=Hotel::find($id);
+        $lists=Hotel::all();
+        return view('admin.gerant.detail', compact('hotel', 'id', 'lists'));
     }
 
     public function store(){
