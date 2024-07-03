@@ -14,7 +14,7 @@
             <!-- Sidebar menu START -->
             <ul class="navbar-nav flex-column" id="navbar-sidebar">
                 <!-- Menu item -->
-                <li class="nav-item"><a href="admin-dashboard.html" class="nav-link active">Dashboard</a></li>
+                <li class="nav-item"><a href="{{ route('dashboard') }}" class="nav-link active">Dashboard</a></li>
 
                 <!-- Title -->
                 <li class="nav-item ms-2 my-2">Pages</li>
@@ -87,7 +87,6 @@
                 <li class="nav-item"> <a class="nav-link" href="docs/index.html">Documentation</a></li>
 
                 <!-- Menu item -->
-                <li class="nav-item"> <a class="nav-link" href="docs/changelog.html">Changelog</a></li>
             </ul>
             <!-- Sidebar menu end -->
 

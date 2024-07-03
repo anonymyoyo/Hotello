@@ -11,9 +11,16 @@ class Hotel extends Model
 
     protected $fillable = [
         'name',
+        'name_pdg',
+        'genre',
         'email',
+        'email2',
+        'phone',
+        'license',
+        'tax_number',
         'localisation',
         'etoiles',
         'nbre_chambres',
+        'description',
     ];
 }

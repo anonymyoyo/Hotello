@@ -39,6 +39,21 @@
                 <label class="form-label">Email *</label>
                 <input type="email" class="form-control" name="email">
             </div>
+            <!-- Email ID -->
+            <div class="mb-4 form-control-bg-light">
+                <label class="form-label">Email ID*</label>
+                <input type="email" class="form-control" name="email2">
+            </div>
+            <!-- Name PDG -->
+            <div class="mb-4 form-control-bg-light">
+                <label class="form-label">Nom du PDG *</label>
+                <input type="text" class="form-control" name="name_pdg">
+            </div>
+            <!-- Name -->
+            <div class="mb-4 form-control-bg-light">
+                <label class="form-label">Nom de L'hotel *</label>
+                <input type="text" class="form-control" name="name">
+            </div>
             <!-- localisation -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Localisation *</label>
@@ -53,6 +68,11 @@
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Nombre de Chambre *</label>
                 <input type="text" class="form-control" name="nbre_chambres">
+            </div>
+
+            <div class="mb-4 form-control-bg-light">
+                <label class="form-label">Description *</label>
+                <textarea class="form-control" name="description" rows="4"></textarea>
             </div>
             <!-- Button -->
             <div><button class="btn btn-lg btn-primary mb-0" type="submit">Creer</button></div>

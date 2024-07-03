@@ -205,7 +205,7 @@
 
 										<li class="list-group-item mb-3">
 											<span>Joining Date:</span>
-											<span class="h6 fw-normal ms-1 mb-0">29 Aug 2019</span>
+											<span class="h6 fw-normal ms-1 mb-0">{{ ($hotel->created_at) }}</span>
 										</li>
 									</ul>
 								</div>
