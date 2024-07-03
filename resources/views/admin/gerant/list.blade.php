@@ -134,6 +134,8 @@
 
 			<!-- agent list START -->
 			<div class="row g-4">
+
+                @foreach ($hotels as $hotel )
 				<!-- Card item -->
 				<div class="col-md-6 col-lg-4 col-xxl-3">
 					<div class="card border h-100">
@@ -149,8 +151,9 @@
 							</ul>
 						</div>
 
-                        @foreach ($hotels as $hotel )
+
                             <div class="card-body text-center pb-0">
+
                                 <!-- Avatar Image -->
                                 <div class="avatar avatar-xl flex-shrink-0 mb-3">
                                     <img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt="avatar">
@@ -163,17 +166,22 @@
                                     <h6 class="mb-0 small"><span class="fw-light">Total listings:</span> 04</h6>
                                     <h6 class="mb-0 small">{{ $hotel->etoiles }}<i class="fa-solid fa-star text-warning ms-1"></i></h6>
                                 </div>
+
                             </div>
                             <!-- card footer -->
                             <div class="card-footer d-flex gap-3 align-items-center">
-                                <a href="{{ route('detail') }}" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+                                {{-- @foreach ( $hotels as $hotel ) --}}
+                                    <a href="{{ route('detail',$hotel->id) }}" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
+                                {{-- @endforeach --}}
                                 <a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
                             </div>
-                        @endforeach
+
 						<!-- Card body -->
 
 					</div>
 				</div>
+@endforeach
+
 			</div>
 			<!-- agent list END -->
 

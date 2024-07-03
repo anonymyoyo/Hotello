@@ -55,7 +55,7 @@
                 <input type="text" class="form-control" name="nbre_chambres">
             </div>
             <!-- Button -->
-            <div><button class="btn btn-lg btn-primary mb-0" type="submit">Send Message</button></div>
+            <div><button class="btn btn-lg btn-primary mb-0" type="submit">Creer</button></div>
         </form>
     </div>
 

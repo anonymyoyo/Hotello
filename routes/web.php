@@ -25,37 +25,8 @@ Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('admin/gerant', [AdminController::class, 'gerant'])->name('list');
     Route::get('gerant/store', [AdminController::class, 'store'])->name('create');
     Route::post('store/add', [AdminController::class, 'add'])->name('add.gerant');
-    Route::get('gerant/detail', [AdminController::class, 'detail'])->name('detail');
+    Route::get('gerant/detail/{id}', [AdminController::class, 'detail'])->name('detail');
     });
-
-// Route::middleware(['auth', 'gerants'])->group(function(){
-//     Route::get('Gerants', [GerantController::class, 'index'])->name('dashboard');
-// });
-
-// Route::middleware(['auth', 'client'])->group(function(){
-//     Route::get('user', [UserController::class, 'index'])->name('profile');
-// });
-
-// Route::get('/gerant_dashboard', function () {
-//     return view('gerant.dashboard');->prefix('admin')->name('admin.')
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
-// Route::middleware(['auth', 'admin'])->group(function(){
-//     Route::get('admin', [AdminController::class, 'index'])->name('dashboard');
-// });
-
-// Route::middleware(['auth', 'gerant'])->group(function(){
-//     Route::get('gerant', [GerantController::class, 'index'])->name('dashboard');
-// });
-
-// Route::middleware(['auth', 'client'])->group(function(){
-//     Route::get('user', [UserController::class, 'index'])->name('profile');
-// });
-
-
-
-
-
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
