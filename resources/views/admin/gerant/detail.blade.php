@@ -118,7 +118,7 @@
 								<div class="icon-md bg-mode h6 mb-0 rounded-circle flex-shrink-0"><i class="bi bi-telephone-fill"></i></div>
 								<div class="ms-2">
 									<small>Phone</small>
-									<h6 class="fw-normal small mb-0"><a href="#">{{--  --}}+1(404) 586-854</a></h6>
+									<h6 class="fw-normal small mb-0"><a href="#">{{ $hotel->phone }}</a></h6>
 								</div>
 							</div>
 
@@ -160,27 +160,27 @@
 									<ul class="list-group list-group-borderless">
 										<li class="list-group-item mb-3">
 											<span>Full Name:</span>
-											<span class="h6 fw-normal ms-1 mb-0">Jacqueline Miller</span>
+											<span class="h6 fw-normal ms-1 mb-0">{{ $hotel->name_pdg }}</span>
 										</li>
 
 										<li class="list-group-item mb-3">
 											<span>User Name:</span>
-											<span class="h6 fw-normal ms-1 mb-0">Lucifer</span>
+											<span class="h6 fw-normal ms-1 mb-0">{{ $hotel->name }}</span>
 										</li>
 
 										<li class="list-group-item mb-3">
 											<span>Mobile Number:</span>
-											<span class="h6 fw-normal ms-1 mb-0">+1(404) 586-854</span>
+											<span class="h6 fw-normal ms-1 mb-0">{{ $hotel->phone }}</span>
 										</li>
 
 										<li class="list-group-item mb-3">
 											<span>Agent License:</span>
-											<span class="h6 fw-normal ms-1 mb-0">258ED458962</span>
+											<span class="h6 fw-normal ms-1 mb-0">{{ $hotel->license }}</span>
 										</li>
 
 										<li class="list-group-item mb-3">
 											<span>Tax Number:</span>
-											<span class="h6 fw-normal ms-1 mb-0">ACG1548GG78952</span>
+											<span class="h6 fw-normal ms-1 mb-0">{{ $hotel->tax_number }}</span>
 										</li>
 									</ul>
 								</div>
@@ -190,17 +190,17 @@
 									<ul class="list-group list-group-borderless">
 										<li class="list-group-item mb-3">
 											<span>Email ID:</span>
-											<span class="h6 fw-normal ms-1 mb-0">hello@gmail.com</span>
+											<span class="h6 fw-normal ms-1 mb-0">{{ $hotel->email2 }}</span>
 										</li>
 
 										<li class="list-group-item mb-3">
 											<span>Gender:</span>
-											<span class="h6 fw-normal ms-1 mb-0">Female</span>
+											<span class="h6 fw-normal ms-1 mb-0">{{ $hotel->genre }}</span>
 										</li>
 
 										<li class="list-group-item mb-3">
 											<span>Location:</span>
-											<span class="h6 fw-normal ms-1 mb-0">225 Cherry Street #56, New York</span>
+											<span class="h6 fw-normal ms-1 mb-0">{{ $hotel->localisation }}</span>
 										</li>
 
 										<li class="list-group-item mb-3">

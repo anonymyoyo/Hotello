@@ -32,10 +32,17 @@ class AdminController extends Controller
     public function add(Request $request){
         Hotel::create([
             'name'=>$request->name,
+            'name_pdg'=>$request->name_pdg,
+            'genre'=>$request->genre,
+            'email2'=>$request->email2,
+            'phone'=>$request->phone,
+            'license'=>$request->license,
+            'tax_number'=>$request->tax_number,
             'email'=>$request->email,
             'localisation'=>$request->localisation,
             'etoiles'=>$request->etoiles,
             'nbre_chambres'=>$request->nbre_chambres,
+            'description'=>$request->description,
         ]);
         return to_route('list')->with('message', 'Gerant ajoute avec success');
     }

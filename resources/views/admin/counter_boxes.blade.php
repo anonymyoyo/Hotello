@@ -5,7 +5,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <!-- Digit -->
                 <div>
-                    <h4 class="mb-0">{{ $hotel->id }}</h4>
+                    <h4 class="mb-0">56</h4>
                     <span class="h6 fw-light mb-0">Total Hotels</span>
                 </div>
                 <!-- Icon -->
