@@ -30,13 +30,15 @@ class AdminController extends Controller
     }
 
     public function store(){
-        return view('admin.gerant.create');
+        $users=User::all();
+        return view('admin.gerant.create', compact('users'));
     }
 
     public function add(Request $request){
+        User::all();
         Hotel::create([
             'name'=>$request->name,
-            'name_pdg'=>$request->name_pdg,
+            'user_id'=>$request->user_id,
             'genre'=>$request->genre,
             'email2'=>$request->email2,
             'phone'=>$request->phone,

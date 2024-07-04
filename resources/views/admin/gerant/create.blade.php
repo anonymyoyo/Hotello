@@ -48,12 +48,12 @@
             <div class="mb-4 form-control-bg-light">
                 <select name="user_id" id="" class="form-select">
                     @foreach ($users as $user)
-                        <option value="" class="form-option"></option>
+                        <option value="" class="form-option">{{ $user->name }}</option>
                     @endforeach
 
                 </select>
-                <label class="form-label">Nom du PDG *</label>
-                <input type="text" class="form-control" name="name_pdg">
+                {{-- <label class="form-label">Nom du PDG *</label>
+                <input type="text" class="form-control" name="name_pdg"> --}}
             </div>
             <!-- Name -->
             <div class="mb-4 form-control-bg-light">
