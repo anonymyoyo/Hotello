@@ -33,6 +33,14 @@ class AuthenticatedSessionController extends Controller
         {
             return to_route('dashboard');
         }
+        elseif(auth()->user()->roles_id === 2)
+        {
+            return to_route('profile');
+        }
+        elseif (auth()->user()->roles_id === 3) {
+            # code...
+            return to_route('page');
+        }
 
         //
     }

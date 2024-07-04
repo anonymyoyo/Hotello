@@ -12,7 +12,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Route::get('/home',[HomeController::class, 'redirect']);
 
@@ -24,7 +24,7 @@ Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('admin/dashboard', [AdminController::class, 'index'])->name('dashboard');
 
     // Routes concernant le gerant
-    Route::get('admin/erant', [AdminController::class, 'gerant'])->name('list');
+    Route::get('admin/gerant', [AdminController::class, 'gerant'])->name('list');
     Route::get('gerant/store', [AdminController::class, 'store'])->name('create');
     Route::post('store/add', [AdminController::class, 'add'])->name('add.gerant');
     Route::get('gerant/detail/{id}', [AdminController::class, 'detail'])->name('detail');
@@ -47,7 +47,11 @@ Route::middleware(['auth', 'admin'])->group(function(){
 
     //     // Routes concernant les chambres
     //     Route::get('admin/booking', [AdminController::class, 'booking'])->name('booking.list');
-    });
+});
+
+Route::middleware(['auth', 'geran'])->group(function(){
+    Route::get('geran/page', [GerantController::class, 'dashboard'])->name('control');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class GerantController extends Controller
 {
     //
-    public function index(){
+    public function dashboard(){
         return view('gerant.dashboard');
     }
 }

@@ -215,7 +215,7 @@
 									<ul class="list-group list-group-borderless">
 										<li class="list-group-item">
 											<span>Description: </span>
-											<p class="h6 fw-normal mb-0">As it so contrasted oh estimating instrument. Size-like body someone had. Are conduct viewing boy minutes warrant the expense Tolerably behavior may admit daughters offending her ask own? Praise effect wishes to change way and any wanted. Lively use looked latter regard had. Does he it part last in</p>
+											<p class="h6 fw-normal mb-0">{{ $hotel->description }}</p>
 										</li>
 									</ul>
 								</div>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Middleware\Admin;
 use App\Models\Hotel;
+use App\Models\User;
 use Illuminate\Http\Request;
 // use App\Http\Controllers\
 

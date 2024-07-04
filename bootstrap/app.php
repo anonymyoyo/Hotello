@@ -1,9 +1,7 @@
 <?php
 
 use App\Http\Middleware\Admin;
-use App\Http\Middleware\Admins;
-use App\Http\Middleware\Clients;
-use App\Http\Middleware\Gerants;
+use App\Http\Middleware\Gerant;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Configuration\Exceptions;
 use Illuminate\Foundation\Configuration\Middleware;
@@ -16,10 +14,10 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
     //     //
-    $middleware->alias(['admin'=>Admin::class]);
-        // $middleware->alias(['admin'=>Admins::class]);
-        // $middleware->alias(['gerant'=>Gerants::class]);
-        // $middleware->alias(['client'=>Clients::class]);
+    $middleware->alias(['admin'=>Admin::class,
+                        'geran'=>Gerant::class,
+                    ]);
+
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
