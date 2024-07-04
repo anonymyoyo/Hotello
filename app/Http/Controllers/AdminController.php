@@ -63,13 +63,33 @@ class AdminController extends Controller
     // ***
     // Gestion des Chambres
 
-    // Gestion des Guests
+    // Gestion des vols
     // ***
     // ***
+    public function vols(){
+        return view('admin.vols.list');
+    }
+    // ***
+    // ***
+    // Gestion des vols
 
+    // Gestion des tourisme
     // ***
     // ***
-    // Gestion des Guests
+    public function tourisme(){
+        return view('admin.tourisme.list');
+    }
+    // ***
+    // ***
+    // Gestion des tourisme
 
-
+    // Gestion des cab
+    // ***
+    // ***
+    public function cab(){
+        return view('admin.cab.list');
+    }
+    // ***
+    // ***
+    // Gestion des cab
 }
