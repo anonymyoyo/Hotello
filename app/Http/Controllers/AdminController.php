@@ -14,6 +14,9 @@ class AdminController extends Controller
         return view('admin.dashboard');
     }
 
+    // Gestion des gerant d'hotels
+    // ***
+    // ***
     public function gerant(){
         $hotels=Hotel::all();
         return view('admin.gerant.list', compact('hotels'));
@@ -46,4 +49,27 @@ class AdminController extends Controller
         ]);
         return to_route('list')->with('message', 'Gerant ajoute avec success');
     }
+    // ***
+    // ***
+    // Gestion des gerants d'hotels
+
+    // Gestion des Chambres
+    // ***
+    // ***
+    public function booking(){
+        return view('admin.booking.list');
+    }
+    // ***
+    // ***
+    // Gestion des Chambres
+
+    // Gestion des Guests
+    // ***
+    // ***
+
+    // ***
+    // ***
+    // Gestion des Guests
+
+
 }

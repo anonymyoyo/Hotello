@@ -22,10 +22,16 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('admin/dashboard', [AdminController::class, 'index'])->name('dashboard');
+
+    // Routes concernant le gerant
     Route::get('admin/gerant', [AdminController::class, 'gerant'])->name('list');
     Route::get('gerant/store', [AdminController::class, 'store'])->name('create');
     Route::post('store/add', [AdminController::class, 'add'])->name('add.gerant');
     Route::get('gerant/detail/{id}', [AdminController::class, 'detail'])->name('detail');
+
+    // Routes concernant les chambres
+    Route::get('admin/booking', [AdminController::class, 'booking'])->name('booking.list');
+    // Route::get('admin/booking', [AdminController::class, 'booking'])->name('booking.list');
     });
 
 Route::middleware('auth')->group(function () {

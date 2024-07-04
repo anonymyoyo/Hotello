@@ -38,7 +38,8 @@
                     </a>
                     <!-- Submenu -->
                     <ul class="nav collapse flex-column" id="collapseguest" data-bs-parent="#navbar-sidebar">
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('guest.list') }}">Guest List</a></li>
+                        {{-- {{ route('guest.list') }} --}}
+                        <li class="nav-item"> <a class="nav-link" href="#">Guest List</a></li>
                         <li class="nav-item"> <a class="nav-link" href="admin-guest-detail.html">Guest Detail</a></li>
                     </ul>
                 </li>
@@ -50,19 +51,23 @@
                     </a>
                     <!-- Submenu -->
                     <ul class="nav collapse flex-column" id="collapseagent" data-bs-parent="#navbar-sidebar">
+                        {{--  --}}
                         <li class="nav-item"> <a class="nav-link" href="{{ route('list') }}">Agent List</a></li>
                         <li class="nav-item"> <a class="nav-link" href="admin-agent-detail.html">Agent Detail</a></li>
                     </ul>
                 </li>
 
                 <!-- Menu item -->
-                <li class="nav-item"> <a class="nav-link" href="{{ route('reviews') }}">Reviews</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Reviews</a></li>
+                {{-- {{ route('reviews') }} --}}
 
                 <!-- Menu item -->
-                <li class="nav-item"> <a class="nav-link" href="{{ route('earning') }}">Earnings</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Earnings</a></li>
+                {{-- {{ route('earning') }} --}}
 
                 <!-- Menu item -->
-                <li class="nav-item"> <a class="nav-link" href="{{ route('settings') }}">Admin Settings</a></li>
+                <li class="nav-item"> <a class="nav-link" href="#">Admin Settings</a></li>
+                {{-- {{ route('settings') }} --}}
 
                 <!-- Menu item -->
                 <li class="nav-item">
