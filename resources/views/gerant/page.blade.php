@@ -68,7 +68,7 @@ Content START -->
 		<!-- Graph END -->
 
 		<!-- Booking table START -->
-		@include('gerant.booking')
+		@include('gerant.booking_stats')
 		<!-- Booking table END -->
 	</div>
 </section>
