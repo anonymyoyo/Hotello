@@ -20,6 +20,7 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');name('gerant.')->prefix('gerant')->
 
+// Routes concernant les traitement admin
 Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('admin/dashboard', [AdminController::class, 'index'])->name('dashboard');
 
@@ -49,8 +50,15 @@ Route::middleware(['auth', 'admin'])->group(function(){
     //     Route::get('admin/booking', [AdminController::class, 'booking'])->name('booking.list');
 });
 
+// Routes concernant les traitement gerant
 Route::middleware(['auth', 'geran'])->group(function(){
     Route::get('geran/dashboard', [GerantController::class, 'dashboard'])->name('page');
+    Route::get('gerant/listing', [GerantController::class, 'listing'])->name('listing');
+    Route::get('gerant/booking', [GerantController::class, 'booking'])->name('booking');
+    Route::get('gerant/activity', [GerantController::class, 'activity'])->name('activity');
+    Route::get('gerant/earning', [GerantController::class, 'earning'])->name('earning');
+    Route::get('gerant/review', [GerantController::class, 'review'])->name('review');
+    Route::get('gerant/setting', [GerantController::class, 'setting'])->name('setting');
 });
 
 Route::middleware('auth')->group(function () {
