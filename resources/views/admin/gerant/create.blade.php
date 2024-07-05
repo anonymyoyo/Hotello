@@ -46,9 +46,9 @@
             </div>
             <!-- Name PDG -->
             <div class="mb-4 form-control-bg-light">
-                <select name="user_id" id="" class="form-select">
+                <select  id="" name="user_id"  class="form-select">
                     @foreach ($users as $user)
-                        <option value="" class="form-option">{{ $user->name }}</option>
+                        <option value="{{ $user->id }}" class="form-option">{{ $user->name }}</option>
                     @endforeach
 
                 </select>
@@ -89,11 +89,6 @@
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Nombre de Chambre *</label>
                 <input type="text" class="form-control" name="nbre_chambres">
-            </div>
-
-            <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Mot de passe *</label>
-                <input type="password" class="form-control" name="password">
             </div>
 
             <div class="mb-4 form-control-bg-light">

@@ -50,7 +50,7 @@ Route::middleware(['auth', 'admin'])->group(function(){
 });
 
 Route::middleware(['auth', 'geran'])->group(function(){
-    Route::get('geran/page', [GerantController::class, 'dashboard'])->name('control');
+    Route::get('geran/dashboard', [GerantController::class, 'dashboard'])->name('page');
 });
 
 Route::middleware('auth')->group(function () {

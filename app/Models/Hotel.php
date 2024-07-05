@@ -23,4 +23,6 @@ class Hotel extends Model
         'nbre_chambres',
         'description',
     ];
+
+    protected $primaryKey = 'user_id';
 }

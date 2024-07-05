@@ -8,6 +8,6 @@ class GerantController extends Controller
 {
     //
     public function dashboard(){
-        return view('gerant.dashboard');
+        return view('gerant.page');
     }
 }
