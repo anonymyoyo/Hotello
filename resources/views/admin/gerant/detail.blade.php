@@ -160,7 +160,13 @@
 									<ul class="list-group list-group-borderless">
 										<li class="list-group-item mb-3">
 											<span>Full Name:</span>
-											<span class="h6 fw-normal ms-1 mb-0">{{ $hotel->name_pdg }}</span>
+                                            @foreach ($users as $user)
+                                                @if ($user->id==$hotel->user_id)
+                                                    <span class="h6 fw-normal ms-1 mb-0">{{ $user->name }}</span>
+                                                @endif
+
+                                            @endforeach
+
 										</li>
 
 										<li class="list-group-item mb-3">

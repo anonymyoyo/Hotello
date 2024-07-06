@@ -79,7 +79,12 @@
             <li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
             <li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
             <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li>
-            <li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+            <li>
+                <form method="POST" action="{{ route('logout') }}" id="logout">
+                    @csrf
+                </form>
+                <a class="dropdown-item bg-danger-soft-hover" onclick="event.preventDefault();
+                document.getElementById('logout').submit();"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
             <li> <hr class="dropdown-divider"></li>
 
             <!-- Dark mode options START -->

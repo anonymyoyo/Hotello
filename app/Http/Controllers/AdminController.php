@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Middleware\Admin;
+
 use App\Models\Hotel;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -24,9 +24,11 @@ class AdminController extends Controller
     }
 
     public function detail($id){
+        // $user=User::find($id);
+        $users=User::all();
         $hotel=Hotel::find($id);
         $lists=Hotel::all();
-        return view('admin.gerant.detail', compact('hotel', 'id', 'lists'));
+        return view('admin.gerant.detail', compact('hotel', 'id', 'lists', 'users'));
     }
 
     public function store(){
