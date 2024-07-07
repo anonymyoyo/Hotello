@@ -27,31 +27,31 @@
         <h2>Nouveau Gerant</h2>
 
         <!-- Contact form -->
-        <form method="POST" action="{{ route('edit.gerant') }}" class="mt-4">
+        <form method="POST" action="{{ route('edit.gerant',$hotel->id) }}" class="mt-4">
             @csrf
+       @method('PUT')
             <!-- Name -->
 
-    @foreach ($datas as $data)
-@if ($data->id==$edit->user_id)
+
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Nom de L'hotel *</label>
-                <input type="text" class="form-control" name="name" value="{{ $edit->name }}">
+                <input type="text" class="form-control" name="name" value="{{ $hotel->name }}">
             </div>
             <!-- Email -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Email *</label>
-                <input type="email" class="form-control" name="email" value="{{ $edit->email }}">
+                <input type="email" class="form-control" name="email" value="{{ $hotel->email }}">
             </div>
             <!-- Email ID -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Email ID*</label>
-                <input type="email" class="form-control" name="email2" value="{{ $edit->email2 }}">
+                <input type="email" class="form-control" name="email2" value="{{ $hotel->email2 }}">
             </div>
             <!-- Name PDG -->
             <div class="mb-4 form-control-bg-light">
                 <select  id="" name="user_id"  class="form-select">
                     {{-- @foreach ($datas as $data) --}}
-                        <option value="{{ $data->id }}" class="form-option">{{ $data->name }}</option>
+                        <option value="{{ $hotel->user->id }}" class="form-option">{{ $hotel->user->name }}</option>
                     {{-- @endforeach --}}
 
                 </select>
@@ -61,46 +61,45 @@
             <!-- Name -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Genre *</label>
-                <input type="text" class="form-control" name="genre" value="{{ $edit->genre }}">
+                <input type="text" class="form-control" name="genre" value="{{ $hotel->genre }}">
             </div>
             <!-- Name -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Numero de telephone *</label>
-                <input type="text" class="form-control" name="phone" value="{{ $edit->phone }}">
+                <input type="text" class="form-control" name="phone" value="{{ $hotel->phone }}">
             </div>
             <!-- Name -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Numero de License *</label>
-                <input type="text" class="form-control" value="{{ $edit->license }}" name="license">
+                <input type="text" class="form-control" value="{{ $hotel->license }}" name="license">
             </div>
             <!--  Name -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Numero de Taxe *</label>
-                <input type="text" class="form-control" value="{{ $edit->tax_number }}" name="tax_number">
+                <input type="text" class="form-control" value="{{ $hotel->tax_number }}" name="tax_number">
             </div>
             <!-- localisation -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Localisation *</label>
-                <input type="text" class="form-control" value="{{ $edit->localisation }}" name="localisation">
+                <input type="text" class="form-control" value="{{ $hotel->localisation }}" name="localisation">
             </div>
             <!-- etoile -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Nombre d'etoile *</label>
-                <input type="text" class="form-control" value="{{ $edit->etoiles }}" name="etoiles">
+                <input type="text" class="form-control" value="{{ $hotel->etoiles }}" name="etoiles">
             </div>
             <!-- Nombre de Chambre -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Nombre de Chambre *</label>
-                <input type="text" class="form-control" value="{{ $edit->nbre_chambres }}" name="nbre_chambres">
+                <input type="text" class="form-control" value="{{ $hotel->nbre_chambres }}" name="nbre_chambres">
             </div>
 
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Description *</label>
-                <textarea class="form-control" value="" name="description" rows="4">{{ $edit->description }}</textarea>
+                <textarea class="form-control" value="" name="description" rows="4">{{ $hotel->description }}</textarea>
             </div>
 
-@endif
-@endforeach
+
             <!-- Button -->
             <div><button class="btn btn-lg btn-primary mb-0" type="submit">Modifier</button></div>
         </form>

@@ -12,6 +12,9 @@ class AdminController extends Controller
 {
     //
     public function index(){
+        $hotelCount=Hotel::count();
+
+        //return $hotelCount;
         return view('admin.dashboard');
     }
 
@@ -32,15 +35,16 @@ class AdminController extends Controller
     }
 
     public function edit( $id){
-        $datas=User::all();
-        $edit=Hotel::find($id);
 
-            return view('admin.gerant.edit', compact('edit', 'datas'));
+        $hotel=Hotel::find($id);
+
+            return view('admin.gerant.edit', compact('hotel'));
     }
 
-    public function update(Request $request){
-        User::all();
-        Hotel::updated([
+    public function update(Request $request,$id){
+
+        $hotel=Hotel::find($id);
+        $hotel->update([
             'name'=>$request->name,
             'user_id'=>$request->user_id,
             'genre'=>$request->genre,

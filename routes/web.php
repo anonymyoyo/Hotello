@@ -30,7 +30,7 @@ Route::middleware(['auth', 'admin'])->group(function(){
     Route::post('store/add', [AdminController::class, 'add'])->name('add.gerant');
     Route::get('gerant/detail/{id}', [AdminController::class, 'detail'])->name('detail');
     Route::get('gerant/edit/{id}', [AdminController::class, 'edit'])->name('edit');
-    Route::post('gerant/update', [AdminController::class, 'update'])->name('edit.gerant');
+    Route::put('gerant/update/{id}', [AdminController::class, 'update'])->name('edit.gerant');
 
     // Routes Admin concernant les chambres
     Route::get('admin/Booking', [AdminController::class, 'booking'])->name('booking.list');

@@ -309,7 +309,7 @@
 					</div>
 					<!-- Notification dropdown menu END -->
 				</li>
-				<!-- Notification dropdown END -->
+				<!-- Notification dro/pdown END -->
 
 				<!-- Profile dropdown START -->
 				<li class="nav-item ms-3 dropdown">
@@ -327,19 +327,20 @@
 									<img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg" alt="avatar">
 								</div>
 								<div>
-									<a class="h6 mt-2 mt-sm-0" href="#">Lori Ferguson</a>
-									<p class="small m-0">example@gmail.com</p>
+                                <a class="h6 mt-2 mt-sm-0" href="#">User Profile</a>
+									{{-- <p class="small m-0">example@gmail.com</p> --}}
 								</div>
 							</div>
 						</li>
 
 						<!-- Links -->
-						<li> <hr class="dropdown-divider"></li>
+						{{-- <li> <hr class="dropdown-divider"></li>
 						<li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-check fa-fw me-2"></i>My Bookings</a></li>
 						<li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
 						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li>
-						<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li> --}}
+						<li><a class="dropdown-item bg-danger-soft-hover" href="{{ route('login') }}"><i class="bi bi-power fa-fw me-2"></i>Sign In</a></li>
+                        <li><a class="dropdown-item bg-danger-soft-hover" href="{{ route('register') }}"><i class="bi bi-power fa-fw me-2"></i>Sign Up</a></li>
 						<li> <hr class="dropdown-divider"></li>
 
 						<!-- Dark mode options START -->
@@ -359,12 +360,12 @@
 										<use href="#"></use>
 									</svg>
 								</button>
-								<button type="button" class="btn btn-link nav-link text-primary-hover mb-0 p-0 active" data-bs-theme-value="auto" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Auto">
+								{{-- <button type="button" class="btn btn-link nav-link text-primary-hover mb-0 p-0 active" data-bs-theme-value="auto" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="Auto">
 									<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-circle-half fa-fw mode-switch" viewBox="0 0 16 16">
 										<path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
 										<use href="#"></use>
 									</svg>
-								</button>
+								</button> --}}
 							</div>
 						</li>
 						<!-- Dark mode options END-->
