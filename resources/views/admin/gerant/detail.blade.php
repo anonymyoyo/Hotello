@@ -81,7 +81,7 @@
 							</a>
 							<!-- dropdown button -->
 							<ul class="dropdown-menu dropdown-w-sm dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownShare1">
-								<li><a class="dropdown-item" href="#"><i class="bi bi-pencil-square fa-fw me-2"></i>Edit</a></li>
+								<li><a class="dropdown-item" href="{{ route('edit', $hotel->id) }}"><i class="bi bi-pencil-square fa-fw me-2"></i>Edit</a></li>
 								<li><a class="dropdown-item" href="#"><i class="bi bi-trash fa-fw me-2"></i>Remove</a></li>
 							</ul>
 						</div>

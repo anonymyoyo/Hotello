@@ -31,6 +31,33 @@ class AdminController extends Controller
         return view('admin.gerant.detail', compact('hotel', 'id', 'lists', 'users'));
     }
 
+    public function edit( $id){
+        $datas=User::all();
+        $edit=Hotel::find($id);
+
+            return view('admin.gerant.edit', compact('edit', 'datas'));
+    }
+
+    public function update(Request $request){
+        User::all();
+        Hotel::updated([
+            'name'=>$request->name,
+            'user_id'=>$request->user_id,
+            'genre'=>$request->genre,
+            'email2'=>$request->email2,
+            'phone'=>$request->phone,
+            'license'=>$request->license,
+            'tax_number'=>$request->tax_number,
+            'email'=>$request->email,
+            'localisation'=>$request->localisation,
+            'etoiles'=>$request->etoiles,
+            'nbre_chambres'=>$request->nbre_chambres,
+            'description'=>$request->description,
+        ]);
+        return to_route('list')->with('message', 'Gerant ajoute avec success');
+
+    }
+
     public function store(){
         $users=User::all();
         return view('admin.gerant.create', compact('users'));
