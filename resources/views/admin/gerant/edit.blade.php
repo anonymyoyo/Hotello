@@ -30,6 +30,9 @@
         <form method="POST" action="{{ route('edit.gerant') }}" class="mt-4">
             @csrf
             <!-- Name -->
+
+    @foreach ($datas as $data)
+@if ($data->id==$edit->user_id)
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Nom de L'hotel *</label>
                 <input type="text" class="form-control" name="name" value="{{ $edit->name }}">
@@ -47,9 +50,9 @@
             <!-- Name PDG -->
             <div class="mb-4 form-control-bg-light">
                 <select  id="" name="user_id"  class="form-select">
-                    @foreach ($datas as $data)
+                    {{-- @foreach ($datas as $data) --}}
                         <option value="{{ $data->id }}" class="form-option">{{ $data->name }}</option>
-                    @endforeach
+                    {{-- @endforeach --}}
 
                 </select>
                 {{-- <label class="form-label">Nom du PDG *</label>
@@ -95,6 +98,9 @@
                 <label class="form-label">Description *</label>
                 <textarea class="form-control" value="" name="description" rows="4">{{ $edit->description }}</textarea>
             </div>
+
+@endif
+@endforeach
             <!-- Button -->
             <div><button class="btn btn-lg btn-primary mb-0" type="submit">Modifier</button></div>
         </form>

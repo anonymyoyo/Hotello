@@ -54,7 +54,7 @@ class AdminController extends Controller
             'nbre_chambres'=>$request->nbre_chambres,
             'description'=>$request->description,
         ]);
-        return to_route('list')->with('message', 'Gerant ajoute avec success');
+        return to_route('list')->with('message', 'Hotel Modifie avec success');
 
     }
 
