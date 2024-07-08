@@ -38,8 +38,8 @@
                     </a>
                     <!-- Submenu -->
                     <ul class="nav collapse flex-column" id="collapseguest" data-bs-parent="#navbar-sidebar">
-                        {{-- {{ route('guest.list') }} --}}
-                        <li class="nav-item"> <a class="nav-link" href="#">Guest List</a></li>
+                        {{--  --}}
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('guest.list') }}">Guest List</a></li>
                         <li class="nav-item"> <a class="nav-link" href="admin-guest-detail.html">Guest Detail</a></li>
                     </ul>
                 </li>

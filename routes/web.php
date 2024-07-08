@@ -31,19 +31,24 @@ Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('gerant/detail/{id}', [AdminController::class, 'detail'])->name('detail');
     Route::get('gerant/edit/{id}', [AdminController::class, 'edit'])->name('edit');
     Route::put('gerant/update/{id}', [AdminController::class, 'update'])->name('edit.gerant');
+    Route::delete('gerant/delete/{id}', [AdminController::class, 'delete'])->name('delete');
+
+    // Routes Admin concernant les Utilisateurs
+    Route::get('admin/guest', [AdminController::class, 'guest'])->name('guest.list');
+    Route::get('guest/store', [AdminController::class, 'store_guest'])->name('guest.create');
 
     // Routes Admin concernant les chambres
     Route::get('admin/Booking', [AdminController::class, 'booking'])->name('booking.list');
     // Route::get('admin/booking', [AdminController::class, 'booking'])->name('booking.list');
 
-        // Routes Admin concernant les Vols
-        Route::get('admin/Vols', [AdminController::class, 'vols'])->name('vol.list');
+    // Routes Admin concernant les Vols
+    Route::get('admin/Vols', [AdminController::class, 'vols'])->name('vol.list');
 
             // Routes Admin concernant les Tourisme
     Route::get('admin/tourisme', [AdminController::class, 'tourisme'])->name('tourism.grid');
 
-        // Routes Admin concernant les locations d'engins
-        Route::get('admin/cab', [AdminController::class, 'cab'])->name('cab.list');
+    // Routes Admin concernant les locations d'engins
+    Route::get('admin/cab', [AdminController::class, 'cab'])->name('cab.list');
 
     //         // Routes concernant les chambres
     // Route::get('admin/booking', [AdminController::class, 'booking'])->name('booking.list');

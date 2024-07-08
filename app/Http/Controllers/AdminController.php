@@ -62,7 +62,11 @@ class AdminController extends Controller
 
     }
 
-    public function delete(){
+    public function delete($id){
+        $hotel=Hotel::find($id);
+        $hotel->delete();
+
+        return to_route('list')->with('message', 'Hotel supprime avec success');
 
     }
 
@@ -92,6 +96,22 @@ class AdminController extends Controller
     // ***
     // ***
     // Gestion des gerants d'hotels
+
+    // Gestion des utilisateurs
+    // ***
+    // ***
+
+    public function guest(){
+        return view('admin.guest.list');
+    }
+
+    public function store_guest(){
+        return view('admin.guest.create');
+    }
+
+    // **
+    // **
+    // Gestion d'utilisateur
 
     // Gestion des Chambres
     // ***
