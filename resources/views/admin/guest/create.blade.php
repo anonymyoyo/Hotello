@@ -27,73 +27,48 @@
         <h2>Nouveau Gerant</h2>
 
         <!-- Contact form -->
-        {{-- <form method="POST" action="{{ route('add.gerant') }}" class="mt-4">
-            @csrf --}}
+        <form method="POST" action="{{ route('guest.add') }}" class="mt-4">
+            @csrf
             <!-- Name -->
             <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Nom de L'hotel *</label>
+                <label class="form-label">Nom du gerant *</label>
                 <input type="text" class="form-control" name="name">
             </div>
             <!-- Email -->
             <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Email *</label>
+                <label class="form-label">Email du gerant*</label>
                 <input type="email" class="form-control" name="email">
-            </div>
-            <!-- Email ID -->
-            <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Email ID*</label>
-                <input type="email" class="form-control" name="email2">
             </div>
             <!-- Name PDG -->
             <div class="mb-4 form-control-bg-light">
-                <select  id="" name="user_id"  class="form-select">
-                    {{-- @foreach ($users as $user)
-                        <option value="{{ $user->id }}" class="form-option">{{ $user->name }}</option>
-                    @endforeach --}}
-
-                </select>
+                <input type="hidden" class="form-control" name="roles_id" value="3">
                 {{-- <label class="form-label">Nom du PDG *</label>
                 <input type="text" class="form-control" name="name_pdg"> --}}
             </div>
-            <!-- Name -->
-            <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Genre *</label>
-                <input type="text" class="form-control" name="genre">
-            </div>
-            <!-- Name -->
+            <!-- Contact -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Numero de telephone *</label>
-                <input type="text" class="form-control" name="phone">
-            </div>
-            <!-- Name -->
-            <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Numero de License *</label>
-                <input type="text" class="form-control" name="license">
-            </div>
-            <!-- Name -->
-            <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Numero de Taxe *</label>
-                <input type="text" class="form-control" name="tax_number">
+                <input type="text" class="form-control" name="contact">
             </div>
             <!-- localisation -->
             <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Localisation *</label>
-                <input type="text" class="form-control" name="localisation">
+                <label class="form-label">Quartier *</label>
+                <input type="text" class="form-control" name="addresse">
             </div>
             <!-- etoile -->
             <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Nombre d'etoile *</label>
-                <input type="text" class="form-control" name="etoiles">
+                <label class="form-label">Pays *</label>
+                <input type="text" class="form-control" name="pays">
             </div>
             <!-- Nombre de Chambre -->
             <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Nombre de Chambre *</label>
-                <input type="text" class="form-control" name="nbre_chambres">
+                <label class="form-label">Ville *</label>
+                <input type="text" class="form-control" name="ville">
             </div>
 
             <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Description *</label>
-                <textarea class="form-control" name="description" rows="4"></textarea>
+                <label class="form-label">Mot de passe *</label>
+                <input class="form-control" name="password" type="password">
             </div>
             <!-- Button -->
             <div><button class="btn btn-lg btn-primary mb-0" type="submit">Creer</button></div>

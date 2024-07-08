@@ -36,6 +36,7 @@ Route::middleware(['auth', 'admin'])->group(function(){
     // Routes Admin concernant les Utilisateurs
     Route::get('admin/guest', [AdminController::class, 'guest'])->name('guest.list');
     Route::get('guest/store', [AdminController::class, 'store_guest'])->name('guest.create');
+    Route::post('guest/add', [AdminController::class, 'add_guest'])->name('guest.add');
 
     // Routes Admin concernant les chambres
     Route::get('admin/Booking', [AdminController::class, 'booking'])->name('booking.list');

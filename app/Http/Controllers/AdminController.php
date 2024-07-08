@@ -109,6 +109,20 @@ class AdminController extends Controller
         return view('admin.guest.create');
     }
 
+    public function add_guest(Request $request){
+        User::create([
+            'name'=>$request->name,
+            'email'=>$request->email,
+            'contact'=>$request->contact,
+            'addresse'=>$request->addresse,
+            'ville'=>$request->ville,
+            'pays'=>$request->pays,
+            'roles_id'=>'3',
+            'password'=>$request->password,
+        ]);
+        return to_route('list')->with('message', 'gerant cree avec succes');
+    }
+
     // **
     // **
     // Gestion d'utilisateur

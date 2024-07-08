@@ -12,7 +12,7 @@
 	<!-- Dark mode -->
 	<script>
 		const storedTheme = localStorage.getItem('theme')
- 
+
 		const getPreferredTheme = () => {
 			if (storedTheme) {
 				return storedTheme
@@ -66,7 +66,7 @@
 
 			}
 		})
-		
+
 	</script>
 
 	<!-- Favicon -->
@@ -92,7 +92,7 @@
 
 <!-- **************** MAIN CONTENT START **************** -->
 <main>
-	
+
 	<!-- Sidebar START -->
 	<nav class="navbar sidebar navbar-expand-xl navbar-light">
 		<!-- Navbar brand for xl START -->
@@ -103,10 +103,10 @@
 			</a>
 		</div>
 		<!-- Navbar brand for xl END -->
-		
+
 		<div class="offcanvas offcanvas-start flex-row custom-scrollbar h-100" data-bs-backdrop="true" tabindex="-1" id="offcanvasSidebar">
 			<div class="offcanvas-body sidebar-content d-flex flex-column pt-4">
-	
+
 				<!-- Sidebar menu START -->
 				<ul class="navbar-nav flex-column" id="navbar-sidebar">
 					<!-- Menu item -->
@@ -126,7 +126,7 @@
 							<li class="nav-item"> <a class="nav-link" href="admin-booking-detail.html">Booking Detail</a></li>
 						</ul>
 					</li>
-	
+
 					<!-- Menu item -->
 					<li class="nav-item">
 						<a class="nav-link" data-bs-toggle="collapse" href="#collapseguest" role="button" aria-expanded="true" aria-controls="collapseguest">
@@ -150,16 +150,16 @@
 							<li class="nav-item"> <a class="nav-link" href="admin-agent-detail.html">Agent Detail</a></li>
 						</ul>
 					</li>
-					
+
 					<!-- Menu item -->
 					<li class="nav-item"> <a class="nav-link" href="admin-reviews.html">Reviews</a></li>
-	
+
 					<!-- Menu item -->
 					<li class="nav-item"> <a class="nav-link" href="admin-earnings.html">Earnings</a></li>
-	
+
 					<!-- Menu item -->
 					<li class="nav-item"> <a class="nav-link" href="admin-settings.html">Admin Settings</a></li>
-	
+
 					<!-- Menu item -->
 					<li class="nav-item">
 						<a class="nav-link" data-bs-toggle="collapse" href="#collapseauthentication" role="button" aria-expanded="false" aria-controls="collapseauthentication">
@@ -173,18 +173,18 @@
 							<li class="nav-item"> <a class="nav-link" href="error.html">Error 404</a></li>
 						</ul>
 					</li>
-	
+
 					<!-- Title -->
 					<li class="nav-item ms-2 my-2">Documentation</li>
-	
+
 					<!-- Menu item -->
 					<li class="nav-item"> <a class="nav-link" href="docs/index.html">Documentation</a></li>
-	
+
 					<!-- Menu item -->
 					<li class="nav-item"> <a class="nav-link" href="docs/changelog.html">Changelog</a></li>
 				</ul>
 				<!-- Sidebar menu end -->
-	
+
 				<!-- Sidebar footer START -->
 				<div class="d-flex align-items-center justify-content-between text-primary-hover mt-auto p-3">
 					<a class="h6 fw-light mb-0 text-body" href="sign-in.html" data-bs-toggle="tooltip" data-bs-placement="top" aria-label="Sign out">
@@ -195,20 +195,20 @@
 					</a>
 				</div>
 				<!-- Sidebar footer END -->
-				
+
 			</div>
 		</div>
 	</nav>
 	<!-- Sidebar END -->
-	
+
 	<!-- Page content START -->
 	<div class="page-content">
-	
+
 		<!-- Top bar START -->
 		<nav class="navbar top-bar navbar-light py-0 py-xl-3">
 			<div class="container-fluid p-0">
 				<div class="d-flex align-items-center w-100">
-	
+
 					<!-- Logo START -->
 					<div class="d-flex align-items-center d-xl-none">
 						<a class="navbar-brand" href="index.html">
@@ -216,7 +216,7 @@
 						</a>
 					</div>
 					<!-- Logo END -->
-	
+
 					<!-- Toggler for sidebar START -->
 					<div class="navbar-expand-xl sidebar-offcanvas-menu">
 						<button class="navbar-toggler me-auto p-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar" aria-expanded="false" aria-label="Toggle navigation" data-bs-auto-close="outside">
@@ -224,7 +224,7 @@
 						</button>
 					</div>
 					<!-- Toggler for sidebar END -->
-					
+
 					<!-- Top bar left -->
 					<div class="navbar-expand-lg ms-auto ms-xl-0">
 						<!-- Toggler for menubar START -->
@@ -232,7 +232,7 @@
 							<i class="bi bi-search"></i>
 						</button>
 						<!-- Toggler for menubar END -->
-	
+
 						<!-- Topbar menu START -->
 						<div class="collapse navbar-collapse w-100 z-index-1" id="navbarTopContent">
 							<!-- Top search START -->
@@ -249,7 +249,7 @@
 						<!-- Topbar menu END -->
 					</div>
 					<!-- Top bar left END -->
-					
+
 					<!-- Top bar right START -->
 					<ul class="nav flex-row align-items-center list-unstyled ms-xl-auto">
 						<!-- Dark mode options START -->
@@ -271,7 +271,7 @@
 										<svg width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill fa-fw mode-switch me-1" viewBox="0 0 16 16">
 											<path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
 											<use href="#"></use>
-										</svg>Light						
+										</svg>Light
 									</button>
 								</li>
 								<li class="mb-1">
@@ -303,7 +303,7 @@
 							</a>
 							<!-- Notification dote -->
 							<span class="notif-badge animation-blink"></span>
-		
+
 							<!-- Notification dropdown menu START -->
 							<div class="dropdown-menu dropdown-animation dropdown-menu-end dropdown-menu-size-md shadow-lg p-0">
 								<div class="card bg-transparent">
@@ -312,7 +312,7 @@
 										<h6 class="m-0">Notifications <span class="badge bg-danger bg-opacity-10 text-danger ms-2">4 new</span></h6>
 										<a class="small" href="#">Clear all</a>
 									</div>
-		
+
 									<!-- Card body START -->
 									<div class="card-body p-0">
 										<ul class="list-group list-group-flush list-unstyled p-2">
@@ -334,7 +334,7 @@
 										</ul>
 									</div>
 									<!-- Card body END -->
-		
+
 									<!-- Card footer -->
 									<div class="card-footer bg-transparent text-center border-top">
 										<a href="#" class="btn btn-sm btn-link mb-0 p-0">See all incoming activity</a>
@@ -344,14 +344,14 @@
 							<!-- Notification dropdown menu END -->
 						</li>
 						<!-- Notification dropdown END -->
-		
+
 						<!-- Profile dropdown START -->
 						<li class="nav-item ms-3 dropdown">
 							<!-- Avatar -->
 							<a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
 								<img class="avatar-img rounded-2" src="assets/images/avatar/01.jpg" alt="avatar">
 							</a>
-		
+
 							<ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
 								<!-- Profile info -->
 								<li class="px-3 mb-3">
@@ -366,7 +366,7 @@
 										</div>
 									</div>
 								</li>
-		
+
 								<!-- Links -->
 								<li> <hr class="dropdown-divider"></li>
 								<li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-check fa-fw me-2"></i>My Bookings</a></li>
@@ -383,16 +383,16 @@
 			</div>
 		</nav>
 		<!-- Top bar END -->
-	
+
 		<!-- Page main content START -->
 		<div class="page-content-wrapper p-xxl-4">
-	
+
 			<!-- Title -->
 			<div class="row">
 				<div class="col-12 mb-4 mb-sm-5">
 					<div class="d-sm-flex justify-content-between align-items-center">
 						<h1 class="h3 mb-3 mb-sm-0">Guest List</h1>
-						<div class="d-grid"><a href="#" class="btn btn-primary mb-0"><i class="bi bi-filetype-pdf me-2"></i>Generate Report</a>	</div>					
+						<div class="d-grid"><a href="#" class="btn btn-primary mb-0"><i class="bi bi-filetype-pdf me-2"></i>Generate Report</a>	</div>
 					</div>
 				</div>
 			</div>
@@ -402,23 +402,23 @@
 				<!-- Tabs -->
 				<div class="col-lg-6">
 					<ul class="nav nav-pills-shadow nav-responsive">
-						<li class="nav-item"> 
-							<a class="nav-link mb-0 active" data-bs-toggle="tab" href="#tab-1">All Guests</a> 
+						<li class="nav-item">
+							<a class="nav-link mb-0 active" data-bs-toggle="tab" href="#tab-1">All Guests</a>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link mb-0" data-bs-toggle="tab" href="#tab-2">Booked</a>
 						</li>
-						<li class="nav-item"> 
-							<a class="nav-link mb-0" data-bs-toggle="tab" href="#tab-3">Canceled</a> 
+						<li class="nav-item">
+							<a class="nav-link mb-0" data-bs-toggle="tab" href="#tab-3">Canceled</a>
 						</li>
-						<li class="nav-item"> 
-							<a class="nav-link mb-0" data-bs-toggle="tab" href="#tab-4">Pending</a> 
+						<li class="nav-item">
+							<a class="nav-link mb-0"  data-bs-toggle="tab" href="#qq">Pending</a>
 						</li>
 					</ul>
 				</div>
 
 				<!-- Search -->
-				<div class="col-md-6 col-lg-3">
+				<div class="col-md-6 col-lg-3" id="gg">
 					<form class="rounded position-relative">
 						<input class="form-control bg-transparent" type="search" placeholder="Search" aria-label="Search">
 						<button class="bg-transparent p-2 position-absolute top-50 end-0 translate-middle-y border-0 text-primary-hover text-reset" type="submit">
@@ -474,7 +474,7 @@
 									<h6 class="mb-0 fw-light">Lori Stevens</h6>
 								</div>
 							</div>
-						</div>	
+						</div>
 
 						<!-- Data item -->
 						<div class="col">
@@ -525,7 +525,7 @@
 									<h6 class="mb-0 fw-light">Carolyn Ortiz</h6>
 								</div>
 							</div>
-						</div>	
+						</div>
 
 						<!-- Data item -->
 						<div class="col">
@@ -576,7 +576,7 @@
 									<h6 class="mb-0 fw-light">Billy Vasquez</h6>
 								</div>
 							</div>
-						</div>	
+						</div>
 
 						<!-- Data item -->
 						<div class="col">
@@ -627,7 +627,7 @@
 									<h6 class="mb-0 fw-light">Samuel Bishop</h6>
 								</div>
 							</div>
-						</div>	
+						</div>
 
 						<!-- Data item -->
 						<div class="col">
@@ -678,7 +678,7 @@
 									<h6 class="mb-0 fw-light">Amanda Reed</h6>
 								</div>
 							</div>
-						</div>	
+						</div>
 
 						<!-- Data item -->
 						<div class="col">
@@ -729,7 +729,7 @@
 									<h6 class="mb-0 fw-light">Jacqueline Miller</h6>
 								</div>
 							</div>
-						</div>	
+						</div>
 
 						<!-- Data item -->
 						<div class="col">
@@ -780,7 +780,7 @@
 									<h6 class="mb-0 fw-light">Joan Wallace</h6>
 								</div>
 							</div>
-						</div>	
+						</div>
 
 						<!-- Data item -->
 						<div class="col">
@@ -831,7 +831,7 @@
 									<h6 class="mb-0 fw-light">Dennis Stevens</h6>
 								</div>
 							</div>
-						</div>	
+						</div>
 
 						<!-- Data item -->
 						<div class="col">
@@ -882,7 +882,1015 @@
 									<h6 class="mb-0 fw-light">Louis Ferguson</h6>
 								</div>
 							</div>
-						</div>	
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">02 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">18 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">22 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G102</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+				</div>
+				<!-- Card body END -->
+
+				<!-- Card footer START -->
+				<div class="card-footer pt-0">
+					<!-- Pagination and content -->
+					<div class="d-sm-flex justify-content-sm-between align-items-sm-center">
+						<!-- Content -->
+						<p class="mb-sm-0 text-center text-sm-start">Showing 1 to 8 of 20 entries</p>
+						<!-- Pagination -->
+						<nav class="mb-sm-0 d-flex justify-content-center" aria-label="navigation">
+							<ul class="pagination pagination-sm pagination-primary-soft mb-0">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" tabindex="-1">Prev</a>
+								</li>
+								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item active"><a class="page-link" href="#">2</a></li>
+								<li class="page-item disabled"><a class="page-link" href="#">..</a></li>
+								<li class="page-item"><a class="page-link" href="#">15</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#">Next</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- Card footer END -->
+			</div>
+
+            <div class="card shadow mt-5">
+				<!-- Card body START -->
+				<div class="card-body">
+					<!-- Table head -->
+					<div class="bg-light rounded p-3 d-none d-lg-block">
+						<div class="row row-cols-7 g-4">
+							<div class="col"><h6 class="mb-0">Guest</h6></div>
+							<div class="col"><h6 class="mb-0">Booking Date</h6></div>
+							<div class="col"><h6 class="mb-0">Check-In</h6></div>
+							<div class="col"><h6 class="mb-0">Check-Out</h6></div>
+							<div class="col"><h6 class="mb-0">Room No</h6></div>
+							<div class="col"><h6 class="mb-0">Status</h6></div>
+							<div class="col"><h6 class="mb-0">Action</h6></div>
+						</div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Lori Stevens</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">02 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">18 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">22 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G102</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Carolyn Ortiz</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">01 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">16 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">18 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G103</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Billy Vasquez</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">29 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">10 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">14 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G105</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-orange bg-opacity-10 text-orange">Pending</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/04.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Samuel Bishop</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">14 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">07 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">09 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G102</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-orange bg-opacity-10 text-orange">Pending</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Amanda Reed</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">10 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">02 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">05 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G102</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/06.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Jacqueline Miller</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">05 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">27 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">01 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G105</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Joan Wallace</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">05 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">23 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">26 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">F105</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/08.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Dennis Stevens</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">14 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">07 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">09 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G102</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-danger bg-opacity-10 text-danger">Canceled</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/10.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Louis Ferguson</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">02 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">18 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">22 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G102</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+				</div>
+				<!-- Card body END -->
+
+				<!-- Card footer START -->
+				<div class="card-footer pt-0">
+					<!-- Pagination and content -->
+					<div class="d-sm-flex justify-content-sm-between align-items-sm-center">
+						<!-- Content -->
+						<p class="mb-sm-0 text-center text-sm-start">Showing 1 to 8 of 20 entries</p>
+						<!-- Pagination -->
+						<nav class="mb-sm-0 d-flex justify-content-center" aria-label="navigation">
+							<ul class="pagination pagination-sm pagination-primary-soft mb-0">
+								<li class="page-item disabled">
+									<a class="page-link" href="#" tabindex="-1">Prev</a>
+								</li>
+								<li class="page-item"><a class="page-link" href="#">1</a></li>
+								<li class="page-item active"><a class="page-link" href="#">2</a></li>
+								<li class="page-item disabled"><a class="page-link" href="#">..</a></li>
+								<li class="page-item"><a class="page-link" href="#">15</a></li>
+								<li class="page-item">
+									<a class="page-link" href="#">Next</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<!-- Card footer END -->
+			</div>
+
+            <div class="card shadow mt-5" >
+				<!-- Card body START -->
+				<div class="card-body" id="tab-4">
+
+                    <a href="#gg">gg</a>
+					<!-- Table head -->
+					<div class="bg-light rounded p-3 d-none d-lg-block" id="qq">
+						<div class="row row-cols-7 g-4">
+							<div class="col"><h6 class="mb-0">Guest</h6></div>
+							<div class="col"><h6 class="mb-0">Booking Date</h6></div>
+							<div class="col"><h6 class="mb-0">Check-In</h6></div>
+							<div class="col"><h6 class="mb-0">Check-Out</h6></div>
+							<div class="col"><h6 class="mb-0">Room No</h6></div>
+							<div class="col"><h6 class="mb-0">Status</h6></div>
+							<div class="col"><h6 class="mb-0">Action</h6></div>
+						</div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4" id="a">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/09.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Lori Stevens</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">02 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">18 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">22 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G102</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Carolyn Ortiz</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">01 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">16 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">18 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G103</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/03.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Billy Vasquez</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">29 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">10 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">14 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G105</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-orange bg-opacity-10 text-orange">Pending</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/04.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Samuel Bishop</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">14 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">07 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">09 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G102</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-orange bg-opacity-10 text-orange">Pending</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/05.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Amanda Reed</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">10 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">02 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">05 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G102</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/06.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Jacqueline Miller</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">05 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">27 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">01 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G105</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/07.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Joan Wallace</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">05 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">23 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">26 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">F105</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-success bg-opacity-10 text-success">Booked</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/08.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Dennis Stevens</h6>
+								</div>
+							</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booking date:</small>
+							<h6 class="mb-0 fw-normal">14 Nov 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-in:</small>
+							<h6 class="mb-0 fw-normal">07 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Check-out:</small>
+							<h6 class="mb-0 fw-normal">09 Dec 2022</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Room no:</small>
+							<h6 class="mb-0 fw-normal">G102</h6>
+						</div>
+
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Payment:</small>
+							<div class="badge bg-danger bg-opacity-10 text-danger">Canceled</div>
+						</div>
+
+						<!-- Data item -->
+						<div class="col"><a href="admin-guest-detail.html" class="btn btn-sm btn-light mb-0">View</a></div>
+					</div>
+
+					<!-- Table data -->
+					<div class="row row-cols-xl-7 align-items-lg-center border-bottom g-4 px-2 py-4">
+						<!-- Data item -->
+						<div class="col">
+							<small class="d-block d-lg-none">Booked by:</small>
+							<div class="d-flex align-items-center">
+								<!-- Avatar -->
+								<div class="avatar avatar-xs flex-shrink-0">
+									<img class="avatar-img rounded-circle" src="assets/images/avatar/10.jpg" alt="avatar">
+								</div>
+								<!-- Info -->
+								<div class="ms-2">
+									<h6 class="mb-0 fw-light">Louis Ferguson</h6>
+								</div>
+							</div>
+						</div>
 
 						<!-- Data item -->
 						<div class="col">
@@ -950,7 +1958,7 @@
 		<!-- Page main content END -->
 	</div>
 	<!-- Page content END -->
-	
+
 	</main>
 <!-- **************** MAIN CONTENT END **************** -->
 
