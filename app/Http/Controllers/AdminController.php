@@ -62,6 +62,10 @@ class AdminController extends Controller
 
     }
 
+    public function delete(){
+
+    }
+
     public function store(){
         $users=User::all();
         return view('admin.gerant.create', compact('users'));
