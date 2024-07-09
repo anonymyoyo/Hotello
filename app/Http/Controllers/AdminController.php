@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers;
 
-
+use App\Models\Chambre;
 use App\Models\Hotel;
+use App\Models\Roles;
 use App\Models\User;
 use Illuminate\Http\Request;
 // use App\Http\Controllers\
@@ -102,7 +103,9 @@ class AdminController extends Controller
     // ***
 
     public function guest(){
-        return view('admin.guest.list');
+        $user=User::all();
+        $role=Roles::all();
+        return view('admin.guest.list', compact('user', 'role'));
     }
 
     public function store_guest(){
@@ -120,7 +123,15 @@ class AdminController extends Controller
             'roles_id'=>'3',
             'password'=>$request->password,
         ]);
-        return to_route('list')->with('message', 'gerant cree avec succes');
+        return to_route('guest.list#tab-5')->with('message', 'gerant cree avec succes');
+    }
+
+    public function detail_guest($id){
+        User::find($id);
+        Chambre::find($id);
+
+        return to_route('guest.detail', compact('id'));
+
     }
 
     // **

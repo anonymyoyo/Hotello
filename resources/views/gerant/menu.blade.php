@@ -6,10 +6,8 @@
 				<div class="avatar avatar-xl mb-2 mb-sm-0">
 					<img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="">
 				</div>
-                @foreach ($gerant as $gerants)
+                <h4 class="mb-2 mb-sm-0 ms-sm-3"><span class="fw-light">Hi</span> {{ auth()->user()->name }}</h4>
 
-                @endforeach
-				<h4 class="mb-2 mb-sm-0 ms-sm-3"><span class="fw-light">Hi</span> {{ $gerants->name }}</h4>
 				<a href="add-listing.html" class="btn btn-sm btn-primary-soft mb-0 ms-auto flex-shrink-0"><i class="bi bi-plus-lg fa-fw me-2"></i>Add New Listing</a>
 			</div>
 			<!-- Avatar and info START -->

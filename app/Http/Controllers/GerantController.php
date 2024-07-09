@@ -13,6 +13,7 @@ class GerantController extends Controller
     //
     public function dashboard(){
         $gerant=User::all();
+        // return $gerant;
         return view('gerant.page', compact('gerant'));
     }
 }
