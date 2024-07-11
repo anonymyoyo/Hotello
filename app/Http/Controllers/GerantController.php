@@ -23,4 +23,24 @@ class GerantController extends Controller
         // return $gerant;
         return view('gerant.listing.listing', compact('gerant'));
     }
+
+    public function gerant_booking(){
+        return view('gerant.booking.booking');
+    }
+
+    public function gerant_activity(){
+        return view('gerant.activity.activity');
+    }
+
+    public function gerant_earning(){
+        return view('gerant.earning.earning');
+    }
+
+    public function gerant_review(){
+        return view('gerant.review.review');
+    }
+
+    public function gerant_setting(){
+        return view('gerant.setting.setting');
+    }
 }

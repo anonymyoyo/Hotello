@@ -14,12 +14,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
-// Route::get('/home',[HomeController::class, 'redirect']);
-
-// Route::get('/dashboard', function () {
-//     return view('dashboard');
-// })->middleware(['auth', 'verified'])->name('dashboard');name('gerant.')->prefix('gerant')->
-
 // Routes concernant les traitement admin
 Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('admin/dashboard', [AdminController::class, 'index'])->name('dashboard');
