@@ -29,19 +29,19 @@
 					<div class="navbar navbar-expand-xl">
 						<ul class="navbar-nav navbar-offcanvas-menu">
 
-							<li class="nav-item"> <a class="nav-link active" href="{{ to_route('page') }}"><i class="bi bi-house-door fa-fw me-1"></i>Dashboard</a>	</li>
+							<li class="nav-item"> <a class="nav-link active" href="{{ route('page') }}"><i class="bi bi-house-door fa-fw me-1"></i>Dashboard</a>	</li>
 
-							<li class="nav-item"> <a class="nav-link" href="{{ to_route('listing') }}"><i class="bi bi-journals fa-fw me-1"></i>Listings</a> </li>
+							<li class="nav-item"> <a class="nav-link" href="{{ route('gerant.listing') }}"><i class="bi bi-journals fa-fw me-1"></i>Listings</a> </li>
 
-							<li class="nav-item"> <a class="nav-link" href="{{ to_route('booking') }}"><i class="bi bi-bookmark-heart fa-fw me-1"></i>Bookings</a> </li>
+							<li class="nav-item"> <a class="nav-link" href="{{ route('gerant.booking') }}"><i class="bi bi-bookmark-heart fa-fw me-1"></i>Bookings</a> </li>
 
-							<li class="nav-item"> <a class="nav-link" href="{{ to_route('activity') }}"><i class="bi bi-bell fa-fw me-1"></i>Activities</a> </li>
+							<li class="nav-item"> <a class="nav-link" href="{{ route('gerant.activity') }}"><i class="bi bi-bell fa-fw me-1"></i>Activities</a> </li>
 
-							<li class="nav-item"> <a class="nav-link" href="{{ to_route('earning') }}"><i class="bi bi-graph-up-arrow fa-fw me-1"></i>Earnings</a>	</li>
+							<li class="nav-item"> <a class="nav-link" href="{{ route('gerant.earning') }}"><i class="bi bi-graph-up-arrow fa-fw me-1"></i>Earnings</a>	</li>
 
-							<li class="nav-item"> <a class="nav-link" href="{{ to_route('review') }}"><i class="bi bi-star fa-fw me-1"></i>Reviews</a></li>
+							<li class="nav-item"> <a class="nav-link" href="{{ route('gerant.review') }}"><i class="bi bi-star fa-fw me-1"></i>Reviews</a></li>
 
-							<li> <a class="nav-link" href="{{ to_route('setting') }}"><i class="bi bi-gear fa-fw me-1"></i>Settings</a></li>
+							<li> <a class="nav-link" href="{{ route('gerant.setting') }}"><i class="bi bi-gear fa-fw me-1"></i>Settings</a></li>
 
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle" href="#" id="dropdoanMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

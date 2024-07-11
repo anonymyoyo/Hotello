@@ -127,10 +127,10 @@ class AdminController extends Controller
     }
 
     public function detail_guest($id){
-        User::find($id);
-        Chambre::find($id);
+        $user=User::find($id);
+        $chambre=Chambre::find($id);
 
-        return to_route('guest.detail', compact('id'));
+        return view('admin.guest.detail', compact('id', 'user', 'chambre'));
 
     }
 

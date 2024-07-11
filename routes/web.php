@@ -62,13 +62,13 @@ Route::middleware(['auth', 'admin'])->group(function(){
 
 // Routes concernant les traitement gerant
 Route::middleware(['auth', 'geran'])->group(function(){
-    Route::get('geran/dashboard', [GerantController::class, 'dashboard'])->name('page');
-    Route::get('gerant/listing', [GerantController::class, 'listing'])->name('listing');
-    Route::get('gerant/booking', [GerantController::class, 'booking'])->name('booking');
-    Route::get('gerant/activity', [GerantController::class, 'activity'])->name('activity');
-    Route::get('gerant/earning', [GerantController::class, 'earning'])->name('earning');
-    Route::get('gerant/review', [GerantController::class, 'review'])->name('review');
-    Route::get('gerant/setting', [GerantController::class, 'setting'])->name('setting');
+    Route::get('gerant/dashboard', [GerantController::class, 'dashboard'])->name('page');
+    Route::get('gerant/listing', [GerantController::class, 'gerant_listing'])->name('gerant.listing');
+    Route::get('gerant/booking', [GerantController::class, 'gerant_booking'])->name('gerant.booking');
+    Route::get('gerant/activity', [GerantController::class, 'gerant_activity'])->name('gerant.activity');
+    Route::get('gerant/earning', [GerantController::class, 'gerant_earning'])->name('gerant.earning');
+    Route::get('gerant/review', [GerantController::class, 'gerant_review'])->name('gerant.review');
+    Route::get('gerant/setting', [GerantController::class, 'gerant_setting'])->name('gerant.setting');
 });
 
 Route::middleware('auth')->group(function () {

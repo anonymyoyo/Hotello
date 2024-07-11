@@ -2199,7 +2199,7 @@
                                     <div class="badge bg-success bg-opacity-10 text-success">Booked</div>
                                 </div>
                                 <!-- Data item -->
-                                <div class="col"><a href="{{ route('guest.detail', '$id') }}" class="btn btn-sm btn-light mb-0">View</a></div>
+                                <div class="col"><a href="{{ route('guest.detail', $users->id) }}" class="btn btn-sm btn-light mb-0">View</a></div>
 
                             </div>
                         @endif

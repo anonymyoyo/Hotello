@@ -16,4 +16,11 @@ class GerantController extends Controller
         // return $gerant;
         return view('gerant.page', compact('gerant'));
     }
+
+    public function gerant_listing(){
+
+        $gerant=User::all();
+        // return $gerant;
+        return view('gerant.listing.listing', compact('gerant'));
+    }
 }
