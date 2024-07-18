@@ -64,9 +64,8 @@ Menu item END -->
 			<div class="col-12">
 				<div class="card border">
 					<!-- Card header START -->
-					<div class="card-header border-bottom" style="display: flex;">
+					<div class="card-header border-bottom">
 						<h5 class="card-header-title">Bookings<span class="badge bg-primary bg-opacity-10 text-primary ms-2">20 Rooms</span></h5>
-                        <a href="" class="btn btn-sm btn-primary-soft mb-0 ms-auto flex-shrink-0 "><i class="bi bi-plus-lg fa-fw me-2"></i>Ajouter un Hotel</a>
 					</div>
 					<!-- Card header END -->
                         {{-- {{ route('create.chambres') }} --}}

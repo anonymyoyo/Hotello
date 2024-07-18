@@ -61,6 +61,7 @@ Route::middleware(['auth', 'geran'])->group(function(){
     Route::get('gerant/hotel', [GerantController::class, 'gerant_hotel'])->name('create.hotel');
     Route::post('hotel/ajouter', [GerantController::class, 'ajouter_hotel'])->name('add.hotel');
     Route::get('gerant/booking', [GerantController::class, 'gerant_booking'])->name('gerant.booking');
+    Route::get('gerant/rooms', [GerantController::class, 'gerant_rooms'])->name('gerant.rooms');
     Route::get('gerant/activity', [GerantController::class, 'gerant_activity'])->name('gerant.activity');
     Route::get('gerant/earning', [GerantController::class, 'gerant_earning'])->name('gerant.earning');
     Route::get('gerant/review', [GerantController::class, 'gerant_review'])->name('gerant.review');

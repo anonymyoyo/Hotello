@@ -38,7 +38,7 @@
                                 <ul class="dropdown-menu" aria-labelledby="dropdoanMenu">
 									<!-- Dropdown menu -->
 									<li> <a class="dropdown-item" href="{{ route('gerant.booking') }}">Bookings</a></li>
-									<li> <a class="dropdown-item" href="#">Liste des chambres</a></li>
+									<li> <a class="dropdown-item" href="{{ route('gerant.rooms') }}">Liste des chambres</a></li>
 								</ul>
                             </li>
 
