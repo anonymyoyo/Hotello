@@ -20,12 +20,12 @@ class GerantController extends Controller
     public function gerant_listing(){
         // $hotel=User::find($id);
         // $BedCounter=Hotel::count('nbre_chambres', auth()->user()->id);
-        $hotel=Hotel::where('user_id', auth()->user()->id)->first();
+        $hotel=Hotel::where('user_id', auth()->user()->id)->get();
         // $hotel=Hotel::where('user_id', auth()->user()->id)->first();
 
         // return $gerant;
-        return $hotel;
-        // return view('gerant.listing.listing', compact( 'hotel'));
+        // return $hotel;
+        return view('gerant.listing.listing', compact('hotel'));
     }
 
     public function gerant_hotel(){

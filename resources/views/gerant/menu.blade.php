@@ -33,7 +33,14 @@
 
 							<li class="nav-item"> <a class="nav-link" href="{{ route('gerant.listing') }}"><i class="bi bi-journals fa-fw me-1"></i>Listings</a> </li>
 
-							<li class="nav-item"> <a class="nav-link" href="{{ route('gerant.booking') }}"><i class="bi bi-bookmark-heart fa-fw me-1"></i>Bookings</a> </li>
+							<li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" href="#">
+                                <i class="bi bi-bookmark-heart fa-fw me-1"></i>Bookings</a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdoanMenu">
+									<!-- Dropdown menu -->
+									<li> <a class="dropdown-item" href="{{ route('gerant.booking') }}">Bookings</a></li>
+									<li> <a class="dropdown-item" href="#">Liste des chambres</a></li>
+								</ul>
+                            </li>
 
 							<li class="nav-item"> <a class="nav-link" href="{{ route('gerant.activity') }}"><i class="bi bi-bell fa-fw me-1"></i>Activities</a> </li>
 

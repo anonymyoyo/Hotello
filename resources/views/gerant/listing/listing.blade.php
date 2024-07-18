@@ -113,7 +113,7 @@ Menu item END -->
 
                         </div>
 
-                        {{-- @foreach ($users as $user) --}}
+                        @foreach ($hotel as $hotels)
                             {{-- @if ( auth()->user()->id) --}}
 
                                 <div class="card-body vstack gap-3">
@@ -144,8 +144,8 @@ Menu item END -->
                                                             </div>
 
                                                             <!-- Title -->
-                                                        <h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">{{ $hotel->name }}</a></h5>
-                                                            <small><i class="bi bi-geo-alt me-2"></i>{{ $hotel->localisation }}</small>
+                                                        <h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">{{ $hotels->name }}</a></h5>
+                                                            <small><i class="bi bi-geo-alt me-2"></i>{{ $hotels->localisation }}</small>
 
                                                             <!-- Price and Button -->
                                                             <div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
@@ -168,7 +168,7 @@ Menu item END -->
                                     <!-- Listing item END -->
                                 </div>
                             {{-- @endif --}}
-                        {{-- @endforeach --}}
+                        @endforeach
 
                         <!-- Card body START -->
 
