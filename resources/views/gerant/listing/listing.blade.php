@@ -113,58 +113,65 @@ Menu item END -->
 
                         </div>
 
-                        <!-- Card body START -->
-                        <div class="card-body vstack gap-3">
-                            <!-- Listing item START -->
+                        {{-- @foreach ($users as $user) --}}
+                            {{-- @if ( auth()->user()->id) --}}
 
-                                    <div class="card border p-2">
-                                        <div class="row g-4">
-                                            <!-- Card img -->
-                                            <div class="col-md-3 col-lg-2">
-                                                <img src="{{ asset('assets/images/category/hotel/4by3/10.jpg') }}" class="card-img rounded-2" alt="Card image">
-                                            </div>
+                                <div class="card-body vstack gap-3">
+                                    <!-- Listing item START -->
 
-                                            <!-- Card body -->
-                                            <div class="col-md-9 col-lg-10">
-                                                <div class="card-body position-relative d-flex flex-column p-0 h-100">
-
-                                                    <!-- Buttons -->
-                                                    <div class="list-inline-item dropdown position-absolute top-0 end-0">
-                                                        <!-- Share button -->
-                                                        <a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownAction2" data-bs-toggle="dropdown" aria-expanded="false">
-                                                            <i class="bi bi-three-dots-vertical"></i>
-                                                        </a>
-                                                        <!-- dropdown button -->
-                                                        <ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownAction2">
-                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle me-1"></i>Report</a></li>
-                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-slash-circle me-1"></i>Disable</a></li>
-                                                        </ul>
+                                            <div class="card border p-2">
+                                                <div class="row g-4">
+                                                    <!-- Card img -->
+                                                    <div class="col-md-3 col-lg-2">
+                                                        <img src="{{ asset('assets/images/category/hotel/4by3/10.jpg') }}" class="card-img rounded-2" alt="Card image">
                                                     </div>
 
-                                                    <!-- Title -->
-                                                <h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">{{ $hotel->name }}</a></h5>
-                                                    <small><i class="bi bi-geo-alt me-2"></i>{{ $hotel->localisation }}</small>
+                                                    <!-- Card body -->
+                                                    <div class="col-md-9 col-lg-10">
+                                                        <div class="card-body position-relative d-flex flex-column p-0 h-100">
 
-                                                    <!-- Price and Button -->
-                                                    <div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
-                                                        <!-- Button -->
-                                                        <div class="d-flex align-items-center">
-                                                            <h5 class="fw-bold mb-0 me-1">$1586</h5>
-                                                            <span class="mb-0 me-2">/day</span>
-                                                        </div>
-                                                        <!-- Price -->
-                                                        <div class="hstack gap-2 mt-3 mt-sm-0">
-                                                            <a href="#" class="btn btn-sm btn-primary mb-0"><i class="bi bi-pencil-square fa-fw me-1"></i>Edit</a>
-                                                            <a href="#" class="btn btn-sm btn-danger mb-0"><i class="bi bi-trash3 fa-fw me-1"></i>Delete</a>
+                                                            <!-- Buttons -->
+                                                            <div class="list-inline-item dropdown position-absolute top-0 end-0">
+                                                                <!-- Share button -->
+                                                                <a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownAction2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                    <i class="bi bi-three-dots-vertical"></i>
+                                                                </a>
+                                                                <!-- dropdown button -->
+                                                                <ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownAction2">
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle me-1"></i>Report</a></li>
+                                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-slash-circle me-1"></i>Disable</a></li>
+                                                                </ul>
+                                                            </div>
+
+                                                            <!-- Title -->
+                                                        <h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">{{ $hotel->name }}</a></h5>
+                                                            <small><i class="bi bi-geo-alt me-2"></i>{{ $hotel->localisation }}</small>
+
+                                                            <!-- Price and Button -->
+                                                            <div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
+                                                                <!-- Button -->
+                                                                <div class="d-flex align-items-center">
+                                                                    <h5 class="fw-bold mb-0 me-1">$1586</h5>
+                                                                    <span class="mb-0 me-2">/day</span>
+                                                                </div>
+                                                                <!-- Price -->
+                                                                <div class="hstack gap-2 mt-3 mt-sm-0">
+                                                                    <a href="#" class="btn btn-sm btn-primary mb-0"><i class="bi bi-pencil-square fa-fw me-1"></i>Edit</a>
+                                                                    <a href="#" class="btn btn-sm btn-danger mb-0"><i class="bi bi-trash3 fa-fw me-1"></i>Delete</a>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
-                                    </div>
 
-                            <!-- Listing item END -->
-                        </div>
+                                    <!-- Listing item END -->
+                                </div>
+                            {{-- @endif --}}
+                        {{-- @endforeach --}}
+
+                        <!-- Card body START -->
+
                         <!-- Card body END -->
                     </div>
                 </div>

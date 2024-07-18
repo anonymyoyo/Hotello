@@ -18,16 +18,37 @@ class GerantController extends Controller
     }
 
     public function gerant_listing(){
-        // $gerant=User::all();
+        // $hotel=User::find($id);
         // $BedCounter=Hotel::count('nbre_chambres', auth()->user()->id);
         $hotel=Hotel::where('user_id', auth()->user()->id)->first();
+        // $hotel=Hotel::where('user_id', auth()->user()->id)->first();
+
         // return $gerant;
-        // return $hotel;
-        return view('gerant.listing.listing', compact( 'hotel'));
+        return $hotel;
+        // return view('gerant.listing.listing', compact( 'hotel'));
     }
 
     public function gerant_hotel(){
         return view('gerant.listing.create');
+    }
+
+    public function ajouter_hotel(Request $request){
+        // $user=User::find($id);
+        Hotel::create([
+            'name'=>$request->name,
+            'user_id'=>auth()->user()->id,
+            'genre'=>$request->genre,
+            'email2'=>$request->email2,
+            'phone'=>$request->phone,
+            'license'=>$request->license,
+            'tax_number'=>$request->tax_number,
+            'email'=>$request->email,
+            'localisation'=>$request->localisation,
+            'etoiles'=>$request->etoiles,
+            'nbre_chambres'=>$request->nbre_chambres,
+            'description'=>$request->description,
+        ]);
+        return to_route('gerant.listing')->with('message', 'Hotel ajoute avec succes');
     }
 
     public function gerant_booking(){

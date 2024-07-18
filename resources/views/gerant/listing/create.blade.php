@@ -65,7 +65,7 @@ Content START -->
                 <h2>Nouvel Hotel</h2>
 
                 <!-- Contact form -->
-                <form method="POST" action="{{ route('add.gerant') }}" class="mt-4">
+                <form method="POST" action="{{ route('add.hotel') }}" class="mt-4">
                     @csrf
                     <!-- Name -->
                     <div class="mb-4 form-control-bg-light">
@@ -84,12 +84,12 @@ Content START -->
                     </div>
                     <!-- Name PDG -->
                     <div class="mb-4 form-control-bg-light">
-                        {{-- <select  id="" name="user_id"  class="form-select">
-                            @foreach ($users as $user)
-                                <option value="{{ $user->id }}" class="form-option">{{ $user->name }}</option>
-                            @endforeach
+                        <select  id="" name="user_id"  class="form-select">
+                            {{-- @foreach ($users as $user) --}}
+                                <option value="" class="form-option">{{ auth()->user()->id }}</option>
+                            {{-- @endforeach --}}
 
-                        </select> --}}
+                        </select>
                         {{-- <label class="form-label">Nom du PDG *</label>
                         <input type="text" class="form-control" name="name_pdg"> --}}
                     </div>
