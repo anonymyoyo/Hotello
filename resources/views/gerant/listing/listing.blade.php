@@ -105,252 +105,64 @@ Menu item END -->
             <div class="row">
                 <div class="col-12">
 
-                    <div class="card border">
+                    <div class="card border ">
                         <!-- Card header -->
-                        <div class="card-header border-bottom">
-                            <h5 class="card-header-title">My Listings <span class="badge bg-primary bg-opacity-10 text-primary ms-2">5 Items</span></h5>
+                        <div class="card-header border-bottom " style="display: flex;">
+                            <h5 class="card-header-title ">My Listings <span class="badge bg-primary bg-opacity-10 text-primary ms-2"></span></h5><br>
+                            <a href="{{ route('create.hotel') }}" class="btn btn-sm btn-primary-soft mb-0 ms-auto flex-shrink-0 "><i class="bi bi-plus-lg fa-fw me-2"></i>Ajouter un Hotel</a>
+
                         </div>
 
                         <!-- Card body START -->
                         <div class="card-body vstack gap-3">
                             <!-- Listing item START -->
-                            <div class="card border p-2">
-                                <div class="row g-4">
-                                    <!-- Card img -->
-                                    <div class="col-md-3 col-lg-2">
-                                        <img src="assets/images/category/hotel/4by3/10.jpg" class="card-img rounded-2" alt="Card image">
-                                    </div>
 
-                                    <!-- Card body -->
-                                    <div class="col-md-9 col-lg-10">
-                                        <div class="card-body position-relative d-flex flex-column p-0 h-100">
-
-                                            <!-- Buttons -->
-                                            <div class="list-inline-item dropdown position-absolute top-0 end-0">
-                                                <!-- Share button -->
-                                                <a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownAction2" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <i class="bi bi-three-dots-vertical"></i>
-                                                </a>
-                                                <!-- dropdown button -->
-                                                <ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownAction2">
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle me-1"></i>Report</a></li>
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-slash-circle me-1"></i>Disable</a></li>
-                                                </ul>
+                                    <div class="card border p-2">
+                                        <div class="row g-4">
+                                            <!-- Card img -->
+                                            <div class="col-md-3 col-lg-2">
+                                                <img src="{{ asset('assets/images/category/hotel/4by3/10.jpg') }}" class="card-img rounded-2" alt="Card image">
                                             </div>
 
-                                            <!-- Title -->
-                                            <h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">Pride moon Village Resort & Spa</a></h5>
-                                            <small><i class="bi bi-geo-alt me-2"></i>31J W Spark Street, California - 24578</small>
+                                            <!-- Card body -->
+                                            <div class="col-md-9 col-lg-10">
+                                                <div class="card-body position-relative d-flex flex-column p-0 h-100">
 
-                                            <!-- Price and Button -->
-                                            <div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
-                                                <!-- Button -->
-                                                <div class="d-flex align-items-center">
-                                                    <h5 class="fw-bold mb-0 me-1">$1586</h5>
-                                                    <span class="mb-0 me-2">/day</span>
-                                                </div>
-                                                <!-- Price -->
-                                                <div class="hstack gap-2 mt-3 mt-sm-0">
-                                                    <a href="#" class="btn btn-sm btn-primary mb-0"><i class="bi bi-pencil-square fa-fw me-1"></i>Edit</a>
-                                                    <a href="#" class="btn btn-sm btn-danger mb-0"><i class="bi bi-trash3 fa-fw me-1"></i>Delete</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Listing item END -->
+                                                    <!-- Buttons -->
+                                                    <div class="list-inline-item dropdown position-absolute top-0 end-0">
+                                                        <!-- Share button -->
+                                                        <a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownAction2" data-bs-toggle="dropdown" aria-expanded="false">
+                                                            <i class="bi bi-three-dots-vertical"></i>
+                                                        </a>
+                                                        <!-- dropdown button -->
+                                                        <ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownAction2">
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle me-1"></i>Report</a></li>
+                                                            <li><a class="dropdown-item" href="#"><i class="bi bi-slash-circle me-1"></i>Disable</a></li>
+                                                        </ul>
+                                                    </div>
 
-                            <!-- Listing item START -->
-                            <div class="card border p-2">
-                                <div class="row g-4">
-                                    <!-- Card img -->
-                                    <div class="col-md-3 col-lg-2">
-                                        <img src="assets/images/category/hotel/4by3/05.jpg" class="card-img rounded-2" alt="Card image">
-                                    </div>
+                                                    <!-- Title -->
+                                                <h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">{{ $hotel->name }}</a></h5>
+                                                    <small><i class="bi bi-geo-alt me-2"></i>{{ $hotel->localisation }}</small>
 
-                                    <!-- Card body -->
-                                    <div class="col-md-9 col-lg-10">
-                                        <div class="card-body position-relative d-flex flex-column p-0 h-100">
-
-                                            <!-- Buttons -->
-                                            <div class="list-inline-item dropdown position-absolute top-0 end-0">
-                                                <!-- Share button -->
-                                                <a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownAction3" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <i class="bi bi-three-dots-vertical"></i>
-                                                </a>
-                                                <!-- dropdown button -->
-                                                <ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownAction3">
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle me-1"></i>Report</a></li>
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-slash-circle me-1"></i>Disable</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <!-- Title -->
-                                            <h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">Royal Beach Resort</a></h5>
-                                            <small><i class="bi bi-geo-alt me-2"></i>Manhattan street, London - 24578</small>
-
-                                            <!-- Price and Button -->
-                                            <div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
-                                                <!-- Button -->
-                                                <div class="d-flex align-items-center">
-                                                    <h5 class="fw-bold mb-0 me-1">$856</h5>
-                                                    <span class="mb-0 me-2">/day</span>
-                                                </div>
-                                                <!-- Price -->
-                                                <div class="hstack gap-2 mt-3 mt-sm-0">
-                                                    <a href="#" class="btn btn-sm btn-primary mb-0"><i class="bi bi-pencil-square fa-fw me-1"></i>Edit</a>
-                                                    <a href="#" class="btn btn-sm btn-danger mb-0"><i class="bi bi-trash3 fa-fw me-1"></i>Delete</a>
+                                                    <!-- Price and Button -->
+                                                    <div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
+                                                        <!-- Button -->
+                                                        <div class="d-flex align-items-center">
+                                                            <h5 class="fw-bold mb-0 me-1">$1586</h5>
+                                                            <span class="mb-0 me-2">/day</span>
+                                                        </div>
+                                                        <!-- Price -->
+                                                        <div class="hstack gap-2 mt-3 mt-sm-0">
+                                                            <a href="#" class="btn btn-sm btn-primary mb-0"><i class="bi bi-pencil-square fa-fw me-1"></i>Edit</a>
+                                                            <a href="#" class="btn btn-sm btn-danger mb-0"><i class="bi bi-trash3 fa-fw me-1"></i>Delete</a>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- Listing item END -->
 
-                            <!-- Listing item START -->
-                            <div class="card border p-2">
-                                <div class="row g-4">
-                                    <!-- Card img -->
-                                    <div class="col-md-3 col-lg-2">
-                                        <img src="assets/images/category/hotel/4by3/04.jpg" class="card-img rounded-2" alt="Card image">
-                                    </div>
-
-                                    <!-- Card body -->
-                                    <div class="col-md-9 col-lg-10">
-                                        <div class="card-body position-relative d-flex flex-column p-0 h-100">
-
-                                            <!-- Buttons -->
-                                            <div class="list-inline-item dropdown position-absolute top-0 end-0">
-                                                <!-- Share button -->
-                                                <a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownAction4" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <i class="bi bi-three-dots-vertical"></i>
-                                                </a>
-                                                <!-- dropdown button -->
-                                                <ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownAction4">
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle me-1"></i>Report</a></li>
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-slash-circle me-1"></i>Disable</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <!-- Title -->
-                                            <h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">Carina Beach Resort</a></h5>
-                                            <small><i class="bi bi-geo-alt me-2"></i>5855 W Century Blvd, Los Angeles - 90045</small>
-
-                                            <!-- Price and Button -->
-                                            <div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
-                                                <!-- Button -->
-                                                <div class="d-flex align-items-center">
-                                                    <h5 class="fw-bold mb-0 me-1">$1025</h5>
-                                                    <span class="mb-0 me-2">/day</span>
-                                                </div>
-                                                <!-- Price -->
-                                                <div class="hstack gap-2 mt-3 mt-sm-0">
-                                                    <a href="#" class="btn btn-sm btn-primary mb-0"><i class="bi bi-pencil-square fa-fw me-1"></i>Edit</a>
-                                                    <a href="#" class="btn btn-sm btn-danger mb-0"><i class="bi bi-trash3 fa-fw me-1"></i>Delete</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Listing item END -->
-
-                            <!-- Listing item START -->
-                            <div class="card border p-2">
-                                <div class="row g-4">
-                                    <!-- Card img -->
-                                    <div class="col-md-3 col-lg-2">
-                                        <img src="assets/images/category/hotel/4by3/06.jpg" class="card-img rounded-2" alt="Card image">
-                                    </div>
-
-                                    <!-- Card body -->
-                                    <div class="col-md-9 col-lg-10">
-                                        <div class="card-body position-relative d-flex flex-column p-0 h-100">
-
-                                            <!-- Buttons -->
-                                            <div class="list-inline-item dropdown position-absolute top-0 end-0">
-                                                <!-- Share button -->
-                                                <a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownAction5" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <i class="bi bi-three-dots-vertical"></i>
-                                                </a>
-                                                <!-- dropdown button -->
-                                                <ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownAction5">
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle me-1"></i>Report</a></li>
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-slash-circle me-1"></i>Disable</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <!-- Title -->
-                                            <h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">Courtyard by Marriott New York</a></h5>
-                                            <small><i class="bi bi-geo-alt me-2"></i>Manhattan street, London - 24578</small>
-
-                                            <!-- Price and Button -->
-                                            <div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
-                                                <!-- Button -->
-                                                <div class="d-flex align-items-center">
-                                                    <h5 class="fw-bold mb-0 me-1">$1125</h5>
-                                                    <span class="mb-0 me-2">/day</span>
-                                                </div>
-                                                <!-- Price -->
-                                                <div class="hstack gap-2 mt-3 mt-sm-0">
-                                                    <a href="#" class="btn btn-sm btn-primary mb-0"><i class="bi bi-pencil-square fa-fw me-1"></i>Edit</a>
-                                                    <a href="#" class="btn btn-sm btn-danger mb-0"><i class="bi bi-trash3 fa-fw me-1"></i>Delete</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- Listing item END -->
-
-                            <!-- Listing item START -->
-                            <div class="card border p-2">
-                                <div class="row g-4">
-                                    <!-- Card img -->
-                                    <div class="col-md-3 col-lg-2">
-                                        <img src="assets/images/category/hotel/4by3/08.jpg" class="card-img rounded-2" alt="Card image">
-                                    </div>
-
-                                    <!-- Card body -->
-                                    <div class="col-md-9 col-lg-10">
-                                        <div class="card-body position-relative d-flex flex-column p-0 h-100">
-
-                                            <!-- Buttons -->
-                                            <div class="list-inline-item dropdown position-absolute top-0 end-0">
-                                                <!-- Share button -->
-                                                <a href="#" class="btn btn-sm btn-round btn-light" role="button" id="dropdownAction6" data-bs-toggle="dropdown" aria-expanded="false">
-                                                    <i class="bi bi-three-dots-vertical"></i>
-                                                </a>
-                                                <!-- dropdown button -->
-                                                <ul class="dropdown-menu dropdown-menu-end min-w-auto shadow rounded" aria-labelledby="dropdownAction6">
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-info-circle me-1"></i>Report</a></li>
-                                                    <li><a class="dropdown-item" href="#"><i class="bi bi-slash-circle me-1"></i>Disable</a></li>
-                                                </ul>
-                                            </div>
-
-                                            <!-- Title -->
-                                            <h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">Beverly Hills Marriott</a></h5>
-                                            <small><i class="bi bi-geo-alt me-2"></i>31J W Spark Street, California - 24578</small>
-
-                                            <!-- Price and Button -->
-                                            <div class="d-sm-flex justify-content-sm-between align-items-center mt-3 mt-md-auto">
-                                                <!-- Button -->
-                                                <div class="d-flex align-items-center">
-                                                    <h5 class="fw-bold mb-0 me-1">$1005</h5>
-                                                    <span class="mb-0 me-2">/day</span>
-                                                </div>
-                                                <!-- Price -->
-                                                <div class="hstack gap-2 mt-3 mt-sm-0">
-                                                    <a href="#" class="btn btn-sm btn-primary mb-0"><i class="bi bi-pencil-square fa-fw me-1"></i>Edit</a>
-                                                    <a href="#" class="btn btn-sm btn-danger mb-0"><i class="bi bi-trash3 fa-fw me-1"></i>Delete</a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                             <!-- Listing item END -->
                         </div>
                         <!-- Card body END -->
