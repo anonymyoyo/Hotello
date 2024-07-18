@@ -123,7 +123,7 @@ class AdminController extends Controller
             'roles_id'=>'3',
             'password'=>$request->password,
         ]);
-        return to_route('guest.list#tab-5')->with('message', 'gerant cree avec succes');
+        return to_route('guest.list')->with('message', 'gerant cree avec succes');
     }
 
     public function detail_guest($id){

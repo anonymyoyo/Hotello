@@ -55,6 +55,12 @@ class GerantController extends Controller
         return view('gerant.booking.rooms');
     }
 
+    public function create_rooms(){
+        $gerant=Hotel::where('user_id', auth()->user()->id)->get();
+        // return $gerant;
+        return view('gerant.booking.create', compact('gerant'));
+    }
+
     public function gerant_activity(){
         return view('gerant.activity.activity');
     }
