@@ -12,16 +12,19 @@ class Chambre extends Model
     use HasFactory;
 
     protected $fillable = [
-        'name',
+        'numero',
         'hotel_id',
-        'disponibilite',
+        'statut',
         'type',
         'prix',
-        'capacite',
     ];
 
     public function hotel(): BelongsTo {
         return $this->belongsTo(Hotel::class);
+    }
+
+    public function reservations(): HasMany{
+        return $this->hasMany(Reservation::class);
     }
 
 

@@ -59,4 +59,8 @@ class User extends Authenticatable
     public function roles(): HasOne{
         return $this->hasOne((Roles::class));
     }
+
+    public function reservations(): HasMany{
+        return $this->hasMany(Reservation::class);
+    }
 }
