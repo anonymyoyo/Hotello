@@ -1,5 +1,7 @@
 <?php
 
+use App\Models\Reservation;
+use App\Models\User;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -11,12 +13,14 @@ return new class extends Migration
      */
     public function up(): void
     {
+        Schema::disableForeignKeyConstraints();
         Schema::create('paiements', function (Blueprint $table) {
             $table->id();
-            $table->string('id_paiement')->nullable(); /*code generer qui servira de moyen de confirmation de paiement*/
+            $table->bigInteger('id_paiement')->unique(); /*code generer qui servira de moyen de confirmation de paiement*/
+            $table->foreignIdFor(Reservation::class)->constrained()->restrictOnUpdate()->restrictOnDelete();
+            $table->foreignIdFor(User::class)->constrained()->restrictOnUpdate()->restrictOnDelete();
             $table->string('montant')->nullable();
             $table->string('methode')->nullable();
-            $table->string('client')->nullable();
             $table->timestamps();
         });
     }

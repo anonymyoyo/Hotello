@@ -16,11 +16,10 @@ return new class extends Migration
         Schema::create('chambres', function (Blueprint $table) {
             $table->id();
             $table->foreignIdFor(Hotel::class)->constrained()->restrictOnUpdate()->restrictOnDelete();
-            $table->string('name');
-            $table->string('disponibilite')->nullable();
+            $table->string('numero');
+            $table->string('statut')->default('Available');
             $table->string('type')->nullable();
             $table->string('prix')->nullable();
-            $table->string('capacite')->nullable();
             $table->timestamps();
         });
     }

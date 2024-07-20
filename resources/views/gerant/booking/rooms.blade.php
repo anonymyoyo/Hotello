@@ -213,17 +213,6 @@ Menu item END -->
 										<td> <div class="badge bg-info bg-opacity-10 text-info">Half payment</div> </td>
 										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
 									</tr>
-
-									<!-- Table item -->
-									<tr>
-										<td> <h6 class="mb-0">10</h6> </td>
-										<td> <h6 class="mb-0"><a href="#">Rock Family Suite</a></h6> </td>
-										<td> Free Cancellation | Breakfast + Lunch/Dinner </td>
-										<td> <h6 class="mb-0 fw-light">Dec 02 - 06</h6> </td>
-										<td> <div class="badge text-bg-success">Booked</div> </td>
-										<td> <div class="badge bg-success bg-opacity-10 text-success">Full payment</div> </td>
-										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
-									</tr>
 								</tbody>
 								<!-- Table body END -->
 							</table>

@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('license')->nullable();
             $table->string('tax_number')->nullable();
             $table->string('localisation')->nullable();
-            $table->string('description');
+            $table->longText('description');
             $table->string('etoiles')->nullable();
             $table->string('nbre_chambres')->nullable();
             $table->timestamps();
