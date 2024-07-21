@@ -84,8 +84,6 @@ class AdminController extends Controller
             'genre'=>$request->genre,
             'email2'=>$request->email2,
             'phone'=>$request->phone,
-            'license'=>$request->license,
-            'tax_number'=>$request->tax_number,
             'email'=>$request->email,
             'localisation'=>$request->localisation,
             'etoiles'=>$request->etoiles,

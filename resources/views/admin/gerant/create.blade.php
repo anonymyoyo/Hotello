@@ -65,16 +65,6 @@
                 <label class="form-label">Numero de telephone *</label>
                 <input type="text" class="form-control" name="phone">
             </div>
-            <!-- Name -->
-            <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Numero de License *</label>
-                <input type="text" class="form-control" name="license">
-            </div>
-            <!-- Name -->
-            <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Numero de Taxe *</label>
-                <input type="text" class="form-control" name="tax_number">
-            </div>
             <!-- localisation -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Localisation *</label>

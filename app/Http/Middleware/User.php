@@ -15,6 +15,12 @@ class User
      */
     public function handle(Request $request, Closure $next): Response
     {
+        if(auth()->user()->roles_id != 2)
+        {
+            // return back();
+            return to_route('control');
+            // abort(403);
+        }
         return $next($request);
     }
 }

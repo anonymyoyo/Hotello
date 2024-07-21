@@ -18,8 +18,6 @@ class Hotel extends Model
         'email',
         'email2',
         'phone',
-        'license',
-        'tax_number',
         'localisation',
         'etoiles',
         'nbre_chambres',

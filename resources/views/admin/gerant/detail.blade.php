@@ -183,16 +183,6 @@
 											<span>Mobile Number:</span>
 											<span class="h6 fw-normal ms-1 mb-0">{{ $hotel->phone }}</span>
 										</li>
-
-										<li class="list-group-item mb-3">
-											<span>Agent License:</span>
-											<span class="h6 fw-normal ms-1 mb-0">{{ $hotel->license }}</span>
-										</li>
-
-										<li class="list-group-item mb-3">
-											<span>Tax Number:</span>
-											<span class="h6 fw-normal ms-1 mb-0">{{ $hotel->tax_number }}</span>
-										</li>
 									</ul>
 								</div>
 

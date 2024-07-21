@@ -113,7 +113,7 @@ Main Content START -->
 							<div class="p-4 p-sm-7">
 								<!-- Logo -->
 								<a href="index.html">
-									<img class="h-50px mb-4" src="assets/images/logo-icon.svg" alt="logo">
+									<img class="h-50px mb-4" src="{{ asset('assets/images/logo-icon.svg') }}" alt="logo">
 								</a>
 								<!-- Title -->
 								<h1 class="mb-2 h3">Welcome back</h1>

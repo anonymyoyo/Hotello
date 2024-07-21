@@ -55,7 +55,7 @@ Route::middleware(['auth', 'admin'])->group(function(){
 });
 
 // Routes concernant les traitement gerant
-Route::middleware(['auth', 'geran'])->group(function(){
+Route::middleware(['auth', 'gerant'])->group(function(){
     Route::get('gerant/dashboard', [GerantController::class, 'dashboard'])->name('page');
     Route::get('gerant/listing', [GerantController::class, 'gerant_listing'])->name('gerant.listing');
     Route::get('gerant/hotel', [GerantController::class, 'gerant_hotel'])->name('create.hotel');
@@ -67,6 +67,11 @@ Route::middleware(['auth', 'geran'])->group(function(){
     Route::get('gerant/earning', [GerantController::class, 'gerant_earning'])->name('gerant.earning');
     Route::get('gerant/review', [GerantController::class, 'gerant_review'])->name('gerant.review');
     Route::get('gerant/setting', [GerantController::class, 'gerant_setting'])->name('gerant.setting');
+});
+
+// Routes concernant les traitement user
+Route::middleware(['auth', 'user'])->group(function(){
+    Route::get('user/dashboard', [UserController::class, 'user_dashboard'])->name('profile');
 });
 
 Route::middleware('auth')->group(function () {

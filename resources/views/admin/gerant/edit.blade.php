@@ -68,16 +68,6 @@
                 <label class="form-label">Numero de telephone *</label>
                 <input type="text" class="form-control" name="phone" value="{{ $hotel->phone }}">
             </div>
-            <!-- Name -->
-            <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Numero de License *</label>
-                <input type="text" class="form-control" value="{{ $hotel->license }}" name="license">
-            </div>
-            <!--  Name -->
-            <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Numero de Taxe *</label>
-                <input type="text" class="form-control" value="{{ $hotel->tax_number }}" name="tax_number">
-            </div>
             <!-- localisation -->
             <div class="mb-4 form-control-bg-light">
                 <label class="form-label">Localisation *</label>
