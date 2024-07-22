@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('room__categories', function (Blueprint $table) {
             $table->id();
+            $table->name();
             $table->timestamps();
         });
     }

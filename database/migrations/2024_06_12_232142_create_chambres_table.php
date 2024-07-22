@@ -30,10 +30,6 @@ return new class extends Migration
             $table->foreignIdFor(Reservation::class)->constrained()->restrictOnUpdate()->restrictOnDelete()->default('-');
             $table->foreignIdFor(Facturation::class)->constrained()->restrictOnUpdate()->restrictOnDelete()->default('-');
             $table->foreignIdFor(Room_Category::class)->constrained()->restrictOnUpdate()->restrictOnDelete()->default('-');
-            $table->foreignIdFor(Room_Equipement::class)->constrained()->restrictOnUpdate()->restrictOnDelete()->default('-');
-            $table->foreignIdFor(Room_Position::class)->constrained()->restrictOnUpdate()->restrictOnDelete()->default('-');
-            $table->foreignIdFor(Room_view::class)->constrained()->restrictOnUpdate()->restrictOnDelete()->default('-');
-            $table->foreignIdFor(Room_view::class)->constrained()->restrictOnUpdate()->restrictOnDelete()->default('-');
             $table->string('capacite')->nullable();
             $table->string('prix')->nullable();
             $table->timestamps();
