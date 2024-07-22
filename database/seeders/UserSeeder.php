@@ -26,14 +26,47 @@ class UserSeeder extends Seeder
         ]);
 
         User::create([
-            'name' => 'Gerant',
-            'email' => 'gerant@icloud.com',
+            'name' => 'Titi',
+            'email' => 'titi@icloud.com',
             'contact' => '694865872',
             'addresse' => 'douala',
             'ville' => 'douala',
             'pays' => 'cameroun',
             'roles_id' => '3',
-            'password' => 'gerant',
+            'password' => 'titi',
+        ]);
+
+        User::create([
+            'name' => 'Moussi Teng Pierre Dilan',
+            'email' => 'moussiteng@icloud.com',
+            'contact' => '694865872',
+            'addresse' => 'douala',
+            'ville' => 'douala',
+            'pays' => 'cameroun',
+            'roles_id' => '3',
+            'password' => 'moussiteng',
+        ]);
+
+        User::create([
+            'name' => 'Sara Njoh',
+            'email' => 'saranjoh@icloud.com',
+            'contact' => '694865872',
+            'addresse' => 'douala',
+            'ville' => 'douala',
+            'pays' => 'cameroun',
+            'roles_id' => '3',
+            'password' => 'saranjoh',
+        ]);
+
+        User::create([
+            'name' => 'BOHOLE Paul Emmanuel',
+            'email' => 'boholepaul@icloud.com',
+            'contact' => '694865872',
+            'addresse' => 'douala',
+            'ville' => 'douala',
+            'pays' => 'cameroun',
+            'roles_id' => '2',
+            'password' => 'boholepaul',
         ]);
     }
 }

@@ -33,7 +33,6 @@ class GerantController extends Controller
         Hotel::create([
             'name'=>$request->name,
             'user_id'=>auth()->user()->id,
-            'genre'=>$request->genre,
             'email2'=>$request->email2,
             'phone'=>$request->phone,
             'license'=>$request->license,

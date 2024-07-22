@@ -49,7 +49,6 @@ class AdminController extends Controller
         $hotel->update([
             'name'=>$request->name,
             'user_id'=>$request->user_id,
-            'genre'=>$request->genre,
             'email2'=>$request->email2,
             'phone'=>$request->phone,
             'license'=>$request->license,
@@ -82,7 +81,6 @@ class AdminController extends Controller
         Hotel::create([
             'name'=>$request->name,
             'user_id'=>$request->user_id,
-            'genre'=>$request->genre,
             'email2'=>$request->email2,
             'phone'=>$request->phone,
             'email'=>$request->email,

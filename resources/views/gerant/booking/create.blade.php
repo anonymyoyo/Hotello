@@ -95,6 +95,11 @@ Content START -->
                     </div>
 
                     <div class="mb-4 form-control-bg-light">
+                        <label class="form-label">Quantite *</label>
+                        <input class="form-control" name="quantite" type="text">
+                    </div>
+
+                    <div class="mb-4 form-control-bg-light">
                         <label class="form-label">Description *</label>
                         <textarea class="form-control" name="description" rows="4"></textarea>
                     </div>

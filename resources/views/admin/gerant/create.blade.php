@@ -46,6 +46,7 @@
             </div>
             <!-- Name PDG -->
             <div class="mb-4 form-control-bg-light">
+                <label class="form-label">Nom du Gerant *</label>
                 <select  id="" name="user_id"  class="form-select">
                     @foreach ($users as $user)
                         <option value="{{ $user->id }}" class="form-option">{{ $user->name }}</option>
@@ -54,11 +55,6 @@
                 </select>
                 {{-- <label class="form-label">Nom du PDG *</label>
                 <input type="text" class="form-control" name="name_pdg"> --}}
-            </div>
-            <!-- Name -->
-            <div class="mb-4 form-control-bg-light">
-                <label class="form-label">Genre *</label>
-                <input type="text" class="form-control" name="genre">
             </div>
             <!-- Name -->
             <div class="mb-4 form-control-bg-light">
