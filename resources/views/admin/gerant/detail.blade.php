@@ -263,7 +263,7 @@
 
                                         <!-- Title -->
                                         <h5 class="card-title mb-0 me-5"><a href="hotel-detail.html">{{ $list->name }}</a></h5>
-                                        <small><i class="bi bi-geo-alt me-2"></i>31J W Spark Street, California - 24578</small>
+                                        <small><i class="bi bi-geo-alt me-2"></i>{{ $list->localisation }}</small>
 
                                         <!-- Price and Button -->
                                         <div class="d-flex justify-content-between align-items-center mt-3 mt-md-auto">

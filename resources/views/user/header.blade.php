@@ -315,7 +315,7 @@
 				<li class="nav-item ms-3 dropdown">
 					<!-- Avatar -->
 					<a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
-						<img class="avatar-img rounded-2" src="assets/images/avatar/01.jpg" alt="avatar">
+						<img class="avatar-img rounded-2" src="{{ asset('assets/images/avatar/01.jpg') }}" alt="avatar">
 					</a>
 
 					<ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
@@ -324,7 +324,7 @@
 							<div class="d-flex align-items-center">
 								<!-- Avatar -->
 								<div class="avatar me-3">
-									<img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg" alt="avatar">
+									<img class="avatar-img rounded-circle shadow" src="{{ asset('assets/images/avatar/01.jpg') }}" alt="avatar">
 								</div>
 								<div>
                                 <a class="h6 mt-2 mt-sm-0" href="#">User Profile</a>
@@ -339,6 +339,8 @@
 						<li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
 						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
 						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li> --}}
+
+
 						<li><a class="dropdown-item bg-danger-soft-hover" href="{{ route('login') }}"><i class="bi bi-power fa-fw me-2"></i>Sign In</a></li>
                         <li><a class="dropdown-item bg-danger-soft-hover" href="{{ route('register') }}"><i class="bi bi-power fa-fw me-2"></i>Sign Up</a></li>
 						<li> <hr class="dropdown-divider"></li>

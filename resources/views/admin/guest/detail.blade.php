@@ -48,166 +48,58 @@
 				<div class="card-body">
 
 					<!-- Title -->
-					<h5 class="mb-3">Booking History</h5>
+					<h5 class="mb-3">Hotel(s) list</h5>
 
 					<!-- Table head -->
 					<div class="bg-light rounded p-3 d-none d-lg-block">
 						<div class="row row-cols-6 justify-content-between g-4">
-							<div class="col"><h6 class="mb-0">Room Name</h6></div>
-							<div class="col"><h6 class="mb-0">Bed type</h6></div>
-							<div class="col"><h6 class="mb-0">Room Floor</h6></div>
-							<div class="col"><h6 class="mb-0">Book Date</h6></div>
+							<div class="col"><h6 class="mb-0">Nom de l'hotek</h6></div>
+							<div class="col"><h6 class="mb-0">Nombre d'etoile(s)</h6></div>
+							<div class="col"><h6 class="mb-0">Nombre de chambre(s)</h6></div>
+							<div class="col"><h6 class="mb-0">Date d'enregistrement</h6></div>
 							<div class="col"><h6 class="mb-0">Action</h6></div>
 						</div>
 					</div>
 
+                    @foreach ($hotel as $hotels)
+                        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-2 g-sm-4 align-items-md-center justify-content-between border-bottom px-2 py-4">
+                            <!-- Data item -->
+                            <div class="col">
+                                <small class="d-block d-lg-none">Nom de l'hotel:</small>
+                                <div class="d-flex align-items-center">
+                                    <!-- Image -->
+                                    <div class="w-80px flex-shrink-0">
+                                        <img src="{{ asset('assets/images/category/hotel/4by3/01.jpg') }}" class="rounded" alt="">
+                                    </div>
+                                    <!-- Title -->
+                                    <h6 class="mb-0 ms-2">{{ $hotels->name }}</h6>
+                                </div>
+                            </div>
+
+                            <!-- Data item -->
+                            <div class="col">
+                                <small class="d-block d-lg-none">Nombre d'etoile(s):</small>
+                                <h6 class="mb-0 fw-normal">{{ $hotels->etoiles }}</h6>
+                            </div>
+
+                            <!-- Data item -->
+                            <div class="col">
+                                <small class="d-block d-lg-none">Nombre de chambre:</small>
+                                <h6 class="mb-0 fw-normal">{{ $hotels->nbre_chambres }}</h6>
+                            </div>
+
+                            <!-- Data item -->
+                            <div class="col">
+                                <small class="d-block d-lg-none">Date d'enregistrement:</small>
+                                <h6 class="text-success mb-0">{{ $hotels->created_at }}</h6>
+                            </div>
+
+                            <!-- Data item -->
+                            <div class="col"><a href="{{ route('detail', $hotels->id) }}" class="btn btn-sm btn-light mb-0">View</a></div>
+                        </div>
+                    @endforeach
 					<!-- Table data -->
-					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-2 g-sm-4 align-items-md-center justify-content-between border-bottom px-2 py-4">
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Room name:</small>
-							<div class="d-flex align-items-center">
-								<!-- Image -->
-								<div class="w-80px flex-shrink-0">
-									<img src="assets/images/category/hotel/4by3/01.jpg" class="rounded" alt="">
-								</div>
-								<!-- Title -->
-								<h6 class="mb-0 ms-2">Deluxe Pool View with Breakfast</h6>
-							</div>
-						</div>
 
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Bed type:</small>
-							<h6 class="mb-0 fw-normal">King size</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Room Floor:</small>
-							<h6 class="mb-0 fw-normal">Ground floor: G5</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Book date:</small>
-							<h6 class="text-success mb-0">22 Nov 2022</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
-					</div>
-
-					<!-- Table data -->
-					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-2 g-sm-4 align-items-md-center justify-content-between border-bottom px-2 py-4">
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Room name:</small>
-							<div class="d-flex align-items-center">
-								<!-- Image -->
-								<div class="w-80px flex-shrink-0">
-									<img src="assets/images/category/hotel/4by3/02.jpg" class="rounded" alt="">
-								</div>
-								<!-- Title -->
-								<h6 class="mb-0 ms-2">Premium Room With Balcony</h6>
-							</div>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Bed type:</small>
-							<h6 class="mb-0 fw-normal">Single Bed</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Room Floor:</small>
-							<h6 class="mb-0 fw-normal">First Floor: F3</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Book date:</small>
-							<h6 class="text-success mb-0">20 Nov 2022</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
-					</div>
-
-					<!-- Table data -->
-					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-2 g-sm-4 align-items-md-center justify-content-between border-bottom px-2 py-4">
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Room name:</small>
-							<div class="d-flex align-items-center">
-								<!-- Image -->
-								<div class="w-80px flex-shrink-0">
-									<img src="assets/images/category/hotel/4by3/03.jpg" class="rounded" alt="">
-								</div>
-								<!-- Title -->
-								<h6 class="mb-0 ms-2">Deluxe Pool View</h6>
-							</div>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Bed type:</small>
-							<h6 class="mb-0 fw-normal">Family Bed</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Room Floor:</small>
-							<h6 class="mb-0 fw-normal">Ground Floor: G3</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Book date:</small>
-							<h6 class="text-success mb-0">16 Nov 2022</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
-					</div>
-
-					<!-- Table data -->
-					<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-6 g-2 g-sm-4 align-items-md-center justify-content-between border-bottom px-2 py-4">
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Room name:</small>
-							<div class="d-flex align-items-center">
-								<!-- Image -->
-								<div class="w-80px flex-shrink-0">
-									<img src="assets/images/category/hotel/4by3/04.jpg" class="rounded" alt="">
-								</div>
-								<!-- Title -->
-								<h6 class="mb-0 ms-2">Superior Room</h6>
-							</div>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Bed type:</small>
-							<h6 class="mb-0 fw-normal">King Bed</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Room Floor:</small>
-							<h6 class="mb-0 fw-normal">First Floor: F5</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col">
-							<small class="d-block d-lg-none">Book date:</small>
-							<h6 class="text-success mb-0">14 Nov 2022</h6>
-						</div>
-
-						<!-- Data item -->
-						<div class="col"><a href="#" class="btn btn-sm btn-light mb-0">View</a></div>
-					</div>
 				</div>
 			</div>
 		</div>

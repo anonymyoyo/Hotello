@@ -78,14 +78,14 @@
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap">
 
 	<!-- Plugins CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/aos/aos.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/flatpickr/css/flatpickr.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/vendor/choices/css/choices.min.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min.css') }}">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/vendor/font-awesome/css/all.min.css') }}">
 
 	<!-- Theme CSS -->
-	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="stylesheet" type="text/css" href="{{ asset('assets/css/style.css') }}">
 
 </head>
 
@@ -98,8 +98,8 @@
 		<div class="container">
 			<!-- Logo START -->
 			<a class="navbar-brand" href="index.html">
-				<img class="light-mode-item navbar-brand-item" src="assets/images/logo.svg" alt="logo">
-				<img class="dark-mode-item navbar-brand-item" src="assets/images/logo-light.svg" alt="logo">
+				<img class="light-mode-item navbar-brand-item" src="{{ asset('assets/images/logo.svg') }}" alt="logo">
+				<img class="dark-mode-item navbar-brand-item" src="{{ asset('assets/images/logo.svg') }}" alt="logo">
 			</a>
 			<!-- Logo END -->
 
@@ -352,7 +352,7 @@
 				<li class="nav-item ms-3 dropdown">
 					<!-- Avatar -->
 					<a class="avatar avatar-xs p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
-						<img class="avatar-img rounded-circle" src="assets/images/avatar/01.jpg" alt="avatar">
+						<img class="avatar-img rounded-circle" src="{{ asset('assets/images/avatar/01.jpg') }}" alt="avatar">
 					</a>
 
 					<!-- Profile dropdown START -->
@@ -362,7 +362,7 @@
 							<div class="d-flex align-items-center">
 								<!-- Avatar -->
 								<div class="avatar me-3">
-									<img class="avatar-img rounded-circle shadow" src="assets/images/avatar/01.jpg" alt="avatar">
+									<img class="avatar-img rounded-circle shadow" src="{{ asset('assets/images/avatar/01.jpg') }}" alt="avatar">
 								</div>
 								<div>
 									<a class="h6 mt-2 mt-sm-0" href="#">Lori Ferguson</a>
@@ -490,7 +490,12 @@ Content START -->
 										<a class="nav-link" href="account-delete.html"><i class="bi bi-trash fa-fw me-2"></i>Delete Profile</a>
 									</li>
 									<li class="nav-item">
-										<a class="nav-link text-danger bg-danger-soft-hover" href="#"><i class="fas fa-sign-out-alt fa-fw me-2"></i>Sign Out</a>
+                                        <form method="POST" action="{{ route('logout') }}" id="logout">
+                                            @csrf
+
+                                        </form><a class="nav-link text-danger bg-danger-soft-hover" onclick="event.preventDefault();
+                                            document.getElementById('logout').submit();"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a>
+										{{-- <a class="nav-link text-danger bg-danger-soft-hover" href="#"><i class="fas fa-sign-out-alt fa-fw me-2"></i>Sign Out</a> --}}
 									</li>
 								</ul>
 								<!-- Sidebar menu item END -->
@@ -725,7 +730,7 @@ Footer START -->
 			<!-- Widget -->
 			<div class="col-md-4">
 				<div class="text-center text-md-start mb-3 mb-md-0">
-					<a href="index.html"> <img class="h-30px" src="assets/images/logo-light.svg" alt="logo"> </a>
+					<a href="index.html"> <img class="h-30px" src="{{ asset('assets/images/logo-light.svg') }}" alt="logo"> </a>
 				</div>
 			</div>
 
@@ -753,12 +758,12 @@ Footer END -->
 <div class="back-top"></div>
 
 <!-- Bootstrap JS -->
-<script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="{{ asset('assets/images/logo-light.svg') }}"></script>
 
 <!-- Vendors -->
-<script src="assets/vendor/aos/aos.js"></script>
-<script src="assets/vendor/flatpickr/js/flatpickr.min.js"></script>
-<script src="assets/vendor/choices/js/choices.min.js"></script>
+<script src="{{ asset('assets/images/logo-light.svg') }}"></script>
+<script src="{{ asset('assets/images/logo-light.svg') }}"></script>
+<script src="{{ asset('assets/images/logo-light.svg') }}"></script>
 
 <!-- ThemeFunctions -->
 <script src="assets/js/functions.js"></script>

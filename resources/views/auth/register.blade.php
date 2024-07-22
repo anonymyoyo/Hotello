@@ -192,7 +192,7 @@
                                                 <div class="p-4 p-sm-6">
                                                     <!-- Logo -->
                                                     <a href="index.html">
-                                                        <img class="h-50px mb-4" src="assets/images/logo-icon.svg" alt="logo">
+                                                        <img class="h-50px mb-4" src="{{ asset('assets/images/logo-icon.svg')}}" alt="logo">
                                                     </a>
                                                     <!-- Title -->
                                                     <h1 class="mb-2 h3">Create new account</h1>
@@ -238,15 +238,15 @@
                                                         <!-- Password -->
                                                         <div class="mb-3 position-relative">
                                                             <label class="form-label">Enter password</label>
-                                                            <input class="form-control fakepassword" type="password" name="password" id="psw-input">
+                                                            <input class="form-control " minlength="8" required type="password" name="password" id="psw-input">
                                                             <span class="position-absolute top-50 end-0 translate-middle-y p-0 mt-3">
-                                                                <i class="fakepasswordicon fas fa-eye-slash cursor-pointer p-2"></i>
+                                                                <i class="icon fas fa-eye-slash cursor-pointer p-2"></i>
                                                             </span>
                                                         </div>
                                                         <!-- Confirm Password -->
                                                         <div class="mb-3">
                                                             <label class="form-label">Confirm Password</label>
-                                                            <input type="password" name="password_confirmation" class="form-control">
+                                                            <input type="password" minlength="8" required name="password_confirmation" class="form-control">
                                                         </div>
                                                         <!-- Remember me -->
                                                         <div class="mb-3">

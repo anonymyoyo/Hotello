@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use App\Models\Chambre;
 use App\Models\Hotel;
 use App\Models\Roles;
@@ -126,9 +127,10 @@ class AdminController extends Controller
 
     public function detail_guest($id){
         $user=User::find($id);
-        $chambre=Chambre::find($id);
+        $hotel=User::find($id)->hotels;
 
-        return view('admin.guest.detail', compact('id', 'user', 'chambre'));
+        // return $hotel;
+        return view('admin.guest.detail', compact('id', 'user', 'hotel'));
 
     }
 
