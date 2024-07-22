@@ -19,7 +19,6 @@ return new class extends Migration
             $table->foreignIdFor(User::class)->constrained()->restrictOnUpdate()->restrictOnDelete();
             $table->string('email')->unique();
             $table->string('email2')->unique();
-            $table->string('genre')->nullable();
             $table->string('phone')->nullable();
             $table->string('license')->nullable();
             $table->string('tax_number')->nullable();
