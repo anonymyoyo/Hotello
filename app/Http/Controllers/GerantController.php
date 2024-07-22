@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use App\Http\Middleware\Gerant;
+use App\Models\Chambre;
 use App\Models\Hotel;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -58,6 +59,25 @@ class GerantController extends Controller
         $gerant=Hotel::where('user_id', auth()->user()->id)->get();
         // return $gerant;
         return view('gerant.booking.create', compact('gerant'));
+    }
+
+    public function add_chambre(Request $request){
+        $chambre=Chambre::create([
+            'name'=>$request->name,
+            'quantite'=>$request->quantite,
+            'hotel_id'=>$request->hotel_id,
+            'user_id'=>$request->user_id,
+            'reservation_id'=>$request->reservation_id,
+            'facturation_id'=>$request->facturation_id,
+            'room_category'=>$request->room_category,
+            'statut'=>$request->statut,
+            'type'=>$request->type,
+            'prix'=>$request->prix,
+        ]);
+
+        return $chambre;
+
+        // return to_route('gerant.room')->with('message', 'Room added succefully');
     }
 
     public function gerant_activity(){

@@ -12,10 +12,15 @@ class Chambre extends Model
     use HasFactory;
 
     protected $fillable = [
-        'numero',
+        'name',
+        'quantite',
         'hotel_id',
+        'user_id',
+        'reservation_id',
+        'facturation_id',
+        'room_category',
+        'capacite',
         'statut',
-        'type',
         'prix',
     ];
 

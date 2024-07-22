@@ -65,7 +65,7 @@ Content START -->
                 <h2>Nouvelle Chambre</h2>
 
                 <!-- Contact form -->
-                <form method="POST" action="{{ route('add.hotel') }}" class="mt-4">
+                <form method="POST" action="{{ route('add.chambre') }}" class="mt-4">
                     @csrf
                     <!-- Name -->
                     <div class="mb-4 form-control-bg-light">
@@ -75,12 +75,12 @@ Content START -->
                     <!-- Email -->
                     <div class="mb-4 form-control-bg-light">
                         <label class="form-label">Type *</label>
-                        <input type="email" class="form-control" name="email">
+                        <input type="email" class="form-control" name="room_category">
                     </div>
                     <!-- Email ID -->
                     <div class="mb-4 form-control-bg-light">
                         <label class="form-label">Disponibilite *</label>
-                        <input type="email" class="form-control" name="email2">
+                        <input type="email" class="form-control" name="statut">
                     </div>
                     <!-- Name PDG -->
                     <div class="mb-4 form-control-bg-light">
@@ -90,8 +90,6 @@ Content START -->
                             @endforeach
 
                         </select>
-                        {{-- <label class="form-label">Nom du PDG *</label>
-                        <input type="text" class="form-control" name="name_pdg"> --}}
                     </div>
 
                     <div class="mb-4 form-control-bg-light">
@@ -99,12 +97,26 @@ Content START -->
                         <input class="form-control" name="quantite" type="text">
                     </div>
 
+
+                    <!-- Email ID -->
+                    <div class="mb-4 form-control-bg-light">
+                        <label class="form-label">Prix *</label>
+                        <input type="text" class="form-control" name="prix">
+                    </div>
+
+
+                    <!-- Email ID -->
+                    <div class="mb-4 form-control-bg-light">
+                        <label class="form-label">Capacite *</label>
+                        <input type="email" class="form-control" name="capacite">
+                    </div>
+
                     <div class="mb-4 form-control-bg-light">
                         <label class="form-label">Description *</label>
                         <textarea class="form-control" name="description" rows="4"></textarea>
                     </div>
                     <!-- Button -->
-                    <div><button class="btn btn-lg btn-primary mb-0" type="submit">Creer</button></div>
+                    <div><button class="btn btn-lg btn-primary mb-0" type="submit">Ajouter</button></div>
                 </form>
             </div>
 
