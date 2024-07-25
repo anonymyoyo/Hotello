@@ -18,7 +18,7 @@ class Chambre extends Model
         'user_id',
         'reservation_id',
         'facturation_id',
-        'room_category',
+        'room_categories',
         'capacite',
         'statut',
         'prix',

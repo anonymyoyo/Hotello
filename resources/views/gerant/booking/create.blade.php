@@ -75,7 +75,7 @@ Content START -->
                     <!-- Email -->
                     <div class="mb-4 form-control-bg-light">
                         <label class="form-label">Type *</label>
-                        <input type="email" class="form-control" name="room_category">
+                        <input type="email" class="form-control" name="room_categories">
                     </div>
                     <!-- Email ID -->
                     <div class="mb-4 form-control-bg-light">
@@ -84,6 +84,7 @@ Content START -->
                     </div>
                     <!-- Name PDG -->
                     <div class="mb-4 form-control-bg-light">
+                        <label class="form-label">Hotel *</label>
                         <select  id="" name="user_id"  class="form-select">
                             @foreach ($gerant as $user)
                                 <option value="{{ $user->user_id }}" class="form-option">{{ $user->name }}</option>
@@ -112,8 +113,13 @@ Content START -->
                     </div>
 
                     <div class="mb-4 form-control-bg-light">
-                        <label class="form-label">Description *</label>
-                        <textarea class="form-control" name="description" rows="4"></textarea>
+                        <label class="form-label">Categorie *</label>
+                        <select  id="" name="user_id"  class="form-select">
+                            @foreach ($room_category as $room)
+                                <option value="{{ $room->id }}" class="form-option">{{ $room->name }}</option>
+                            @endforeach
+
+                        </select>
                     </div>
                     <!-- Button -->
                     <div><button class="btn btn-lg btn-primary mb-0" type="submit">Ajouter</button></div>

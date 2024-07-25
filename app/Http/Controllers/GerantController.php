@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Middleware\Gerant;
 use App\Models\Chambre;
 use App\Models\Hotel;
+use App\Models\Room_Category;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -57,18 +58,18 @@ class GerantController extends Controller
 
     public function create_rooms(){
         $gerant=Hotel::where('user_id', auth()->user()->id)->get();
+        $room_category=Room_Category::all();
         // return $gerant;
-        return view('gerant.booking.create', compact('gerant'));
+        return view('gerant.booking.create', compact('gerant', 'room_category'));
     }
 
     public function add_chambre(Request $request){
+            Room_Category::all();
         $chambre=Chambre::create([
             'name'=>$request->name,
             'quantite'=>$request->quantite,
             'hotel_id'=>$request->hotel_id,
             'user_id'=>$request->user_id,
-            'reservation_id'=>$request->reservation_id,
-            'facturation_id'=>$request->facturation_id,
             'room_category'=>$request->room_category,
             'statut'=>$request->statut,
             'type'=>$request->type,
