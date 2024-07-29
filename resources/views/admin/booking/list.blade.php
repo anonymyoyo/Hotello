@@ -25,7 +25,7 @@
 				<div class="col-12 mb-5">
 					<div class="d-sm-flex justify-content-between align-items-center">
 						<h1 class="h3 mb-2 mb-sm-0">Booking</h1>
-						<div class="d-grid"><a href="{{ route('create') }}" class="btn btn-primary-soft mb-0"><i class="bi bi-plus-lg fa-fw"></i> Ajouter une nouvelle categorie de chambres</a></div>
+						{{-- <div class="d-grid"><a href="{{ route('room.category') }}" class="btn btn-primary-soft mb-0"><i class="bi bi-plus-lg fa-fw"></i> Ajouter une nouvelle categorie de chambres</a></div> --}}
 					</div>
 				</div>
 			</div>
@@ -47,6 +47,9 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link mb-0" data-bs-toggle="tab" href="#tab-3">Sold Out</a>
+						</li>
+                        <li class="nav-item">
+							<a class="nav-link mb-0"  href="{{ route('category.room') }}">Categories</a>
 						</li>
 					</ul>
 				</div>

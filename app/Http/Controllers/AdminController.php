@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Chambre;
 use App\Models\Hotel;
 use App\Models\Roles;
+use App\Models\Room_Category;
 use App\Models\User;
 use Illuminate\Http\Request;
 // use App\Http\Controllers\
@@ -141,6 +142,47 @@ class AdminController extends Controller
     // ***
     public function booking(){
         return view('admin.booking.list');
+    }
+
+    public function room_category(){
+        return view('admin.booking.create');
+    }
+
+    public function category_room(){
+        return view('admin.booking.room_category');
+    }
+
+    public function add_category_room(Request $request){
+        Room_Category::create([
+            'name'=>$request->name,
+        ]);
+
+        return to_route('category.room')->with('message', 'Categorie Ajoute avec succes');
+    }
+
+    public function create_rooms(){
+        $gerant=Hotel::where('user_id', auth()->user()->id)->get();
+        $room_category=Room_Category::all();
+        // return $gerant;
+        return view('gerant.booking.create', compact('gerant', 'room_category'));
+    }
+
+    public function add_chambre(Request $request){
+            Room_Category::all();
+        $chambre=Chambre::create([
+            'name'=>$request->name,
+            'quantite'=>$request->quantite,
+            'hotel_id'=>$request->hotel_id,
+            'user_id'=>$request->user_id,
+            'room_category'=>$request->room_category,
+            'statut'=>$request->statut,
+            'type'=>$request->type,
+            'prix'=>$request->prix,
+        ]);
+
+        return $chambre;
+
+        // return to_route('gerant.room')->with('message', 'Room added succefully');
     }
     // ***
     // ***

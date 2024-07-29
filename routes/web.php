@@ -36,7 +36,9 @@ Route::middleware(['auth', 'admin'])->group(function(){
 
     // Routes Admin concernant les chambres
     Route::get('admin/Booking', [AdminController::class, 'booking'])->name('booking.list');
-    // Route::get('admin/booking', [AdminController::class, 'booking'])->name('booking.list');
+    Route::get('booking/room', [AdminController::class, 'room_category'])->name('room.category');
+    Route::get('room/category', [AdminController::class, 'category_room'])->name('category.room');
+    Route::post('room/add', [AdminController::class, 'add_category_room'])->name('add_room_category');
 
     // Routes Admin concernant les Vols
     Route::get('admin/Vols', [AdminController::class, 'vols'])->name('vol.list');
