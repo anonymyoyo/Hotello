@@ -49,7 +49,7 @@
 							<a class="nav-link mb-0" data-bs-toggle="tab" href="#tab-3">Sold Out</a>
 						</li>
                         <li class="nav-item">
-							<a class="nav-link mb-0"  href="{{ route('category.room') }}">Categories</a>
+							<a class="nav-link mb-0" href="{{ route('category.room') }}">Categories</a>
 						</li>
 					</ul>
 				</div>

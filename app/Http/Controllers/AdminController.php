@@ -149,7 +149,8 @@ class AdminController extends Controller
     }
 
     public function category_room(){
-        return view('admin.booking.room_category');
+        $categories = Room_Category::all();
+        return view('admin.booking.room_category', compact('categories'));
     }
 
     public function add_category_room(Request $request){
@@ -158,6 +159,14 @@ class AdminController extends Controller
         ]);
 
         return to_route('category.room')->with('message', 'Categorie Ajoute avec succes');
+    }
+
+    public function delete_room_category($id){
+        $category=Room_Category::find($id);
+        $category->delete();
+
+        return to_route('category.room')->with('message', ' supprime avec success');
+
     }
 
     public function create_rooms(){

@@ -72,11 +72,6 @@ Content START -->
                         <label class="form-label">Nom de La chambre *</label>
                         <input type="text" class="form-control" name="name">
                     </div>
-                    <!-- Email -->
-                    <div class="mb-4 form-control-bg-light">
-                        <label class="form-label">Type *</label>
-                        <input type="email" class="form-control" name="room_categories">
-                    </div>
                     <!-- Email ID -->
                     <div class="mb-4 form-control-bg-light">
                         <label class="form-label">Disponibilite *</label>
