@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
                     AdminSeeder::class,
                     UserSeeder::class,
                     HotelSeeder::class,
+                    StatutSeeder::class,
             ]);
     }
 }
