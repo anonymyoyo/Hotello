@@ -65,7 +65,9 @@ Menu item END -->
 				<div class="card border">
 					<!-- Card header START -->
 					<div class="card-header border-bottom" style="display: flex;">
-						<h5 class="card-header-title">Bookings<span class="badge bg-primary bg-opacity-10 text-primary ms-2">20 Rooms</span></h5>
+                            {{-- @if ($chambres->user_id === auth()->user()->id) --}}
+						<h5 class="card-header-title">Bookings<span class="badge bg-primary bg-opacity-10 text-primary ms-2">{{ $chambreCount }} Rooms</span></h5>
+                            {{-- @endif --}}
                         <a href="{{ route('create.chambres') }}" class="btn btn-sm btn-primary-soft mb-0 ms-auto flex-shrink-0 "><i class="bi bi-plus-lg fa-fw me-2"></i>Ajouter une Chambre</a>
 					</div>
 					<!-- Card header END -->
@@ -113,107 +115,45 @@ Menu item END -->
 									</tr>
 								</thead>
 
-								<!-- Table body START -->
-								<tbody class="border-top-0">
-									<!-- Table item -->
-									<tr>
-										<td> <h6 class="mb-0">01</h6> </td>
-										<td> <h6 class="mb-0"><a href="#">Deluxe Pool View</a></h6> </td>
-										<td> With Breakfast </td>
-										<td> <h6 class="mb-0 fw-light">Nov 22 - 25</h6> </td>
-										<td> <div class="badge text-bg-success">Booked</div> </td>
-										<td> <div class="badge bg-success bg-opacity-10 text-success">Full payment</div> </td>
-										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
-									</tr>
 
-									<!-- Table item -->
-									<tr>
-										<td> <h6 class="mb-0">02</h6> </td>
-										<td> <h6 class="mb-0"><a href="#">Deluxe Pool View with Breakfast</a></h6> </td>
-										<td> Free Cancellation | Breakfast only </td>
-										<td> <h6 class="mb-0 fw-light">Nov 24 - 28</h6> </td>
-										<td> <div class="badge text-bg-success">Booked</div> </td>
-										<td> <div class="badge bg-orange bg-opacity-10 text-orange">On Property</div> </td>
-										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
-									</tr>
+                                <tbody class="border-top-0">
 
-									<!-- Table item -->
-									<tr>
-										<td> <h6 class="mb-0">03</h6> </td>
-										<td> <h6 class="mb-0"><a href="#">Luxury Room with Balcony</a></h6> </td>
-										<td> Free Cancellation | Breakfast + Lunch/Dinner </td>
-										<td> <h6 class="mb-0 fw-light">Nov 24 - 28</h6> </td>
-										<td> <div class="badge text-bg-info">Reserved</div> </td>
-										<td> <div class="badge bg-info bg-opacity-10 text-info">Half Payment</div> </td>
-										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
-									</tr>
+                                    @foreach ($chambres as $chambre)
+                                    @if ($chambre->user_id === auth()->user()->id)
+                                    {{-- @foreach ($room_category as $room_categories) --}}
+                                    {{-- --}}
+                                        <tr>
+										<td> <h6 class="mb-0">{{ $chambre->id }}</h6> </td>
+										<td> <h6 class="mb-0"><a href="#">{{ $chambre->name }}</a></h6> </td>
+                                        {{-- @if ($chambre->room__category_id === $room_categories->id) --}}
+                                            {{-- <td> {{ $chambre->room__category_id }} </td> --}}
+                                        {{-- @endif --}}
+                                        @foreach ($room_category as $room_categories)
+                                            @if ($chambre->room__category_id === $room_categories->id)
+                                                <td> {{ $room_categories->name }}
+                                            @endif
+                                        @endforeach
+										<td> <h6 class="mb-0"><a href="#">{{ $chambre->created_at }}</a></h6></td>
+                                        @foreach ($statuts as $statut)
+                                        @if ($chambre->statut_id === $statut->id)
+                                            <td> <div class="badge text-bg-warning">{{ $statut->statut }}</div> </td>
+                                        @endif
+                                        @endforeach
 
-									<!-- Table item -->
-									<tr>
-										<td> <h6 class="mb-0">04</h6> </td>
-										<td> <h6 class="mb-0"><a href="#">Deluxe Room Twin Bed With Balcony</a></h6> </td>
-										<td> Free Cancellation </td>
-										<td> <h6 class="mb-0 fw-light">Nov 28 - 30</h6> </td>
-										<td> <div class="badge text-bg-success">Booked</div> </td>
-										<td> <div class="badge bg-success bg-opacity-10 text-success">Full Payment</div> </td>
-										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
-									</tr>
-
-									<!-- Table item -->
-									<tr>
-										<td> <h6 class="mb-0">05</h6> </td>
-										<td> <h6 class="mb-0"><a href="#">Deluxe Room Twin Bed With Balcony</a></h6> </td>
-										<td> Free Cancellation | Breakfast only </td>
-										<td> - </td>
-										<td> <div class="badge text-bg-warning">Available</div> </td>
 										<td> - </td>
 										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
 									</tr>
-
+                                    {{-- @endforeach --}}
+                                    {{-- @endforeach --}}
+                                    @endif
+                                    @endforeach
 									<!-- Table item -->
-									<tr>
-										<td> <h6 class="mb-0">06</h6> </td>
-										<td> <h6 class="mb-0"><a href="#">Premium Room With Balcony</a></h6> </td>
-										<td> Free Cancellation | Breakfast only </td>
-										<td> <h6 class="mb-0 fw-light">Nov 14 - 18</h6> </td>
-										<td> <div class="badge text-bg-danger">Cancel</div> </td>
-										<td> - </td>
-										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
-									</tr>
 
-									<!-- Table item -->
-									<tr>
-										<td> <h6 class="mb-0">07</h6> </td>
-										<td> <h6 class="mb-0"><a href="#">Deluxe Room King Bed with Balcony</a></h6> </td>
-										<td> Free Cancellation </td>
-										<td> <h6 class="mb-0 fw-light">Nov 28 - 30</h6> </td>
-										<td> <div class="badge text-bg-info">Reserved</div> </td>
-										<td> <div class="badge bg-success bg-opacity-10 text-success">Full Payment</div> </td>
-										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
-									</tr>
 
-									<!-- Table item -->
-									<tr>
-										<td> <h6 class="mb-0">08</h6> </td>
-										<td> <h6 class="mb-0"><a href="#">Superior Room</a></h6> </td>
-										<td> With Breakfast </td>
-										<td> <h6 class="mb-0 fw-light">Nov 22 - 25</h6> </td>
-										<td> <div class="badge text-bg-success">Booked</div> </td>
-										<td> <div class="badge bg-success bg-opacity-10 text-success">Full payment</div> </td>
-										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
-									</tr>
-
-									<!-- Table item -->
-									<tr>
-										<td> <h6 class="mb-0">09</h6> </td>
-										<td> <h6 class="mb-0"><a href="#">Studio Suite King</a></h6> </td>
-										<td> Free Cancellation | Breakfast only </td>
-										<td> <h6 class="mb-0 fw-light">Nov 21 - 24</h6> </td>
-										<td> <div class="badge text-bg-info">Reserved</div> </td>
-										<td> <div class="badge bg-info bg-opacity-10 text-info">Half payment</div> </td>
-										<td> <a href="#" class="btn btn-sm btn-light mb-0">View</a> </td>
-									</tr>
 								</tbody>
+
+								<!-- Table body START -->
+
 								<!-- Table body END -->
 							</table>
 						</div>
@@ -247,7 +187,7 @@ Menu item END -->
 					<!-- Card footer END -->
 				</div>
 			</div>
-		 </div>
+		</div>
 		<!-- Booking table END -->
 	</div>
 </section>
@@ -269,7 +209,7 @@ Footer END -->
 <div class="back-top"></div>
 
 <!-- Bootstrap JS -->
-@include('gerant.script');
+@include('gerant.script')
 </body>
 </html>
 

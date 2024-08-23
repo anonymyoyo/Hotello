@@ -7,6 +7,7 @@ use App\Http\Middleware\Gerant;
 use App\Models\Chambre;
 use App\Models\Hotel;
 use App\Models\Room_Category;
+use App\Models\Statut;
 use App\Models\User;
 use Illuminate\Http\Request;
 
@@ -53,32 +54,46 @@ class GerantController extends Controller
     }
 
     public function gerant_rooms(){
-        return view('gerant.booking.rooms');
+        $chambreCount=Chambre::count();
+        $chambres=Chambre::all();
+        $room_category=Room_Category::all();
+        $statuts=Statut::all();
+        return view('gerant.booking.rooms', compact('chambres', 'room_category', 'statuts', 'chambreCount'));
     }
 
     public function create_rooms(){
         $gerant=Hotel::where('user_id', auth()->user()->id)->get();
         $room_category=Room_Category::all();
+        $statuts=Statut::all();
+
         // return $gerant;
-        return view('gerant.booking.create', compact('gerant', 'room_category'));
+        // return $statuts;
+
+        return view('gerant.booking.create', compact('gerant', 'room_category', 'statuts'));
     }
 
     public function add_chambre(Request $request){
-            Room_Category::all();
+            // Room_Category::all();
+            // Hotel::all();
+            Hotel::where('user_id', auth()->user()->id)->get();
+            // Statut::where('statut',statut()->id)->get();
+            // Hotel::where('user_id', auth()->user()->id)->get();
+            // $chambre=Chambre::all();
         $chambre=Chambre::create([
             'name'=>$request->name,
             'quantite'=>$request->quantite,
-            'hotel_id'=>$request->hotel_id,
-            'user_id'=>$request->user_id,
-            'room_category'=>$request->room_category,
-            'statut'=>$request->statut,
-            'type'=>$request->type,
+            // 'hotel_id'=>auth()->user()->id,
+            'user_id'=>auth()->user()->id,
+            'room__category_id'=>$request->room__category_id,
+            'statut_id'=>$request->statut_id,
+            'capacite'=>$request->capacite,
             'prix'=>$request->prix,
         ]);
 
-        return $chambre;
+        // return $chambre;
+        // return $hotel;
 
-        // return to_route('gerant.room')->with('message', 'Room added succefully');
+        return to_route('gerant.rooms')->with('message', 'Room added succefully');
     }
 
     public function gerant_activity(){

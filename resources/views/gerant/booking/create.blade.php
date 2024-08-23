@@ -75,14 +75,31 @@ Content START -->
                     <!-- Email ID -->
                     <div class="mb-4 form-control-bg-light">
                         <label class="form-label">Disponibilite *</label>
-                        <input type="email" class="form-control" name="statut">
+                        <select name="statut_id" id="" class="form-select">
+                        @foreach ($statuts as $statut)
+                            <option value="{{ $statut->id }}" class="form-control"  > {{ $statut->statut }}</option>
+                        @endforeach
+                    </select>
+                    </div>
+                    <!-- Email ID -->
+                    <div class="mb-4 form-control-bg-light">
+                        {{-- <label class="form-label">Disponibilite *</label>value="{{ $statut->statut_id }}" --}}
+                        {{-- @foreach ($chambre as $chambres)value="{{ $statut->statut }}"
+                        @foreach ($hotel as $hotels) --}}
+                            {{-- @if ($chambres->hotel_id === $hotels->id) --}}
+                        {{-- <input type="hidden" class="form-control" value="{{ $chambre->hotel()->name }}" name="hotel_id"> --}}
+                        {{-- @endif
+                        @endforeach
+
+                        @endforeach --}}
+
                     </div>
                     <!-- Name PDG -->
                     <div class="mb-4 form-control-bg-light">
                         <label class="form-label">Hotel *</label>
                         <select  id="" name="user_id"  class="form-select">
-                            @foreach ($gerant as $user)
-                                <option value="{{ $user->user_id }}" class="form-option">{{ $user->name }}</option>
+                            @foreach ($gerant as $hotel)
+                                <option value="{{ $hotel->user_id }}" class="form-option">{{ $hotel->name }}</option>
                             @endforeach
 
                         </select>
@@ -104,12 +121,12 @@ Content START -->
                     <!-- Email ID -->
                     <div class="mb-4 form-control-bg-light">
                         <label class="form-label">Capacite *</label>
-                        <input type="email" class="form-control" name="capacite">
+                        <input type="text" class="form-control" name="capacite">
                     </div>
 
                     <div class="mb-4 form-control-bg-light">
                         <label class="form-label">Categorie *</label>
-                        <select  id="" name="user_id"  class="form-select">
+                        <select  id="" name="room__category_id"  class="form-select">
                             @foreach ($room_category as $room)
                                 <option value="{{ $room->id }}" class="form-option">{{ $room->name }}</option>
                             @endforeach
