@@ -8,6 +8,6 @@ class UserController extends Controller
 {
     //
     public function user_dashboard(){
-        return view('user.profile');
+        return view('user.user.profile');
     }
 }
