@@ -27,35 +27,36 @@
             <!-- Name -->
             <div class="col-md-6">
                 <label class="form-label">Full Name<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" value="Jacqueline Miller" placeholder="Enter your full name">
+                <input type="text" class="form-control" value="{{ auth()->user()->name }}" placeholder="Enter your full name">
             </div>
 
             <!-- Email -->
             <div class="col-md-6">
                 <label class="form-label">Email address<span class="text-danger">*</span></label>
-                <input type="email" class="form-control" value="hello@gmail.com" placeholder="Enter your email id">
+                <input type="email" class="form-control" value="{{ auth()->user()->email }}" placeholder="Enter your email id">
             </div>
 
             <!-- Mobile -->
             <div class="col-md-6">
                 <label class="form-label">Mobile number<span class="text-danger">*</span></label>
-                <input type="text" class="form-control" value="222 555 666" placeholder="Enter your mobile number">
+                <input type="text" class="form-control" value="{{ auth()->user()->contact }}" placeholder="Enter your mobile number">
             </div>
 
             <!-- Nationality -->
             <div class="col-md-6">
                 <label class="form-label">Nationality<span class="text-danger">*</span></label>
-                <select class="form-select js-choice">
+                <input type="text" class="form-control" value="{{ auth()->user()->pays }}" placeholder="Enter your mobile number">
+                {{-- <select class="form-select js-choice">
                     <option value="">Select your country</option>
                     <option>USA</option>
                     <option selected>Paris</option>
                     <option>India</option>
                     <option>UK</option>
-                </select>
+                </select> --}}
             </div>
 
             <!-- Date of birth -->
-            <div class="col-md-6">
+            {{-- <div class="col-md-6">
                 <label class="form-label">Date of Birth<span class="text-danger">*</span></label>
                 <input type="text" class="form-control flatpickr" value="29 Aug 1996" placeholder="Enter date of birth" data-date-format="d M Y">
             </div>
@@ -83,12 +84,12 @@
                         </label>
                     </div>
                 </div>
-            </div>
+            </div> --}}
 
             <!-- Address -->
             <div class="col-12">
                 <label class="form-label">Address</label>
-                <textarea class="form-control" rows="3" spellcheck="false">2119 N Division Ave, New Hampshire, York, United States</textarea>
+                <textarea class="form-control" rows="3" spellcheck="false">{{ auth()->user()->addresse }}, {{ auth()->user()->ville }}, {{ auth()->user()->pays }}</textarea>
             </div>
 
             <!-- Button -->

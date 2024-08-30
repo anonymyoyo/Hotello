@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 
+
 // Routes concernant les traitement admin
 Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('admin/dashboard', [AdminController::class, 'index'])->name('dashboard');
@@ -77,6 +78,8 @@ Route::middleware(['auth', 'gerant'])->group(function(){
 // Routes concernant les traitement user
 Route::middleware(['auth', 'user'])->group(function(){
     Route::get('user/dashboard', [UserController::class, 'user_dashboard'])->name('profile');
+    Route::get('Home/', [UserController::class, 'index2'])->name('home2');
+
 });
 
 Route::middleware('auth')->group(function () {

@@ -259,6 +259,7 @@
 			<!-- Nav category menu END -->
 
 			<!-- Profile and Notification START -->
+            {{-- @foreach ($user as $users) --}}
 			<ul class="nav flex-row align-items-center list-unstyled ms-xl-auto">
 
 				<!-- Notification dropdown START -->
@@ -320,30 +321,58 @@
 
 					<ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
 						<!-- Profile info -->
-						<li class="px-3 mb-3">
+						@if (auth()->user())
+                        <li class="px-3 mb-3">
 							<div class="d-flex align-items-center">
 								<!-- Avatar -->
 								<div class="avatar me-3">
 									<img class="avatar-img rounded-circle shadow" src="{{ asset('assets/images/avatar/01.jpg') }}" alt="avatar">
 								</div>
 								<div>
-                                <a class="h6 mt-2 mt-sm-0" href="#">User Profile</a>
-									{{-- <p class="small m-0">example@gmail.com</p> --}}
+                                <a class="h6 mt-2 mt-sm-0" href="#"> Mon Compte</a>
+                                <p class="small m-0">{{ auth()->user()->email }}</p>
+									{{-- <p class="small m-0">example@gmail.com</p>{{ auth()->user()->name }}  --}}
 								</div>
 							</div>
 						</li>
 
 						<!-- Links -->
-						{{-- <li> <hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-check fa-fw me-2"></i>My Bookings</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
-						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li> --}}
+						<li> <hr class="dropdown-divider"></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-check fa-fw me-2"></i>Reservations</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>Favoris</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Reglages</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Centre d'aide</a></li>
+                        <li class="nav-item">
+                            <form method="POST" action="{{ route('logout') }}" id="logout">
+                                @csrf
 
+                            </form><a class="nav-link text-danger bg-danger-soft-hover" onclick="event.preventDefault();
+                                document.getElementById('logout').submit();"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a>
+                            {{-- <a class="nav-link text-danger bg-danger-soft-hover" href="#"><i class="fas fa-sign-out-alt fa-fw me-2"></i>Sign Out</a> --}}
+                        </li>
+                        {{-- <li><a class="dropdown-item bg-danger-soft-hover" href="{{ route('login') }}"><i class="bi bi-power fa-fw me-2"></i>Deconnexion</a></li> --}}
 
-						<li><a class="dropdown-item bg-danger-soft-hover" href="{{ route('login') }}"><i class="bi bi-power fa-fw me-2"></i>Sign In</a></li>
+                            @else
+                            <li class="px-3 mb-3">
+                                <div class="d-flex align-items-center">
+                                    <!-- Avatar -->
+                                    <div class="avatar me-3">
+                                        <img class="avatar-img rounded-circle shadow" src="{{ asset('assets/images/avatar/01.jpg') }}" alt="avatar">
+                                    </div>
+                                    <div>
+                                    <a class="h6 mt-2 mt-sm-0" href="#">Espace utilisateur</a>
+                                        {{-- <p class="small m-0">example@gmail.com</p>{{ auth()->user()->name }}  --}}
+                                    </div>
+                                </div>
+                            </li>
+                            <li><a class="dropdown-item bg-danger-soft-hover" href="{{ route('login') }}"><i class="bi bi-power fa-fw me-2"></i>Sign In</a></li>
                         <li><a class="dropdown-item bg-danger-soft-hover" href="{{ route('register') }}"><i class="bi bi-power fa-fw me-2"></i>Sign Up</a></li>
 						<li> <hr class="dropdown-divider"></li>
+                        @endif
+                        {{-- @endforeach --}}
+
+
+
 
 						<!-- Dark mode options START -->
 						<li>
@@ -375,6 +404,7 @@
 				</li>
 				<!-- Profile dropdown END -->
 			</ul>
+            {{-- @endforeach --}}
 			<!-- Profile and Notification START -->
 
 		</div>

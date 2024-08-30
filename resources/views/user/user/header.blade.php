@@ -3,10 +3,13 @@
 	<nav class="navbar navbar-expand-xl">
 		<div class="container">
 			<!-- Logo START -->
-			<a class="navbar-brand" href="index.html">
+            {{-- @foreach ($users as $user) --}}
+                <a class="navbar-brand" href="{{ route('home2') }}">
 				<img class="light-mode-item navbar-brand-item" src="{{ asset('assets/images/logo.svg') }}" alt="logo">
 				<img class="dark-mode-item navbar-brand-item" src="{{ asset('assets/images/logo.svg') }}" alt="logo">
 			</a>
+            {{-- @endforeach --}}
+
 			<!-- Logo END -->
 
 			<!-- Responsive navbar toggler -->

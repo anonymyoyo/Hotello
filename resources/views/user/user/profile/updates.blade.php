@@ -2,7 +2,7 @@
     <!-- Card header -->
     <div class="card-header border-bottom">
         <h4 class="card-header-title">Update email</h4>
-        <p class="mb-0">Your current email address is <span class="text-primary">example@gmail.com</span></p>
+        <p class="mb-0">Your current email address is <span class="text-primary">{{ auth()->user()->email }}</span></p>
     </div>
 
     <!-- Card body START -->
@@ -10,7 +10,7 @@
         <form>
             <!-- Email -->
             <label class="form-label">Enter your new email id<span class="text-danger">*</span></label>
-            <input type="email" class="form-control" placeholder="Enter your email id">
+            <input type="email" class="form-control" value="{{ auth()->user()->email }}" placeholder="Enter your email id">
 
             <div class="text-end mt-3">
                 <a href="#" class="btn btn-primary mb-0">Save Email</a>
@@ -26,7 +26,7 @@
     <!-- Card header -->
     <div class="card-header border-bottom">
         <h4 class="card-header-title">Update Password</h4>
-        <p class="mb-0">Your current email address is <span class="text-primary">example@gmail.com</span></p>
+        <p class="mb-0">Your current email address is <span class="text-primary">{{ auth()->user()->email }}</span></p>
     </div>
 
     <!-- Card body START -->

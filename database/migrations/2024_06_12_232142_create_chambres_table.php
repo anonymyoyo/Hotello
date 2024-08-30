@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Middleware\Gerant;
 use App\Models\Facturation;
 use App\Models\Hotel;
 use App\Models\Reservation;
@@ -27,7 +28,7 @@ return new class extends Migration
             $table->string('quantite')->nullable();
             $table->string('name');
             $table->foreignIdFor(Statut::class)->constrained()->restrictOnUpdate()->restrictOnDelete();
-            $table->foreignIdFor(User::class)->constrained()->restrictOnUpdate()->restrictOnDelete();
+            $table->foreignIdFor(Hotel::class)->constrained()->restrictOnUpdate()->restrictOnDelete();
             $table->foreignIdFor(Room_Category::class)->constrained()->restrictOnUpdate()->restrictOnDelete();
             $table->string('capacite')->nullable();
             $table->string('prix')->nullable();

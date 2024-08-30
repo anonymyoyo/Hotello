@@ -25,8 +25,8 @@
                         <div class="avatar avatar-xl mb-2">
                             <img class="avatar-img rounded-circle border border-2 border-white" src="assets/images/avatar/01.jpg" alt="">
                         </div>
-                        <h6 class="mb-0">Jacqueline Miller</h6>
-                        <a href="#" class="text-reset text-primary-hover small">hello@gmail.com</a>
+                        <h6 class="mb-0">{{ auth()->user()->name }}</h6>
+                        <a href="#" class="text-reset text-primary-hover small">{{ auth()->user()->email }}</a>
                         <hr>
                     </div>
 
