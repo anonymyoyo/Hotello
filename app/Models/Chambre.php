@@ -14,7 +14,7 @@ class Chambre extends Model
     protected $fillable = [
         'name',
         'quantite',
-        'user_id',
+        'hotel_id',
         'room__category_id',
         'capacite',
         'statut_id',

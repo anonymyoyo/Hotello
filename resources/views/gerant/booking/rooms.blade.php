@@ -119,7 +119,7 @@ Menu item END -->
                                 <tbody class="border-top-0">
 
                                     @foreach ($chambres as $chambre)
-                                    @if ($chambre->user_id === auth()->user()->id)
+                                    {{-- @if ($chambre->user_id === auth()->user()->id) --}}
                                     {{-- @foreach ($room_category as $room_categories) --}}
                                     {{-- --}}
                                         <tr>
@@ -145,7 +145,7 @@ Menu item END -->
 									</tr>
                                     {{-- @endforeach --}}
                                     {{-- @endforeach --}}
-                                    @endif
+                                    {{-- @endif --}}
                                     @endforeach
 									<!-- Table item -->
 

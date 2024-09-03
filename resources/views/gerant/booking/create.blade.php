@@ -63,10 +63,11 @@ Content START -->
             <div class="col-lg-12">
                 <!-- Title -->
                 <h2>Nouvelle Chambre</h2>
-
+                @foreach ($gerant as $hotel)
                 <!-- Contact form -->
-                <form method="POST" action="{{ route('add.chambre') }}" class="mt-4">
+                <form method="POST" action="{{ route('add.chambre', $hotel->id) }}" class="mt-4">
                     @csrf
+                    @endforeach
                     <!-- Name -->
                     <div class="mb-4 form-control-bg-light">
                         <label class="form-label">Nom de La chambre *</label>
@@ -99,7 +100,7 @@ Content START -->
                         <label class="form-label">Hotel *</label>
                         <select  id="" name="user_id"  class="form-select">
                             @foreach ($gerant as $hotel)
-                                <option value="{{ $hotel->user_id }}" class="form-option">{{ $hotel->name }}</option>
+                                <option value="{{ $hotel->hotel_id }}" class="form-option">{{ $hotel->name }}</option>
                             @endforeach
 
                         </select>
@@ -136,6 +137,7 @@ Content START -->
                     <!-- Button -->
                     <div><button class="btn btn-lg btn-primary mb-0" type="submit">Ajouter</button></div>
                 </form>
+                {{-- @endforeach --}}
             </div>
 
 
