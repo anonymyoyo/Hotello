@@ -42,8 +42,28 @@ class HomeController extends Controller
         return view('user.cab');
     }
 
-    // public function index()
-    // {
-    //     return view('user.home');
-    // }
+    public function directory()
+    {
+        return view('user.directory');
+    }
+
+    public function add_listing()
+    {
+        return view('user.add_listing');
+    }
+
+    public function hero()
+    {
+        return view('user.hero');
+    }
+
+    public function compare()
+    {
+        return view('user.compare');
+    }
+
+    public function offre()
+    {
+        return view('user.offre');
+    }
 }

@@ -17,10 +17,11 @@ Route::get('/', [HomeController::class, 'hotel'])->name('hotel');
 Route::get('/', [HomeController::class, 'flight'])->name('flight');
 Route::get('/', [HomeController::class, 'tourisme'])->name('tourisme');
 Route::get('/', [HomeController::class, 'cab'])->name('cab');
-// Route::get('/', [HomeController::class, 'index'])->name('home');
-// Route::get('/', [HomeController::class, 'index'])->name('home');
-// Route::get('/', [HomeController::class, 'index'])->name('home');
-// Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'directory'])->name('directory');
+Route::get('/', [HomeController::class, 'add_listing'])->name('add_listing');
+Route::get('/', [HomeController::class, 'hero'])->name('hero');
+Route::get('/', [HomeController::class, 'compare'])->name('compare');
+Route::get('/', [HomeController::class, 'offre'])->name('offre');
 
 
 // Routes concernant les traitement admin
