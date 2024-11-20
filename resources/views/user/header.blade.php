@@ -329,7 +329,7 @@
 									<img class="avatar-img rounded-circle shadow" src="{{ asset('assets/images/avatar/01.jpg') }}" alt="avatar">
 								</div>
 								<div>
-                                <a class="h6 mt-2 mt-sm-0" href="#"> Mon Compte</a>
+                                <a class="h6 mt-2 mt-sm-0" href="{{ route('profile') }}"> Mon Compte</a>
                                 <p class="small m-0">{{ auth()->user()->email }}</p>
 									{{-- <p class="small m-0">example@gmail.com</p>{{ auth()->user()->name }}  --}}
 								</div>

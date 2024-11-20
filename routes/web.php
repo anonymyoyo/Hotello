@@ -13,15 +13,15 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
-Route::get('/', [HomeController::class, 'hotel'])->name('hotel');
-Route::get('/', [HomeController::class, 'flight'])->name('flight');
-Route::get('/', [HomeController::class, 'tourisme'])->name('tourisme');
-Route::get('/', [HomeController::class, 'cab'])->name('cab');
-Route::get('/', [HomeController::class, 'directory'])->name('directory');
-Route::get('/', [HomeController::class, 'add_listing'])->name('add_listing');
-Route::get('/', [HomeController::class, 'hero'])->name('hero');
-Route::get('/', [HomeController::class, 'compare'])->name('compare');
-Route::get('/', [HomeController::class, 'offre'])->name('offre');
+Route::get('/hotel', [HomeController::class, 'hotel'])->name('hotel');
+Route::get('/flight', [HomeController::class, 'flight'])->name('flight');
+Route::get('/tourisme', [HomeController::class, 'tourisme'])->name('tourisme');
+Route::get('/cab', [HomeController::class, 'cab'])->name('cab');
+Route::get('/directory', [HomeController::class, 'directory'])->name('directory');
+Route::get('/liste des reservations', [HomeController::class, 'add_listing'])->name('add_listing');
+Route::get('/hero', [HomeController::class, 'hero'])->name('hero');
+Route::get('/comparer', [HomeController::class, 'compare'])->name('compare');
+Route::get('/offre', [HomeController::class, 'offre'])->name('offre');
 
 
 // Routes concernant les traitement admin
@@ -87,7 +87,7 @@ Route::middleware(['auth', 'gerant'])->group(function(){
 // Routes concernant les traitement user
 Route::middleware(['auth', 'user'])->group(function(){
     Route::get('user/dashboard', [UserController::class, 'user_dashboard'])->name('profile');
-    Route::get('Home/', [UserController::class, 'index2'])->name('home2');
+    // Route::get('Home/', [UserController::class, 'index2'])->name('home2');
 
 });
 

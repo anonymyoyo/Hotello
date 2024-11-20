@@ -112,7 +112,7 @@ Main Content START -->
 						<div class="col-lg-6 order-1">
 							<div class="p-4 p-sm-7">
 								<!-- Logo -->
-								<a href="index.html">
+								<a href="{{ route('home') }}">
 									<img class="h-50px mb-4" src="{{ asset('assets/images/logo-icon.svg') }}" alt="logo">
 								</a>
 								<!-- Title -->
@@ -160,7 +160,7 @@ Main Content START -->
 									</div>
 
 									<!-- Copyright -->
-									<div class="text-primary-hover text-body mt-3 text-center"> Copyrights ©2024 Booking. Build by <a href="https://www.webestica.com/" class="text-body">Webestica</a>. </div>
+									<div class="text-primary-hover text-body mt-3 text-center"> Anonyme ©2024 Hotello. Build by <a href="#" class="text-body">Anonyme</a>. </div>
 								</form>
 								<!-- Form END -->
 							</div>
