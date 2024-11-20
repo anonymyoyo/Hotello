@@ -5,7 +5,7 @@
             <div class="d-flex justify-content-between align-items-center">
                 <!-- Digit -->
                 <div>
-                    <h4 class="mb-0">56</h4>
+                    <h4 class="mb-0">{{ $hotelCount }}</h4>
                     <span class="h6 fw-light mb-0">Total Hotels</span>
                 </div>
                 <!-- Icon -->
@@ -34,8 +34,9 @@
         <div class="card card-body bg-primary bg-opacity-10 border border-primary border-opacity-25 p-4 h-100">
             <div class="d-flex justify-content-between align-items-center">
                 <!-- Digit -->
+                {{-- {{ $roomCounter }} --}}
                 <div>
-                    <h4 class="mb-0">245</h4>
+                    <h4 class="mb-0"></h4>
                     <span class="h6 fw-light mb-0">Total Rooms</span>
                 </div>
                 <!-- Icon -->

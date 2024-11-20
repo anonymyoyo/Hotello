@@ -19,10 +19,31 @@ class HomeController extends Controller
 
     public function index()
     {
-        // $user=User::where('id', auth()->user()->roles_id)->find($id);
-        // $user=User::find($id);
-
-        // return $user;, compact('user')
         return view('user.home');
     }
+
+    public function hotel()
+    {
+        return view('user.hotel');
+    }
+
+    public function flight()
+    {
+        return view('user.flight');
+    }
+
+    public function tourisme()
+    {
+        return view('user.tourisme');
+    }
+
+    public function cab()
+    {
+        return view('user.cab');
+    }
+
+    // public function index()
+    // {
+    //     return view('user.home');
+    // }
 }

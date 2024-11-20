@@ -16,9 +16,10 @@ class AdminController extends Controller
     //
     public function index(){
         $hotelCount=Hotel::count();
+        $roomCounter=Chambre::count();
 
         //return $hotelCount;
-        return view('admin.dashboard');
+        return view('admin.dashboard', compact('hotelCount', 'roomCounter'));
     }
 
     // Gestion des gerant d'hotels
@@ -32,9 +33,11 @@ class AdminController extends Controller
     public function detail($id){
         // $user=User::find($id);
         $users=User::all();
+        // $hotels=Hotel::where('user_id', auth()->user()->id)->get();,'hotels'
+        $roomCounter=Chambre::count();
         $hotel=Hotel::find($id);
         $lists=Hotel::all();
-        return view('admin.gerant.detail', compact('hotel', 'id', 'lists', 'users'));
+        return view('admin.gerant.detail', compact('hotel', 'id', 'lists', 'users','roomCounter'));
     }
 
     public function edit( $id){

@@ -13,6 +13,14 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class, 'hotel'])->name('hotel');
+Route::get('/', [HomeController::class, 'flight'])->name('flight');
+Route::get('/', [HomeController::class, 'tourisme'])->name('tourisme');
+Route::get('/', [HomeController::class, 'cab'])->name('cab');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
+// Route::get('/', [HomeController::class, 'index'])->name('home');
 
 
 // Routes concernant les traitement admin

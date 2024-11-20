@@ -29,12 +29,11 @@
 						<div class="d-flex justify-content-between align-items-center">
 							<!-- Digit -->
 							<div>
-								<h3 class="mb-0 fw-bold">04</h3>
-								<span class="mb-0 h6 fw-light">Total Hotels</span>
+								<h3 class="mb-0 fw-bold">{{ $roomCounter }}</h3>
+								<span class="mb-0 h6 fw-light">Total Rooms</span>
 							</div>
 							<!-- Icon -->
-							<div class="icon-lg rounded-circle flex-shrink-0 bg-primary text-white mb-0"><i class="fa-solid fa-hotel fa-fw"></i></div>
-						</div>
+                            <div class="icon-lg rounded-circle bg-primary text-white mb-0"><i class="fa-solid fa-bed fa-fw"></i></div>						</div>
 					</div>
 				</div>
 
