@@ -33,25 +33,25 @@
                     <!-- Sidebar menu item START -->
                     <ul class="nav nav-pills-primary-soft flex-column">
                         <li class="nav-item">
-                            <a class="nav-link active" href="{{ route('profile') }}"><i class="bi bi-person fa-fw me-2"></i>My Profile</a>
+                            <a class="nav-link active" href="{{ route('profile') }}"><i class="bi bi-person fa-fw me-2"></i>Mon Profile</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="account-bookings.html"><i class="bi bi-ticket-perforated fa-fw me-2"></i>My Bookings</a>
+                            <a class="nav-link" href="{{ route('user.reservations') }}"><i class="bi bi-ticket-perforated fa-fw me-2"></i>Reservations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="account-travelers.html"><i class="bi bi-people fa-fw me-2"></i>Travelers</a>
+                            <a class="nav-link" href="{{ route('user.voyages') }}"><i class="bi bi-people fa-fw me-2"></i>Voyages</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="account-payment-details.html"><i class="bi bi-wallet fa-fw me-2"></i>Payment Details</a>
+                            <a class="nav-link" href="{{ route('user.transactions') }}"><i class="bi bi-wallet fa-fw me-2"></i>Transactions</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="account-wishlist.html"><i class="bi bi-heart fa-fw me-2"></i>Wishlist</a>
+                            <a class="nav-link" href="{{ route('user.favoris') }}"><i class="bi bi-heart fa-fw me-2"></i>Favoris</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="account-settings.html"><i class="bi bi-gear fa-fw me-2"></i>Settings</a>
+                            <a class="nav-link" href="{{ route('user.reglages') }}"><i class="bi bi-gear fa-fw me-2"></i>Reglages</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="account-delete.html"><i class="bi bi-trash fa-fw me-2"></i>Delete Profile</a>
+                            <a class="nav-link" href="account-delete.html"><i class="bi bi-trash fa-fw me-2"></i>Supprimer profile</a>
                         </li>
                         <li class="nav-item">
                             <form method="POST" action="{{ route('logout') }}" id="logout">

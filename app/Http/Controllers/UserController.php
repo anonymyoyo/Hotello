@@ -13,12 +13,27 @@ class UserController extends Controller
         return view('user.user.profile');
     }
 
-    public function index2(){
-        // $users=User::find($id);
+    public function user_reservations(){
+        return view('user.user.profile');
+    }
 
-        // return $users;
+    public function user_favoris(){
+        return view('user.user.profile');
+    }
 
-        return view('user.home');
+    public function user_reglages(){
+        return view('user.user.profile');
+    }
 
-        }
+    public function user_voyages(){
+        return view('user.user.profile');
+    }
+
+    public function user_transactions(){
+        return view('user.user.profile');
+    }
+
+    public function user_aide(){
+        return view('user.user.profile');
+    }
 }

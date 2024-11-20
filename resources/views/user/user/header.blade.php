@@ -282,11 +282,11 @@
 
 						<!-- Links -->
 						<li> <hr class="dropdown-divider"></li>
-						<li><a class="dropdown-item" href="{{ route('user.reservations') }}"><i class="bi bi-bookmark-check fa-fw me-2"></i>Reservations</a></li>
-						<li><a class="dropdown-item" href="{{ route('user.favoris') }}"><i class="bi bi-heart fa-fw me-2"></i>Favoris</a></li>
-						<li><a class="dropdown-item" href="{{ route('user.reglages') }}"><i class="bi bi-gear fa-fw me-2"></i>Reglages</a></li>
-						<li><a class="dropdown-item" href="{{ route('user.aide') }}"><i class="bi bi-info-circle fa-fw me-2"></i>Centre d'aide</a></li>
-						<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Deconnexiont</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-bookmark-check fa-fw me-2"></i>My Bookings</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-heart fa-fw me-2"></i>My Wishlist</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-gear fa-fw me-2"></i>Settings</a></li>
+						<li><a class="dropdown-item" href="#"><i class="bi bi-info-circle fa-fw me-2"></i>Help Center</a></li>
+						<li><a class="dropdown-item bg-danger-soft-hover" href="#"><i class="bi bi-power fa-fw me-2"></i>Sign Out</a></li>
 						<li> <hr class="dropdown-divider"></li>
 
 						<!-- Dark mode options START -->

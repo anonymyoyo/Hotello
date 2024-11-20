@@ -11,6 +11,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
+use function Ramsey\Uuid\v1;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/hotel', [HomeController::class, 'hotel'])->name('hotel');
@@ -87,8 +88,12 @@ Route::middleware(['auth', 'gerant'])->group(function(){
 // Routes concernant les traitement user
 Route::middleware(['auth', 'user'])->group(function(){
     Route::get('user/dashboard', [UserController::class, 'user_dashboard'])->name('profile');
-    // Route::get('Home/', [UserController::class, 'index2'])->name('home2');
-
+    Route::get('user/reservations', [UserController::class, 'user_reservations'])->name('user.reservations');
+    Route::get('user/favoris', [UserController::class, 'user_favoris'])->name('user.favoris');
+    Route::get('user/reglages', [UserController::class, 'user_reglages'])->name('user.reglages');
+    Route::get('user/voyages', [UserController::class, 'user_voyages'])->name('user.voyages');
+    Route::get('user/transactions', [UserController::class, 'user_transactions'])->name('user.transactions');
+    Route::get('user/aide', [UserController::class, 'user_aide'])->name('user.aide');
 });
 
 Route::middleware('auth')->group(function () {
