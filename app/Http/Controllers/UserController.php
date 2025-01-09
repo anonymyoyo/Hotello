@@ -14,23 +14,23 @@ class UserController extends Controller
     }
 
     public function user_reservations(){
-        return view('user.user.profile');
+        return view('user.user.reservations.reservations');
     }
 
     public function user_favoris(){
-        return view('user.user.profile');
+        return view('user.user.favoris.favoris');
     }
 
     public function user_reglages(){
-        return view('user.user.profile');
+        return view('user.user.reglages.reglages');
     }
 
     public function user_voyages(){
-        return view('user.user.profile');
+        return view('user.user.voyages.voyages');
     }
 
     public function user_transactions(){
-        return view('user.user.profile');
+        return view('user.user.transactions.transactions');
     }
 
     public function user_aide(){

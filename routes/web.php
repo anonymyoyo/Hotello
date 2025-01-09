@@ -26,7 +26,7 @@ Route::get('/offre', [HomeController::class, 'offre'])->name('offre');
 
 
 // Routes concernant les traitement admin
-Route::middleware(['auth', 'admin'])->group(function(){
+Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/dashboard', [AdminController::class, 'index'])->name('dashboard');
 
     // Routes concernant le gerant
@@ -34,6 +34,8 @@ Route::middleware(['auth', 'admin'])->group(function(){
     Route::get('gerant/store', [AdminController::class, 'store'])->name('create');
     Route::post('store/add', [AdminController::class, 'add'])->name('add.gerant');
     Route::get('gerant/detail/{id}', [AdminController::class, 'detail'])->name('detail');
+    Route::get('gerant/contact/{id}', [AdminController::class, 'contact'])->name('admin.contact');
+    Route::post('gerant/message', [AdminController::class, 'admin_contact'])->name('admin.message');
     Route::get('gerant/edit/{id}', [AdminController::class, 'edit'])->name('edit');
     Route::put('gerant/update/{id}', [AdminController::class, 'update'])->name('edit.gerant');
     Route::delete('gerant/delete/{id}', [AdminController::class, 'delete'])->name('delete');
@@ -56,7 +58,7 @@ Route::middleware(['auth', 'admin'])->group(function(){
     // Routes Admin concernant les Vols
     Route::get('admin/Vols', [AdminController::class, 'vols'])->name('vol.list');
 
-            // Routes Admin concernant les Tourisme
+    // Routes Admin concernant les Tourisme
     Route::get('admin/tourisme', [AdminController::class, 'tourisme'])->name('tourism.grid');
 
     // Routes Admin concernant les locations d'engins
@@ -70,7 +72,7 @@ Route::middleware(['auth', 'admin'])->group(function(){
 });
 
 // Routes concernant les traitement gerant
-Route::middleware(['auth', 'gerant'])->group(function(){
+Route::middleware(['auth', 'gerant'])->group(function () {
     Route::get('gerant/dashboard', [GerantController::class, 'dashboard'])->name('page');
     Route::get('gerant/listing', [GerantController::class, 'gerant_listing'])->name('gerant.listing');
     Route::get('gerant/hotel', [GerantController::class, 'gerant_hotel'])->name('create.hotel');
@@ -86,7 +88,7 @@ Route::middleware(['auth', 'gerant'])->group(function(){
 });
 
 // Routes concernant les traitement user
-Route::middleware(['auth', 'user'])->group(function(){
+Route::middleware(['auth', 'user'])->group(function () {
     Route::get('user/dashboard', [UserController::class, 'user_dashboard'])->name('profile');
     Route::get('user/reservations', [UserController::class, 'user_reservations'])->name('user.reservations');
     Route::get('user/favoris', [UserController::class, 'user_favoris'])->name('user.favoris');
@@ -102,4 +104,4 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-require __DIR__.'/auth.php';
+require __DIR__ . '/auth.php';

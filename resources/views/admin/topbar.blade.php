@@ -103,7 +103,7 @@
                             <!-- Card header -->
                             <div class="card-header bg-transparent d-flex justify-content-between align-items-center border-bottom">
                                 <h6 class="m-0">Notifications <span class="badge bg-danger bg-opacity-10 text-danger ms-2">4 new</span></h6>
-                                <a class="small" href="#">Clear all</a>
+                                <a class="small" href="#">Effacer tout</a>
                             </div>
 
                             <!-- Card body START -->
@@ -130,7 +130,7 @@
 
                             <!-- Card footer -->
                             <div class="card-footer bg-transparent text-center border-top">
-                                <a href="#" class="btn btn-sm btn-link mb-0 p-0">See all incoming activity</a>
+                                <a href="{{ route('admin.messagerie') }}" class="btn btn-sm btn-link mb-0 p-0">Voir Messagerie</a>
                             </div>
                         </div>
                     </div>

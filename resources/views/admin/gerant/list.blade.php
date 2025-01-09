@@ -180,7 +180,7 @@
                                 {{-- @foreach ( $hotels as $hotel ) --}}
                                     <a href="{{ route('detail', $hotel->id) }}" class="btn btn-sm btn-primary-soft mb-0 w-100">View detail</a>
                                 {{-- @endforeach --}}
-                                <a href="#" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
+                                <a href="{{ route('admin.contact', $hotel->id) }}" class="btn btn-sm btn-light flex-shrink-0 mb-0"><i class="bi bi-envelope"></i></a>
                             </div>
 
 						<!-- Card body -->
