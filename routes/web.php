@@ -28,6 +28,7 @@ Route::get('/offre', [HomeController::class, 'offre'])->name('offre');
 // Routes concernant les traitement admin
 Route::middleware(['auth', 'admin'])->group(function () {
     Route::get('admin/dashboard', [AdminController::class, 'index'])->name('dashboard');
+    Route::get('admin/messagerie', [AdminController::class, 'admin_messagerie'])->name('admin.messagerie');
 
     // Routes concernant le gerant
     Route::get('admin/gerant', [AdminController::class, 'gerant'])->name('list');

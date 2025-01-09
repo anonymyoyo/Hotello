@@ -25,6 +25,11 @@ class AdminController extends Controller
         return view('admin.dashboard', compact('hotelCount', 'roomCounter'));
     }
 
+    public function admin_messagerie()
+    {
+        return view('admin.messagerie.message');
+    }
+
     // Gestion des gerant d'hotels
     // ***
     // ***
