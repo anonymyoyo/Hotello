@@ -22,7 +22,7 @@
                 <!-- Menu item -->
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#collapsebooking" role="button" aria-expanded="false" aria-controls="collapsebooking">
-                    Bookings
+                    Reservations
                     </a>
                     <!-- Submenu -->
                     <ul class="nav collapse flex-column" id="collapsebooking" data-bs-parent="#navbar-sidebar">
@@ -34,25 +34,25 @@
                 <!-- Menu item -->
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#collapseguest" role="button" aria-expanded="false" aria-controls="collapseguest">
-                    Guests
+                    Utilisateurs
                     </a>
                     <!-- Submenu -->
                     <ul class="nav collapse flex-column" id="collapseguest" data-bs-parent="#navbar-sidebar">
                         {{--  --}}
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('guest.list') }}">Guest List</a></li>
-                        <li class="nav-item"> <a class="nav-link" href="admin-guest-detail.html">Guest Detail</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('guest.list_client') }}">Clients</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('guest.list_gerant') }}">Gerants</a></li>
                     </ul>
                 </li>
 
                 <!-- Menu item -->
                 <li class="nav-item">
                     <a class="nav-link" data-bs-toggle="collapse" href="#collapseagent" role="button" aria-expanded="false" aria-controls="collapseagent">
-                    Agents
+                    Hotels
                     </a>
                     <!-- Submenu -->
                     <ul class="nav collapse flex-column" id="collapseagent" data-bs-parent="#navbar-sidebar">
                         {{--  --}}
-                        <li class="nav-item"> <a class="nav-link" href="{{ route('list') }}">Agent List</a></li>
+                        <li class="nav-item"> <a class="nav-link" href="{{ route('list') }}">Listes</a></li>
                         <li class="nav-item"> <a class="nav-link" href="admin-agent-detail.html">Agent Detail</a></li>
                     </ul>
                 </li>

@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Chambre;
 use App\Models\Hotel;
 use App\Models\Messages;
+use App\Models\Reservation;
 use App\Models\Roles;
 use App\Models\Room_Category;
 use App\Models\User;
@@ -147,7 +148,14 @@ class AdminController extends Controller
     {
         $user = User::all();
         $role = Roles::all();
-        return view('admin.guest.list', compact('user', 'role'));
+        return view('admin.guest.list_client', compact('user', 'role'));
+    }
+
+    public function guest_gerant()
+    {
+        $user = User::all();
+        $role = Roles::all();
+        return view('admin.guest.list_gerant', compact('user', 'role'));
     }
 
     public function store_guest()
@@ -170,13 +178,22 @@ class AdminController extends Controller
         return to_route('guest.list')->with('message', 'gerant cree avec succes');
     }
 
-    public function detail_guest($id)
+    public function detail_guest_client($id)
     {
         $user = User::find($id);
+        $reservation = Reservation::where('user_id', $user->id)->get();
+
+        // return $user;
+        return view('admin.guest.detail_client', compact('id', 'user', 'hotel'));
+    }
+
+    public function detail_guest_gerant($id)
+    {
+        $user = User::all();
         $hotel = User::find($id)->hotels;
 
         // return $hotel;
-        return view('admin.guest.detail', compact('id', 'user', 'hotel'));
+        return view('admin.guest.detail_client', compact('id', 'user', 'hotel'));
     }
 
     // **

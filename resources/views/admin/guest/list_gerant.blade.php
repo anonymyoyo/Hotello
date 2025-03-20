@@ -36,19 +36,7 @@
 				<div class="col-lg-6">
 					<ul class="nav nav-pills-shadow nav-responsive">
 						<li class="nav-item">
-							<a class="nav-link mb-0 active"  href="#tab-1">Clients</a>
-						</li>
-						{{-- <li class="nav-item">
-							<a class="nav-link mb-0"  href="#tab-2">Reserve</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link mb-0"  href="#tab-3">Annule</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link mb-0"  href="#tab-4">En attente</a>
-						</li> --}}
-                        <li class="nav-item">
-							<a class="nav-link mb-0" href="#tab-5">Gerant</a>
+							<a class="nav-link mb-0 active"  href="#tab-1">Gerants</a>
 						</li>
 					</ul>
 				</div>
@@ -75,139 +63,6 @@
 						</select>
 					</form>
 				</div>
-			</div>
-
-			<div class="card shadow mt-5" id="tab-1">
-                <h1 class="h3 mb-3 mb-sm-0">Liste des Clients</h1>
-				<!-- Card body START -->
-				<div class="card-body">
-					<!-- Table head -->
-                    <div class="bg-light rounded p-3 d-none d-lg-block">
-						<div class="row row-cols-11 g-4">
-                            <div class="col"><h6 class="mb-0">Id</h6></div>
-							<div class="col"><h6 class="mb-0">Nom</h6></div>
-							<div class="col"><h6 class="mb-0">Email</h6></div>
-							<div class="col"><h6 class="mb-0">Contact</h6></div>
-							<div class="col"><h6 class="mb-0">Addresse</h6></div>
-							<div class="col"><h6 class="mb-0">Ville</h6></div>
-							<div class="col"><h6 class="mb-0">Pays</h6></div>
-                            <div class="col"><h6 class="mb-0">Date d'adhesion</h6></div>
-                            <div class="col"><h6 class="mb-0">Statut</h6></div>
-                            <div class="col"><h6 class="mb-0">Detail</h6></div>
-						</div>
-					</div>
-
-					<!-- Table data -->
-					@foreach ($user as $users)
-                        @if ($users->roles_id === 2)
-                            <div class="row row-cols-xl-10 align-items-lg-center border-bottom g-4 px-2 py-4">
-                                <!-- Data item -->
-                                <div class="col">
-                                    <h6 class="mb-0 fw-normal">{{ $users->id }}</h6>
-                                </div>
-
-                                <!-- Data item -->
-                                <div class="col">
-                                    <small class="d-block d-lg-none">Booked by:</small>
-                                    <div class="d-flex align-items-center">
-                                        <!-- Avatar -->
-                                        <div class="avatar avatar-xs flex-shrink-0">
-                                            <img class="avatar-img rounded-circle" src="{{ asset('assets/images/avatar/09.jpg') }}" alt="avatar">
-                                        </div>
-                                        <!-- Info -->
-                                        <div class="ms-2">
-                                            <h6 class="mb-0 fw-light">{{ $users->name }}</h6>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Data item -->
-                                <div class="col">
-                                    <small class="d-block d-lg-none">Booking date:</small>
-                                    <h6 class="mb-0 fw-normal">{{ $users->email }}</h6>
-                                </div>
-
-                                <!-- Data item -->
-                                <div class="col">
-                                    <small class="d-block d-lg-none">Check-in:</small>
-                                    <h6 class="mb-0 fw-normal">{{ $users->contact }}</h6>
-                                </div>
-
-                                <!-- Data item -->
-                                <div class="col">
-                                    <small class="d-block d-lg-none">Check-out:</small>
-                                    <h6 class="mb-0 fw-normal">{{ $users->addresse }}</h6>
-                                </div>
-
-
-                                <!-- Data item -->
-                                <div class="col">
-                                    <small class="d-block d-lg-none">Check-out:</small>
-                                    <h6 class="mb-0 fw-normal">{{ $users->ville }}</h6>
-                                </div>
-
-                                <!-- Data item -->
-                                <div class="col">
-                                    <small class="d-block d-lg-none">Room no:</small>
-                                    <h6 class="mb-0 fw-normal">{{ $users->pays }}</h6>
-                                </div>
-
-                                <!-- Data item -->
-                                {{-- @if (auth()->$users->user_id === $roles->id) --}}
-
-                                {{-- <div class="col">
-                                    <small class="d-block d-lg-none">Room no:</small>
-                                    <h6 class="mb-0 fw-normal">{{ $users->user_id }}</h6>
-                                </div> --}}
-                        {{-- @endif --}}
-
-                                <!-- Data item -->
-                                <div class="col">
-                                    <small class="d-block d-lg-none">Payment:</small>
-                                    <div class="badge bg-success bg-opacity-10 text-success">{{ $users->created_at }}</div>
-                                </div>
-
-                                <!-- Data item -->
-                                <div class="col">
-                                    <small class="d-block d-lg-none">Payment:</small>
-                                    <div class="badge bg-success bg-opacity-10 text-success">Booked</div>
-                                </div>
-                                <!-- Data item -->
-                                <div class="col"><a href="{{ route('guest.detail', $users->id) }}" class="btn btn-sm btn-light mb-0">View</a></div>
-
-                            </div>
-                        @endif
-
-                    @endforeach
-
-				</div>
-
-				<!-- Card body END -->
-
-				<!-- Card footer START -->
-				<div class="card-footer pt-0">
-					<!-- Pagination and content -->
-					<div class="d-sm-flex justify-content-sm-between align-items-sm-center">
-						<!-- Content -->
-						<p class="mb-sm-0 text-center text-sm-start">Showing 1 to 8 of 20 entries</p>
-						<!-- Pagination -->
-						<nav class="mb-sm-0 d-flex justify-content-center" aria-label="navigation">
-							<ul class="pagination pagination-sm pagination-primary-soft mb-0">
-								<li class="page-item disabled">
-									<a class="page-link" href="#" tabindex="-1">Prev</a>
-								</li>
-								<li class="page-item"><a class="page-link" href="#">1</a></li>
-								<li class="page-item active"><a class="page-link" href="#">2</a></li>
-								<li class="page-item disabled"><a class="page-link" href="#">..</a></li>
-								<li class="page-item"><a class="page-link" href="#">15</a></li>
-								<li class="page-item">
-									<a class="page-link" href="#">Next</a>
-								</li>
-							</ul>
-						</nav>
-					</div>
-				</div>
-				<!-- Card footer END -->
 			</div>
 
             <!-- Guest list START -->
@@ -308,7 +163,7 @@
                                     <div class="badge bg-success bg-opacity-10 text-success">Booked</div>
                                 </div>
                                 <!-- Data item -->
-                                <div class="col"><a href="{{ route('guest.detail', $users->id) }}" class="btn btn-sm btn-light mb-0">View</a></div>
+                                <div class="col"><a href="{{ route('guest_gerant.detail', $users->id) }}" class="btn btn-sm btn-light mb-0">View</a></div>
 
                             </div>
                         @endif
