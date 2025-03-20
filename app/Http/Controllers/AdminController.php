@@ -143,7 +143,7 @@ class AdminController extends Controller
     // ***
     // ***
 
-    public function guest()
+    public function guest_client()
     {
         $user = User::all();
         $role = Roles::all();

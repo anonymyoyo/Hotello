@@ -42,7 +42,8 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::delete('gerant/delete/{id}', [AdminController::class, 'delete'])->name('delete');
 
     // Routes Admin concernant les Utilisateurs
-    Route::get('admin/guest', [AdminController::class, 'guest'])->name('guest.list');
+    Route::get('admin/guest/client', [AdminController::class, 'guest_client'])->name('guest.list_client');
+    Route::get('admin/guest/gerant', [AdminController::class, 'guest_gerant'])->name('guest.list_gerant');
     Route::get('guest/store', [AdminController::class, 'store_guest'])->name('guest.create');
     Route::post('guest/add', [AdminController::class, 'add_guest'])->name('guest.add');
     Route::get('guest/detail/{id}', [AdminController::class, 'detail_guest'])->name('guest.detail');
