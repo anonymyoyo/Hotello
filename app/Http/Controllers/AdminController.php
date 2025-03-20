@@ -184,17 +184,25 @@ class AdminController extends Controller
         $reservation = Reservation::where('user_id', $user->id)->get();
 
         // return $user;
-        return view('admin.guest.detail_client', compact('id', 'user', 'hotel'));
+        return view('admin.guest.detail_client', compact('id', 'user', 'reservation'));
     }
 
     public function detail_guest_gerant($id)
     {
-        $user = User::all();
+        $user = User::find($id);
         $hotel = User::find($id)->hotels;
 
         // return $hotel;
-        return view('admin.guest.detail_client', compact('id', 'user', 'hotel'));
+        return view('admin.guest.detail_gerant', compact('id', 'user', 'hotel'));
     }
+
+    public function edit_guest_gerant() {}
+
+    public function update_guest_gerant() {}
+
+    public function delete_guest_gerant() {}
+
+
 
     // **
     // **

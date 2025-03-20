@@ -84,6 +84,7 @@
                             <div class="col"><h6 class="mb-0">Date d'adhesion</h6></div>
                             <div class="col"><h6 class="mb-0">Statut</h6></div>
                             <div class="col"><h6 class="mb-0">Detail</h6></div>
+                            <div class="col"><h6 class="mb-0">Action</h6></div>
 						</div>
 					</div>
 
@@ -164,6 +165,21 @@
                                 </div>
                                 <!-- Data item -->
                                 <div class="col"><a href="{{ route('guest_gerant.detail', $users->id) }}" class="btn btn-sm btn-light mb-0">View</a></div>
+
+                                <!-- Data item -->
+                                <div class="col">
+                                    <small class="d-block d-lg-none">Action:</small>
+                                    <a href="{{ route('guest_gerant.edit', $users->id) }}" class="badge bg-success bg-opacity-10 text-success"><i class="bi bi-pencil-square fa-fw me-2"></i></a>
+                                    <li>
+                                        <form method="POST" action="{{ route('guest_gerant.delete', $users->id) }}" id="delete">
+                                            @csrf
+                                            @method('delete')
+                                        </form>
+                                        <a class="badge bg-danger bg-opacity-10 text-danger" onclick="event.preventDefault();
+                                        document.getElementById('delete').submit()"><i class="bi bi-trash fa-fw me-2"></i></a>
+                                    </li>
+                                </div>
+
 
                             </div>
                         @endif

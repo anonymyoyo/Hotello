@@ -48,6 +48,9 @@ Route::middleware(['auth', 'admin'])->group(function () {
     Route::post('guest/add', [AdminController::class, 'add_guest'])->name('guest.add');
     Route::get('guest/detail/client{id}', [AdminController::class, 'detail_guest_client'])->name('guest_client.detail');
     Route::get('guest/detail/gerant{id}', [AdminController::class, 'detail_guest_gerant'])->name('guest_gerant.detail');
+    Route::get('admin/guest/edit/gerant{id}', [AdminController::class, 'edit_guest_gerant'])->name('guest_gerant.edit');
+    Route::put('admin/guest/update/gerant{id}', [AdminController::class, 'update_guest_gerant'])->name('guest_gerant.update');
+    Route::delete('admin/guest/delete/gerant{id}', [AdminController::class, 'delete_guest_gerant'])->name('guest_gerant.delete');
 
 
     // Routes Admin concernant les chambres

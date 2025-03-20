@@ -53,7 +53,7 @@
 					<!-- Table head -->
 					<div class="bg-light rounded p-3 d-none d-lg-block">
 						<div class="row row-cols-6 justify-content-between g-4">
-							<div class="col"><h6 class="mb-0">Nom de l'hotek</h6></div>
+							<div class="col"><h6 class="mb-0">Nom de l'hotel</h6></div>
 							<div class="col"><h6 class="mb-0">Nombre d'etoile(s)</h6></div>
 							<div class="col"><h6 class="mb-0">Nombre de chambre(s)</h6></div>
 							<div class="col"><h6 class="mb-0">Date d'enregistrement</h6></div>
